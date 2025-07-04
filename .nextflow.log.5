@@ -1,0 +1,33 @@
+Jul-04 15:37:56.043 [main] DEBUG nextflow.cli.Launcher - $> nextflow run main.nf -profile local_docker_fixedd --input /home/phemarajata/Downloads/sra_reads --outdir /home/phemarajata/Downloads/sra_reads/my-results --skip_kraken true --max_cpus 20 --max_memory 56.GB --max_time 48.h
+Jul-04 15:37:56.103 [main] DEBUG nextflow.cli.CmdRun - N E X T F L O W  ~  version 25.04.4
+Jul-04 15:37:56.119 [main] DEBUG nextflow.plugin.PluginsFacade - Setting up plugin manager > mode=prod; embedded=false; plugins-dir=/home/phemarajata/.nextflow/plugins; core-plugins: nf-amazon@2.15.0,nf-azure@1.16.0,nf-cloudcache@0.4.3,nf-codecommit@0.2.3,nf-console@1.2.1,nf-google@1.21.0,nf-k8s@1.0.0,nf-tower@1.11.3,nf-wave@1.12.1
+Jul-04 15:37:56.134 [main] INFO  o.pf4j.DefaultPluginStatusProvider - Enabled plugins: []
+Jul-04 15:37:56.134 [main] INFO  o.pf4j.DefaultPluginStatusProvider - Disabled plugins: []
+Jul-04 15:37:56.136 [main] INFO  org.pf4j.DefaultPluginManager - PF4J version 3.12.0 in 'deployment' mode
+Jul-04 15:37:56.149 [main] INFO  org.pf4j.AbstractPluginManager - No plugins
+Jul-04 15:37:56.165 [main] DEBUG nextflow.config.ConfigBuilder - Found config local: /home/phemarajata/wf-paired-end-illumina-assembly-gcb/nextflow.config
+Jul-04 15:37:56.168 [main] DEBUG nextflow.config.ConfigBuilder - Parsing config file: /home/phemarajata/wf-paired-end-illumina-assembly-gcb/nextflow.config
+Jul-04 15:37:56.189 [main] DEBUG n.secret.LocalSecretsProvider - Secrets store: /home/phemarajata/.nextflow/secrets/store.json
+Jul-04 15:37:56.192 [main] DEBUG nextflow.secret.SecretsLoader - Discovered secrets providers: [nextflow.secret.LocalSecretsProvider@2160e52a] - activable => nextflow.secret.LocalSecretsProvider@2160e52a
+Jul-04 15:37:56.202 [main] DEBUG nextflow.config.ConfigBuilder - Applying config profile: `local_docker_fixedd`
+Jul-04 15:37:57.617 [main] DEBUG nextflow.config.ConfigBuilder - Available config profiles: [aspen_hpc, debug, test, gcb, test_cat_checkm2_very_high_cpu_local, test_full_skip_kraken, docker, local_docker_fixed, test_both_host_removal_high_ram_skip_subsample_skip_kraken, shifter, docker_working, conda, singularity, rosalind_hpc, test_full, test_skip_host_removal_high_ram_skip_kraken]
+Jul-04 15:37:57.636 [main] DEBUG nextflow.cli.Launcher - Operation aborted
+nextflow.exception.AbortOperationException: Unknown configuration profile: 'local_docker_fixedd'
+
+Did you mean one of these?
+    local_docker_fixed
+
+
+	at org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:321)
+	at nextflow.config.ConfigBuilder.checkValidProfile(ConfigBuilder.groovy:511)
+	at org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:321)
+	at nextflow.config.ConfigBuilder.buildConfig0(ConfigBuilder.groovy:386)
+	at org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:321)
+	at nextflow.config.ConfigBuilder.buildGivenFiles(ConfigBuilder.groovy:318)
+	at org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:321)
+	at nextflow.config.ConfigBuilder.buildConfigObject(ConfigBuilder.groovy:816)
+	at org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:321)
+	at nextflow.config.ConfigBuilder.build(ConfigBuilder.groovy:829)
+	at nextflow.cli.CmdRun.run(CmdRun.groovy:333)
+	at nextflow.cli.Launcher.run(Launcher.groovy:513)
+	at nextflow.cli.Launcher.main(Launcher.groovy:673)

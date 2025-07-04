@@ -1,0 +1,49 @@
+lint:
+  actions_awsfulltest: False
+  actions_awstest: False
+  files_exist:
+    - .gitignore
+    - aws.config
+    - pyproject.toml
+    - .prettierignore
+    - conf/igenomes.config
+    - assets/multiqc_config.yml
+    - .github/workflows/linting.yml
+    - .github/workflows/awstest.yml
+    - .github/workflows/awsfulltest.yml
+    - .github/workflows/linting_comment.yml
+    - lib/WorkflowWf-paired-end-illumina-assembly.groovy
+    - assets/nf-core-wf-paired-end-illumina-assembly_logo_light.png
+    - docs/images/nf-core-wf-paired-end-illumina-assembly_logo_dark.png
+    - docs/images/nf-core-wf-paired-end-illumina-assembly_logo_light.png
+  files_unchanged:
+    - LICENSE
+    - .gitignore
+    - pyproject.toml
+    - docs/README.md
+    - pyproject.toml
+    - .prettierignore
+    - .github/CONTRIBUTING.md
+    - assets/email_template.txt
+    - lib/NfcoreTemplate.groovy
+    - assets/email_template.html
+    - .github/workflows/branch.yml
+    - assets/sendmail_template.txt
+    - .github/workflows/linting.yml
+    - .github/PULL_REQUEST_TEMPLATE.md
+    - .github/ISSUE_TEMPLATE/bug_report.yml
+    - .github/ISSUE_TEMPLATE/feature_request.yml
+  multiqc_config: False
+  nextflow_config:
+    - manifest.name
+    - manifest.homePage
+  pipeline_name_conventions: False
+  system_exit: False
+
+repository_type: pipeline
+
+template:
+  name: bacterial-genomics/wf-paired-end-illumina-assembly
+# update:
+#   https://github.com/nf-core/modules.git:
+#     nf-core: False

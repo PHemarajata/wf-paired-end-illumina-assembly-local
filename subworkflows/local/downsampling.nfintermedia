@@ -1,0 +1,125 @@
+#!/usr/bin/env nextflow
+nextflow.enable.dsl = 2
+
+/*
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    IMPORT LOCAL MODULES
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+*/
+
+include { CALCULATE_METRICS_FASTQ_SEQKIT as CALC_STATS_DOWNSAMPLE_FQ_SEQKIT } from "../../modules/local/calculate_metrics_fastq_seqkit/main"
+include { CALCULATE_METRICS_FASTQ_SEQTK  as CALC_STATS_DOWNSAMPLE_FQ_SEQTK  } from "../../modules/local/calculate_metrics_fastq_seqtk/main"
+include { COUNT_TOTAL_BP_INPUT_READS_SEQKIT                                } from "../../modules/local/count_total_bp_input_readss_seqkit/main"
+include { COUNT_TOTAL_BP_INPUT_READS_SEQTK                                 } from "../../modules/local/count_total_bp_input_readss_seqtk/main"
+include { ESTIMATE_GENOME_SIZE_KMC                                         } from "../../modules/local/estimate_genome_size_kmc/main"
+include { ESTIMATE_ORIGINAL_INPUT_DEPTH_UNIX                               } from "../../modules/local/estimate_original_input_depth_unix/main"
+include { SUBSAMPLE_READS_TO_DEPTH_SEQKIT                                  } from "../../modules/local/subsample_reads_to_depth_seqkit/main"
+include { SUBSAMPLE_READS_TO_DEPTH_SEQTK                                   } from "../../modules/local/subsample_reads_to_depth_seqtk/main"
+
+/*
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    WORKFLOW: Downsample Reads to a Target Depth
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+*/
+
+workflow DOWNSAMPLE {
+    take:
+    ch_reads // [ val(meta), [ path(R1), path(R2) ] ]
+
+    main:
+    ch_versions             = Channel.empty()
+    ch_output_summary_files = Channel.empty()
+    ch_total_bp             = Channel.empty()
+
+    if (params.subsample) {
+        log.info "Subsampling enabled — estimating if input exceeds ${params.depth}x coverage"
+
+        // STEP 1: Estimate genome size
+        ESTIMATE_GENOME_SIZE_KMC(ch_reads)
+        ch_versions = ch_versions.mix(ESTIMATE_GENOME_SIZE_KMC.out.versions)
+
+        // STEP 2: Count total bases
+        if (params.subsample_tool.toLowerCase() == "seqkit") {
+            COUNT_TOTAL_BP_INPUT_READS_SEQKIT(ch_reads)
+            ch_total_bp = COUNT_TOTAL_BP_INPUT_READS_SEQKIT.out.input_total_bp
+            ch_versions = ch_versions.mix(COUNT_TOTAL_BP_INPUT_READS_SEQKIT.out.versions)
+        } else {
+            COUNT_TOTAL_BP_INPUT_READS_SEQTK(ch_reads)
+            ch_total_bp = COUNT_TOTAL_BP_INPUT_READS_SEQTK.out.output
+            ch_versions = ch_versions.mix(COUNT_TOTAL_BP_INPUT_READS_SEQTK.out.versions)
+        }
+
+        // STEP 3: Join base count and genome size estimates
+        ch_for_depth_estimation = ch_total_bp.join(ESTIMATE_GENOME_SIZE_KMC.out.genome_size)
+
+        // STEP 4: Estimate input depth and fraction
+        ESTIMATE_ORIGINAL_INPUT_DEPTH_UNIX(ch_for_depth_estimation)
+        ch_versions = ch_versions.mix(ESTIMATE_ORIGINAL_INPUT_DEPTH_UNIX.out.versions)
+
+        // STEP 5: Manually split samples into above/below depth groups (NO `.into`)
+        ESTIMATE_ORIGINAL_INPUT_DEPTH_UNIX.out.fraction
+            .join(ch_reads)
+            .map { meta, fraction_file, reads ->
+                def isAbove = false
+                try {
+                    def val = new File(fraction_file.toString()).text.trim().toFloat()
+                    isAbove = (val < 1.0)
+                } catch (Exception e) {
+                    log.warn "Could not parse fraction for ${meta.id}, assuming below target."
+                }
+                return [isAbove, meta, reads, fraction_file]
+            }
+            .splitCsv(by: 0)
+            .set { ch_above_depth_raw, ch_below_depth_raw }
+
+        // STEP 6: Prepare input for each branch
+        ch_above_depth = ch_above_depth_raw.map { _, meta, reads, fraction -> [meta, reads, fraction] }
+        ch_below_depth = ch_below_depth_raw.map { _, meta, reads, fraction -> [meta, reads] }
+
+        // STEP 7: Run subsampling tool
+        if (params.subsample_tool.toLowerCase() == "seqkit") {
+            SUBSAMPLE_READS_TO_DEPTH_SEQKIT(ch_above_depth)
+            ch_versions = ch_versions.mix(SUBSAMPLE_READS_TO_DEPTH_SEQKIT.out.versions)
+
+            ch_subsampled_reads_summary = SUBSAMPLE_READS_TO_DEPTH_SEQKIT.out.summary
+                .collectFile(
+                    name:       "Summary.Subsampled_Reads.tsv",
+                    keepHeader: true,
+                    sort:       true,
+                    storeDir:   "${params.outdir}/Summaries"
+                )
+            ch_output_summary_files = ch_output_summary_files.mix(ch_subsampled_reads_summary)
+
+            ch_final_reads = SUBSAMPLE_READS_TO_DEPTH_SEQKIT.out.subsampled_reads
+                .mix(ch_below_depth)
+
+            CALC_STATS_DOWNSAMPLE_FQ_SEQKIT(ch_final_reads, "Subsampled_Reads")
+            ch_versions = ch_versions.mix(CALC_STATS_DOWNSAMPLE_FQ_SEQKIT.out.versions)
+
+            ch_downsample_metrics = CALC_STATS_DOWNSAMPLE_FQ_SEQKIT.out.output
+                .collectFile(
+                    name:       "Summary.Subsampled_Reads.Metrics.tsv",
+                    keepHeader: true,
+                    sort:       true,
+                    storeDir:   "${params.outdir}/Summaries"
+                )
+            ch_output_summary_files = ch_output_summary_files.mix(ch_downsample_metrics)
+
+        } else {
+            SUBSAMPLE_READS_TO_DEPTH_SEQTK(ch_above_depth)
+            ch_versions = ch_versions.mix(SUBSAMPLE_READS_TO_DEPTH_SEQTK.out.versions)
+
+            ch_final_reads = SUBSAMPLE_READS_TO_DEPTH_SEQTK.out.subsampled_reads
+                .mix(ch_below_depth)
+        }
+
+    } else {
+        log.info "Subsampling not enabled — using original reads"
+        ch_final_reads = ch_reads
+    }
+
+    emit:
+    reads                = ch_final_reads
+    versions             = ch_versions
+    output_summary_files = ch_output_summary_files
+}
