@@ -565,8 +565,8 @@ workflow ASSEMBLY {
     ================================================================================
     */
 
-    // Prepare kraken1 database for use
-    if ( ch_kraken1_db_file ) {
+    // Prepare kraken1 database for use - only if not skipped
+    if ( ch_kraken1_db_file && !params.skip_kraken && !params.skip_kraken1 ) {
         if ( ch_kraken1_db_file.extension in ['gz', 'tgz'] ) {
             // Add meta information
             ch_kraken1_db = Channel.of(ch_kraken1_db_file)
@@ -612,35 +612,39 @@ workflow ASSEMBLY {
             ch_db_for_kraken1 = Channel.empty()
         }
 
+        // PROCESS: Run kraken1 on paired cleaned reads
+        READ_CLASSIFY_KRAKEN_ONE (
+            ch_overlap_flash,
+            ch_db_for_kraken1
+        )
+        // READ_CLASSIFY_KRAKEN_ONE
+        //     .view { file -> println "DEBUG: From READ_CLASSIFY_KRAKEN_ONE, emitting file: ${file}" }
+        // READ_CLASSIFY_KRAKEN_ONE
+        //     .view { item -> println "DEBUG: From READ_CLASSIFY_KRAKEN_ONE, channel item: ${item}" }
+        ch_versions = ch_versions.mix(READ_CLASSIFY_KRAKEN_ONE.out.versions)
+
+        // Collect kraken summaries and concatenate into one file
+        ch_kraken_one_summary = READ_CLASSIFY_KRAKEN_ONE.out.summary
+                                    .collectFile(
+                                        name:       "Summary.Kraken.tsv",
+                                        keepHeader: true,
+                                        sort:       { file -> file.text },
+                                        storeDir:   "${params.outdir}/Summaries"
+                                    )
+                                    .view { collectedFiles -> println "DEBUG: From READ_CLASSIFY_KRAKEN_ONE.out.summary, collected files: ${collectedFiles}" }
+        ch_output_summary_files = ch_output_summary_files.mix(ch_kraken_one_summary)
+
     } else {
-        log.warn("Kraken could not be performed - database not specified using --kraken1_db!")
+        if (params.skip_kraken || params.skip_kraken1) {
+            log.info("Kraken1 classification skipped as requested")
+        } else {
+            log.warn("Kraken1 could not be performed - database not specified using --kraken1_db!")
+        }
         ch_db_for_kraken1 = Channel.empty()
     }
 
-    // PROCESS: Run kraken1 on paired cleaned reads
-    READ_CLASSIFY_KRAKEN_ONE (
-        ch_overlap_flash,
-        ch_db_for_kraken1
-    )
-    // READ_CLASSIFY_KRAKEN_ONE
-    //     .view { file -> println "DEBUG: From READ_CLASSIFY_KRAKEN_ONE, emitting file: ${file}" }
-    // READ_CLASSIFY_KRAKEN_ONE
-    //     .view { item -> println "DEBUG: From READ_CLASSIFY_KRAKEN_ONE, channel item: ${item}" }
-    ch_versions = ch_versions.mix(READ_CLASSIFY_KRAKEN_ONE.out.versions)
-
-    // Collect kraken summaries and concatenate into one file
-    ch_kraken_one_summary = READ_CLASSIFY_KRAKEN_ONE.out.summary
-                                .collectFile(
-                                    name:       "Summary.Kraken.tsv",
-                                    keepHeader: true,
-                                    sort:       { file -> file.text },
-                                    storeDir:   "${params.outdir}/Summaries"
-                                )
-                                .view { collectedFiles -> println "DEBUG: From READ_CLASSIFY_KRAKEN_ONE.out.summary, collected files: ${collectedFiles}" }
-    ch_output_summary_files = ch_output_summary_files.mix(ch_kraken_one_summary)
-
-    // Prepare kraken2 database for use
-    if ( ch_kraken2_db_file ) {
+    // Prepare kraken2 database for use - only if not skipped
+    if ( ch_kraken2_db_file && !params.skip_kraken && !params.skip_kraken2 ) {
         if ( ch_kraken2_db_file.extension in ['gz', 'tgz'] ) {
             // Add meta information
             ch_kraken2_db = Channel.of(ch_kraken2_db_file)
@@ -676,32 +680,36 @@ workflow ASSEMBLY {
             ch_db_for_kraken2 = Channel.empty()
         }
 
+        // PROCESS: Run kraken2 on paired cleaned reads
+        READ_CLASSIFY_KRAKEN_TWO (
+            ch_overlap_flash,
+            ch_db_for_kraken2
+        )
+        // READ_CLASSIFY_KRAKEN_TWO
+        //     .view { file -> println "DEBUG: From READ_CLASSIFY_KRAKEN_TWO, emitting file: ${file}" }
+        // READ_CLASSIFY_KRAKEN_TWO
+        //     .view { item -> println "DEBUG: From READ_CLASSIFY_KRAKEN_TWO, channel item: ${item}" }
+        ch_versions = ch_versions.mix(READ_CLASSIFY_KRAKEN_TWO.out.versions)
+
+        // Collect kraken2 summaries and concatenate into one file
+        ch_kraken_two_summary = READ_CLASSIFY_KRAKEN_TWO.out.summary
+                                    .collectFile(
+                                        name:       "Summary.Kraken2.tsv",
+                                        keepHeader: true,
+                                        sort:       { file -> file.text },
+                                        storeDir:   "${params.outdir}/Summaries"
+                                    )
+                                    .view { collectedFiles -> println "DEBUG: From READ_CLASSIFY_KRAKEN_TWO.out.summary, collected files: ${collectedFiles}" }
+        ch_output_summary_files = ch_output_summary_files.mix(ch_kraken_two_summary)
+
     } else {
-        log.warn("Kraken2 could not be performed - database not specified using --kraken2_db!")
+        if (params.skip_kraken || params.skip_kraken2) {
+            log.info("Kraken2 classification skipped as requested")
+        } else {
+            log.warn("Kraken2 could not be performed - database not specified using --kraken2_db!")
+        }
         ch_db_for_kraken2 = Channel.empty()
     }
-
-    // PROCESS: Run kraken2 on paired cleaned reads
-    READ_CLASSIFY_KRAKEN_TWO (
-        ch_overlap_flash,
-        ch_db_for_kraken2
-    )
-    // READ_CLASSIFY_KRAKEN_TWO
-    //     .view { file -> println "DEBUG: From READ_CLASSIFY_KRAKEN_TWO, emitting file: ${file}" }
-    // READ_CLASSIFY_KRAKEN_TWO
-    //     .view { item -> println "DEBUG: From READ_CLASSIFY_KRAKEN_TWO, channel item: ${item}" }
-    ch_versions = ch_versions.mix(READ_CLASSIFY_KRAKEN_TWO.out.versions)
-
-    // Collect kraken2 summaries and concatenate into one file
-    ch_kraken_two_summary = READ_CLASSIFY_KRAKEN_TWO.out.summary
-                                .collectFile(
-                                    name:       "Summary.Kraken2.tsv",
-                                    keepHeader: true,
-                                    sort:       { file -> file.text },
-                                    storeDir:   "${params.outdir}/Summaries"
-                                )
-                                .view { collectedFiles -> println "DEBUG: From READ_CLASSIFY_KRAKEN_TWO.out.summary, collected files: ${collectedFiles}" }
-    ch_output_summary_files = ch_output_summary_files.mix(ch_kraken_two_summary)
 
 
     /*

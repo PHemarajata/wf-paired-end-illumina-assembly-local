@@ -1,33 +1,1033 @@
-Jul-04 15:37:56.043 [main] DEBUG nextflow.cli.Launcher - $> nextflow run main.nf -profile local_docker_fixedd --input /home/phemarajata/Downloads/sra_reads --outdir /home/phemarajata/Downloads/sra_reads/my-results --skip_kraken true --max_cpus 20 --max_memory 56.GB --max_time 48.h
-Jul-04 15:37:56.103 [main] DEBUG nextflow.cli.CmdRun - N E X T F L O W  ~  version 25.04.4
-Jul-04 15:37:56.119 [main] DEBUG nextflow.plugin.PluginsFacade - Setting up plugin manager > mode=prod; embedded=false; plugins-dir=/home/phemarajata/.nextflow/plugins; core-plugins: nf-amazon@2.15.0,nf-azure@1.16.0,nf-cloudcache@0.4.3,nf-codecommit@0.2.3,nf-console@1.2.1,nf-google@1.21.0,nf-k8s@1.0.0,nf-tower@1.11.3,nf-wave@1.12.1
-Jul-04 15:37:56.134 [main] INFO  o.pf4j.DefaultPluginStatusProvider - Enabled plugins: []
-Jul-04 15:37:56.134 [main] INFO  o.pf4j.DefaultPluginStatusProvider - Disabled plugins: []
-Jul-04 15:37:56.136 [main] INFO  org.pf4j.DefaultPluginManager - PF4J version 3.12.0 in 'deployment' mode
-Jul-04 15:37:56.149 [main] INFO  org.pf4j.AbstractPluginManager - No plugins
-Jul-04 15:37:56.165 [main] DEBUG nextflow.config.ConfigBuilder - Found config local: /home/phemarajata/wf-paired-end-illumina-assembly-gcb/nextflow.config
-Jul-04 15:37:56.168 [main] DEBUG nextflow.config.ConfigBuilder - Parsing config file: /home/phemarajata/wf-paired-end-illumina-assembly-gcb/nextflow.config
-Jul-04 15:37:56.189 [main] DEBUG n.secret.LocalSecretsProvider - Secrets store: /home/phemarajata/.nextflow/secrets/store.json
-Jul-04 15:37:56.192 [main] DEBUG nextflow.secret.SecretsLoader - Discovered secrets providers: [nextflow.secret.LocalSecretsProvider@2160e52a] - activable => nextflow.secret.LocalSecretsProvider@2160e52a
-Jul-04 15:37:56.202 [main] DEBUG nextflow.config.ConfigBuilder - Applying config profile: `local_docker_fixedd`
-Jul-04 15:37:57.617 [main] DEBUG nextflow.config.ConfigBuilder - Available config profiles: [aspen_hpc, debug, test, gcb, test_cat_checkm2_very_high_cpu_local, test_full_skip_kraken, docker, local_docker_fixed, test_both_host_removal_high_ram_skip_subsample_skip_kraken, shifter, docker_working, conda, singularity, rosalind_hpc, test_full, test_skip_host_removal_high_ram_skip_kraken]
-Jul-04 15:37:57.636 [main] DEBUG nextflow.cli.Launcher - Operation aborted
-nextflow.exception.AbortOperationException: Unknown configuration profile: 'local_docker_fixedd'
+Jul-04 20:24:31.324 [main] DEBUG nextflow.cli.Launcher - $> nextflow run main.nf -profile local_docker_fixed --input /home/phemarajata/Downloads/sra_reads --outdir /home/phemarajata/Downloads/sra_reads/my-results --skip_kraken true --max_cpus 20 --max_memory 56.GB --max_time 48.h -resume
+Jul-04 20:24:31.382 [main] DEBUG nextflow.cli.CmdRun - N E X T F L O W  ~  version 25.04.4
+Jul-04 20:24:31.396 [main] DEBUG nextflow.plugin.PluginsFacade - Setting up plugin manager > mode=prod; embedded=false; plugins-dir=/home/phemarajata/.nextflow/plugins; core-plugins: nf-amazon@2.15.0,nf-azure@1.16.0,nf-cloudcache@0.4.3,nf-codecommit@0.2.3,nf-console@1.2.1,nf-google@1.21.0,nf-k8s@1.0.0,nf-tower@1.11.3,nf-wave@1.12.1
+Jul-04 20:24:31.419 [main] INFO  o.pf4j.DefaultPluginStatusProvider - Enabled plugins: []
+Jul-04 20:24:31.419 [main] INFO  o.pf4j.DefaultPluginStatusProvider - Disabled plugins: []
+Jul-04 20:24:31.421 [main] INFO  org.pf4j.DefaultPluginManager - PF4J version 3.12.0 in 'deployment' mode
+Jul-04 20:24:31.430 [main] INFO  org.pf4j.AbstractPluginManager - No plugins
+Jul-04 20:24:31.444 [main] DEBUG nextflow.config.ConfigBuilder - Found config local: /home/phemarajata/wf-paired-end-illumina-assembly-gcb/nextflow.config
+Jul-04 20:24:31.445 [main] DEBUG nextflow.config.ConfigBuilder - Parsing config file: /home/phemarajata/wf-paired-end-illumina-assembly-gcb/nextflow.config
+Jul-04 20:24:31.466 [main] DEBUG n.secret.LocalSecretsProvider - Secrets store: /home/phemarajata/.nextflow/secrets/store.json
+Jul-04 20:24:31.469 [main] DEBUG nextflow.secret.SecretsLoader - Discovered secrets providers: [nextflow.secret.LocalSecretsProvider@2160e52a] - activable => nextflow.secret.LocalSecretsProvider@2160e52a
+Jul-04 20:24:31.480 [main] DEBUG nextflow.config.ConfigBuilder - Applying config profile: `local_docker_fixed`
+Jul-04 20:24:32.787 [main] DEBUG nextflow.config.ConfigBuilder - Available config profiles: [aspen_hpc, debug, test, gcb, test_cat_checkm2_very_high_cpu_local, test_full_skip_kraken, docker, local_docker_fixed, test_both_host_removal_high_ram_skip_subsample_skip_kraken, shifter, docker_working, conda, singularity, rosalind_hpc, test_full, test_skip_host_removal_high_ram_skip_kraken]
+Jul-04 20:24:32.848 [main] DEBUG nextflow.cli.CmdRun - Applied DSL=2 from script declaration
+Jul-04 20:24:32.863 [main] DEBUG nextflow.cli.CmdRun - Launching `main.nf` [jovial_snyder] DSL2 - revision: ea859950eb
+Jul-04 20:24:32.864 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins default=[]
+Jul-04 20:24:32.864 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins resolved requirement=[]
+Jul-04 20:24:32.906 [main] DEBUG nextflow.Session - Session UUID: 686e6b2b-df9a-4c0d-9b1e-07e4c1c6f279
+Jul-04 20:24:32.907 [main] DEBUG nextflow.Session - Run name: jovial_snyder
+Jul-04 20:24:32.907 [main] DEBUG nextflow.Session - Executor pool size: 22
+Jul-04 20:24:32.913 [main] DEBUG nextflow.file.FilePorter - File porter settings maxRetries=3; maxTransfers=50; pollTimeout=null
+Jul-04 20:24:32.917 [main] DEBUG nextflow.util.ThreadPoolBuilder - Creating thread pool 'FileTransfer' minSize=10; maxSize=66; workQueue=LinkedBlockingQueue[-1]; allowCoreThreadTimeout=false
+Jul-04 20:24:32.938 [main] DEBUG nextflow.cli.CmdRun - 
+  Version: 25.04.4 build 5950
+  Created: 16-06-2025 14:23 UTC (21:23 ICST)
+  System: Linux 6.11.0-29-generic
+  Runtime: Groovy 4.0.26 on Java HotSpot(TM) 64-Bit Server VM 17.0.12+8-LTS-286
+  Encoding: UTF-8 (UTF-8)
+  Process: 98878@phemarajata-Stealth-16-MercedesAMG-A1VGG [127.0.1.1]
+  CPUs: 22 - Mem: 62.3 GB (54.2 GB) - Swap: 8 GB (7 GB)
+Jul-04 20:24:32.967 [main] DEBUG nextflow.Session - Work-dir: /home/phemarajata/wf-paired-end-illumina-assembly-gcb/work [ext2/ext3]
+Jul-04 20:24:32.986 [main] DEBUG nextflow.executor.ExecutorFactory - Extension executors providers=[]
+Jul-04 20:24:32.994 [main] DEBUG nextflow.Session - Observer factory: DefaultObserverFactory
+Jul-04 20:24:33.027 [main] DEBUG nextflow.Session - Observer factory (v2): LinObserverFactory
+Jul-04 20:24:33.064 [main] DEBUG nextflow.cache.CacheFactory - Using Nextflow cache factory: nextflow.cache.DefaultCacheFactory
+Jul-04 20:24:33.078 [main] DEBUG nextflow.util.CustomThreadPool - Creating default thread pool > poolSize: 23; maxThreads: 1000
+Jul-04 20:24:33.159 [main] DEBUG nextflow.Session - Session start
+Jul-04 20:24:33.161 [main] DEBUG nextflow.trace.TraceFileObserver - Workflow started -- trace file: /home/phemarajata/Downloads/sra_reads/my-results/pipeline_info/execution_trace_2025-Jul-04_Fri_20-24-32.txt
+Jul-04 20:24:33.166 [main] DEBUG nextflow.Session - Using default localLib path: /home/phemarajata/wf-paired-end-illumina-assembly-gcb/lib
+Jul-04 20:24:33.168 [main] DEBUG nextflow.Session - Adding to the classpath library: /home/phemarajata/wf-paired-end-illumina-assembly-gcb/lib
+Jul-04 20:24:33.168 [main] DEBUG nextflow.Session - Adding to the classpath library: /home/phemarajata/wf-paired-end-illumina-assembly-gcb/lib/nfcore_external_java_deps.jar
+Jul-04 20:24:33.662 [main] DEBUG nextflow.script.ScriptRunner - > Launching execution
+Jul-04 20:24:33.709 [main] INFO  nextflow.Nextflow - 
 
-Did you mean one of these?
-    local_docker_fixed
+-[2m----------------------------------------------------[0m-
+[0;34m     __     __       __  __ __      __     __     [0m
+[0;34m|  ||_  __ |__) /\ ||__)|_ |  \ __ |_ |\ ||  \ __ [0m
+[0;34m|/\||      |   /--\|| \ |__|__/    |__| \||__/    [0m
+[0;34m                                 __ __ __     __       [0m
+[0;34m||  |  |  ||\/|||\ | /\  __  /\ (_ (_ |_ |\/||__)|  \_/ [0m
+[0;34m||__|__\__/|  ||| \|/--\    /--\__)__)|__|  ||__)|__ | [0m
 
+[0;32mTrim, assemble, and annotate paired end illumina reads. [0m
 
-	at org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:321)
-	at nextflow.config.ConfigBuilder.checkValidProfile(ConfigBuilder.groovy:511)
-	at org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:321)
-	at nextflow.config.ConfigBuilder.buildConfig0(ConfigBuilder.groovy:386)
-	at org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:321)
-	at nextflow.config.ConfigBuilder.buildGivenFiles(ConfigBuilder.groovy:318)
-	at org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:321)
-	at nextflow.config.ConfigBuilder.buildConfigObject(ConfigBuilder.groovy:816)
-	at org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:321)
-	at nextflow.config.ConfigBuilder.build(ConfigBuilder.groovy:829)
-	at nextflow.cli.CmdRun.run(CmdRun.groovy:333)
-	at nextflow.cli.Launcher.run(Launcher.groovy:513)
-	at nextflow.cli.Launcher.main(Launcher.groovy:673)
+[0;35mbacterial-genomics/wf-paired-end-illumina-assembly v3.0.0[0m
+-[2m----------------------------------------------------[0m-
+[1mCore Nextflow options[0m
+  [0;34mrunName             : [0;32mjovial_snyder[0m
+  [0;34mcontainerEngine     : [0;32mdocker[0m
+  [0;34mlaunchDir           : [0;32m/home/phemarajata/wf-paired-end-illumina-assembly-gcb[0m
+  [0;34mworkDir             : [0;32m/home/phemarajata/wf-paired-end-illumina-assembly-gcb/work[0m
+  [0;34mprojectDir          : [0;32m/home/phemarajata/wf-paired-end-illumina-assembly-gcb[0m
+  [0;34muserName            : [0;32mphemarajata[0m
+  [0;34mprofile             : [0;32mlocal_docker_fixed[0m
+  [0;34mconfigFiles         : [0;32m/home/phemarajata/wf-paired-end-illumina-assembly-gcb/nextflow.config[0m
+
+[1mInput/output options[0m
+  [0;34minput               : [0;32m/home/phemarajata/Downloads/sra_reads[0m
+  [0;34moutdir              : [0;32m/home/phemarajata/Downloads/sra_reads/my-results[0m
+  [0;34mlogpath             : [0;32m/home/phemarajata/Downloads/sra_reads/my-results/pipeline_info[0m
+
+[1mRemove host options[0m
+  [0;34msra_scrubber_db     : [0;32mhttps://ftp.ncbi.nlm.nih.gov/sra/dbs/human_filter/human_filter.db.20240718v2[0m
+
+[1mReference file options[0m
+  [0;34mphix_reference      : [0;32m/home/phemarajata/wf-paired-end-illumina-assembly-gcb/bin/PhiX_NC_001422.1.fasta[0m
+  [0;34madapter_reference   : [0;32m/home/phemarajata/wf-paired-end-illumina-assembly-gcb/bin/adapters_Nextera_NEB_TruSeq_NuGEN_ThruPLEX.fas[0m
+
+[1mAssembly classification with GTDB-Tk options[0m
+  [0;34mmash_db             : [0;32mnull[0m
+
+[1mProfile options[0m
+  [0;34mprofile_cache_dir   : [0;32m/home/phemarajata/wf-paired-end-illumina-assembly-gcb/assets/.cache[0m
+
+[1mMax job request options[0m
+  [0;34mmax_cpus            : [0;32m20[0m
+  [0;34mmax_memory          : [0;32m56.GB[0m
+  [0;34mmax_time            : [0;32m48.h[0m
+
+[1mGeneric options[0m
+  [0;34mtracedir            : [0;32m/home/phemarajata/Downloads/sra_reads/my-results/pipeline_info[0m
+  [0;34mprocess_log_dir     : [0;32m/home/phemarajata/Downloads/sra_reads/my-results/pipeline_info/process_logs[0m
+  [0;34mqc_filecheck_log_dir: [0;32m/home/phemarajata/Downloads/sra_reads/my-results/pipeline_info/qc_file_checks[0m
+
+[1mOther parameters[0m
+  [0;34mschema_ignore_params: [0;32mfilter_blast_bitscore,filter_blast_column,min_filesize_filtered_blastn,min_filesize_blastn_output,min_filesize_blastn_db,min_filesize_extracted_ssu_file,min_filesize_renamed_ssu_file,genbank_search_type,genbank_query_qualifier,genbank_query_feature,genbank_query,min_filesize_annotated_genbank,min_filesize_binary_se_alignment,min_filesize_final_assembly,min_filesize_polished_assembly,min_filesize_binary_pe_alignment,min_filesize_filtered_assembly,filter_contigs_no_sort,filter_contigs_deflines,filter_contigs_keep_low_complexity,filter_contigs_length,filter_contigs_gcskew,filter_contigs_coverage,min_filesize_raw_assembly,min_filesize_non_overlapping_fastq,min_filesize_fastq_adapters_removed,min_filesize_adapters,min_filesize_fastq_phix_removed,min_filesize_phix_genome,min_filesize_fastq_input,workflows,available_workflows,max_retry,bigdata,logpath,qc_filecheck_log_dir,process_log_dir,kraken1_db,kraken2_db,blast_db,polish_corrections,skesa_allow_snps,skesa_min_contig_length,skesa_max_snp_length,skesa_fraction,skesa_steps,skesa_vector_percent,skesa_kmer_length,excel_sheet_name,merge_lanes,sge_high_memory,sge_options,sge_queue_size,sge_queue,sge_penv,singularity_cache,sge_process_time,gtdbtk_pplacer_scratch,gtdbtk_min_perc_aa,gtdbtk_pplacer_cpus,gtdbtk_min_af,depth,genome_size,busco_config,adapter_reference,phix_reference,spades_mode,spades_kmer_sizes,validationSchemaIgnoreParams,validationShowHiddenParams,validation-schema-ignore-params,validation-show-hidden-params,mash_db,min_filesize_sra_human_scrubber_db_file,trimmomatic_keep_both_reads,trimmomatic_palindrome_clip_threshold,trimmomatic_simple_clip_threshold,trimmomatic_required_quality,trimmomatic_trailing_quality,trimmomatic_leading_quality,trimmomatic_min_length,trimmomatic_min_adapter_length,trimmomatic_seed_mismatches,trimmomatic_window_size,trimmomatic_phred,create_excel_outputs,rdp_phylomarker,rdp_output_format,min_filesize_rdp_output,ASSEMBLY:READ_CLASSIFY_KRAKEN_ONE,ASSEMBLY:ASSEMBLE_CONTIGS:ASSEMBLE_CONTIGS_SPADES,ASSEMBLY:READ_CLASSIFY_KRAKEN_ONE,ASSEMBLY:ASSEMBLE_CONTIGS:ASSEMBLE_CONTIGS_SKESA,min_filesize_checkm2_report,cat_db,min_filesize_cat_output,download_cat_db,trim_reads_tool,subsample_tool,seqtk_seed,seqkit_seed[0m
+
+!! Only displaying parameters that differ from the pipeline defaults !!
+-[2m----------------------------------------------------[0m-
+If you use bacterial-genomics/wf-paired-end-illumina-assembly for your analysis please cite:
+
+* The nf-core framework
+  https://doi.org/10.1038/s41587-020-0439-x
+
+* Software dependencies
+  https://github.com/bacterial-genomics/wf-paired-end-illumina-assembly/blob/main/CITATIONS.md
+-[2m----------------------------------------------------[0m-
+Jul-04 20:24:33.823 [main] WARN  nextflow.Nextflow - Found unexpected parameters:
+* --checkm2_cache_dir: /home/phemarajata/.nextflow_cache/checkm2
+* --kraken_cache_dir: /home/phemarajata/.nextflow_cache/kraken
+* --blast_cache_dir: /home/phemarajata/.nextflow_cache/blast
+* --database_cache_dir: /home/phemarajata/.nextflow_cache/databases
+* --skip_kraken: true
+Jul-04 20:24:33.823 [main] INFO  nextflow.Nextflow - - [2mIgnore this warning: params.schema_ignore_params = "checkm2_cache_dir,kraken_cache_dir,blast_cache_dir,database_cache_dir,skip_kraken" [0m
+Jul-04 20:24:47.924 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:INFILE_HANDLING_UNIX` matches process ASSEMBLY:INFILE_HANDLING_UNIX
+Jul-04 20:24:47.932 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: local
+Jul-04 20:24:47.932 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jul-04 20:24:47.936 [main] DEBUG nextflow.executor.Executor - [warm up] executor > local
+Jul-04 20:24:47.939 [main] DEBUG n.processor.LocalPollingMonitor - Creating local task monitor for executor 'local' > cpus=20; memory=56 GB; capacity=10; pollInterval=100ms; dumpInterval=5m
+Jul-04 20:24:47.940 [main] DEBUG n.processor.TaskPollingMonitor - >>> barrier register (monitor: local)
+Jul-04 20:24:47.952 [main] DEBUG nextflow.processor.TaskProcessor - Creating process 'ASSEMBLY:INFILE_HANDLING_UNIX': maxForks=0; fair=false; array=0
+Jul-04 20:24:48.004 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:CALC_STATS_INPUT_FQ_SEQKIT` matches process ASSEMBLY:CALC_STATS_INPUT_FQ_SEQKIT
+Jul-04 20:24:48.007 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: local
+Jul-04 20:24:48.007 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jul-04 20:24:48.008 [main] DEBUG nextflow.processor.TaskProcessor - Creating process 'ASSEMBLY:CALC_STATS_INPUT_FQ_SEQKIT': maxForks=0; fair=false; array=0
+Jul-04 20:24:48.018 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: local
+Jul-04 20:24:48.019 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jul-04 20:24:48.019 [main] DEBUG nextflow.processor.TaskProcessor - Creating process 'ASSEMBLY:VALIDATE_FASTQ_SEQFU': maxForks=0; fair=false; array=0
+Jul-04 20:24:48.960 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_medium` matches labels `process_medium` for process with name ASSEMBLY:HOST_REMOVAL:REMOVE_HOST_SRA_HUMAN_SCRUBBER
+Jul-04 20:24:48.960 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:REMOVE_HOST_SRA_HUMAN_SCRUBBER` matches process ASSEMBLY:HOST_REMOVAL:REMOVE_HOST_SRA_HUMAN_SCRUBBER
+Jul-04 20:24:48.962 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: local
+Jul-04 20:24:48.962 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jul-04 20:24:48.963 [main] DEBUG nextflow.processor.TaskProcessor - Creating process 'ASSEMBLY:HOST_REMOVAL:REMOVE_HOST_SRA_HUMAN_SCRUBBER': maxForks=0; fair=false; array=0
+Jul-04 20:24:48.973 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:CALC_STATS_SCRUB_REMOVED_FQ_SEQKIT` matches process ASSEMBLY:HOST_REMOVAL:CALC_STATS_SCRUB_REMOVED_FQ_SEQKIT
+Jul-04 20:24:48.975 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: local
+Jul-04 20:24:48.975 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jul-04 20:24:48.975 [main] DEBUG nextflow.processor.TaskProcessor - Creating process 'ASSEMBLY:HOST_REMOVAL:CALC_STATS_SCRUB_REMOVED_FQ_SEQKIT': maxForks=0; fair=false; array=0
+Jul-04 20:24:48.982 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_high` matches labels `process_high` for process with name ASSEMBLY:HOST_REMOVAL:REMOVE_BROKEN_PAIRS_BBTOOLS_REPAIR
+Jul-04 20:24:48.982 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:REMOVE_BROKEN_PAIRS_BBTOOLS_REPAIR` matches process ASSEMBLY:HOST_REMOVAL:REMOVE_BROKEN_PAIRS_BBTOOLS_REPAIR
+Jul-04 20:24:48.984 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: local
+Jul-04 20:24:48.984 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jul-04 20:24:48.985 [main] DEBUG nextflow.processor.TaskProcessor - Creating process 'ASSEMBLY:HOST_REMOVAL:REMOVE_BROKEN_PAIRS_BBTOOLS_REPAIR': maxForks=0; fair=false; array=0
+Jul-04 20:24:48.993 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:CALC_STATS_REPAIR_REMOVED_FQ_SEQKIT` matches process ASSEMBLY:HOST_REMOVAL:CALC_STATS_REPAIR_REMOVED_FQ_SEQKIT
+Jul-04 20:24:48.994 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: local
+Jul-04 20:24:48.995 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jul-04 20:24:48.995 [main] DEBUG nextflow.processor.TaskProcessor - Creating process 'ASSEMBLY:HOST_REMOVAL:CALC_STATS_REPAIR_REMOVED_FQ_SEQKIT': maxForks=0; fair=false; array=0
+Jul-04 20:24:49.004 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_high` matches labels `process_high` for process with name ASSEMBLY:HOST_REMOVAL:REMOVE_HOST_HOSTILE
+Jul-04 20:24:49.004 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:REMOVE_HOST_HOSTILE` matches process ASSEMBLY:HOST_REMOVAL:REMOVE_HOST_HOSTILE
+Jul-04 20:24:49.007 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: local
+Jul-04 20:24:49.007 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jul-04 20:24:49.007 [main] DEBUG nextflow.processor.TaskProcessor - Creating process 'ASSEMBLY:HOST_REMOVAL:REMOVE_HOST_HOSTILE': maxForks=0; fair=false; array=0
+Jul-04 20:24:49.021 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:CALC_STATS_HOSTILE_REMOVED_FQ_SEQKIT` matches process ASSEMBLY:HOST_REMOVAL:CALC_STATS_HOSTILE_REMOVED_FQ_SEQKIT
+Jul-04 20:24:49.023 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: local
+Jul-04 20:24:49.023 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jul-04 20:24:49.024 [main] DEBUG nextflow.processor.TaskProcessor - Creating process 'ASSEMBLY:HOST_REMOVAL:CALC_STATS_HOSTILE_REMOVED_FQ_SEQKIT': maxForks=0; fair=false; array=0
+Jul-04 20:24:49.034 [main] WARN  nextflow.script.ScriptBinding - Access to undefined parameter `subsample` -- Initialise it to a default value eg. `params.subsample = some_value`
+Jul-04 20:24:49.041 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_high` matches labels `process_high` for process with name ASSEMBLY:REMOVE_PHIX_BBDUK
+Jul-04 20:24:49.041 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:REMOVE_PHIX_BBDUK` matches process ASSEMBLY:REMOVE_PHIX_BBDUK
+Jul-04 20:24:49.043 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: local
+Jul-04 20:24:49.043 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jul-04 20:24:49.044 [main] DEBUG nextflow.processor.TaskProcessor - Creating process 'ASSEMBLY:REMOVE_PHIX_BBDUK': maxForks=0; fair=false; array=0
+Jul-04 20:24:49.056 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:CALC_STATS_NOPHIX_FQ_SEQKIT` matches process ASSEMBLY:CALC_STATS_NOPHIX_FQ_SEQKIT
+Jul-04 20:24:49.058 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: local
+Jul-04 20:24:49.058 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jul-04 20:24:49.058 [main] DEBUG nextflow.processor.TaskProcessor - Creating process 'ASSEMBLY:CALC_STATS_NOPHIX_FQ_SEQKIT': maxForks=0; fair=false; array=0
+Jul-04 20:24:49.068 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_high` matches labels `process_high` for process with name ASSEMBLY:TRIM_READS_TRIMMOMATIC
+Jul-04 20:24:49.069 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:TRIM_READS_TRIMMOMATIC` matches process ASSEMBLY:TRIM_READS_TRIMMOMATIC
+Jul-04 20:24:49.071 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: local
+Jul-04 20:24:49.071 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jul-04 20:24:49.071 [main] DEBUG nextflow.processor.TaskProcessor - Creating process 'ASSEMBLY:TRIM_READS_TRIMMOMATIC': maxForks=0; fair=false; array=0
+Jul-04 20:24:49.082 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:CALC_STATS_TRIM_FQ_SEQKIT` matches process ASSEMBLY:CALC_STATS_TRIM_FQ_SEQKIT
+Jul-04 20:24:49.083 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: local
+Jul-04 20:24:49.084 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jul-04 20:24:49.084 [main] DEBUG nextflow.processor.TaskProcessor - Creating process 'ASSEMBLY:CALC_STATS_TRIM_FQ_SEQKIT': maxForks=0; fair=false; array=0
+Jul-04 20:24:49.094 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_high` matches labels `process_high` for process with name ASSEMBLY:OVERLAP_PAIRED_READS_FLASH
+Jul-04 20:24:49.094 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:OVERLAP_PAIRED_READS_FLASH` matches process ASSEMBLY:OVERLAP_PAIRED_READS_FLASH
+Jul-04 20:24:49.096 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: local
+Jul-04 20:24:49.096 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jul-04 20:24:49.097 [main] DEBUG nextflow.processor.TaskProcessor - Creating process 'ASSEMBLY:OVERLAP_PAIRED_READS_FLASH': maxForks=0; fair=false; array=0
+Jul-04 20:24:49.111 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:CALC_STATS_CLEANEDREADS_FQ_SEQKIT` matches process ASSEMBLY:CALC_STATS_CLEANEDREADS_FQ_SEQKIT
+Jul-04 20:24:49.113 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: local
+Jul-04 20:24:49.113 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jul-04 20:24:49.114 [main] DEBUG nextflow.processor.TaskProcessor - Creating process 'ASSEMBLY:CALC_STATS_CLEANEDREADS_FQ_SEQKIT': maxForks=0; fair=false; array=0
+Jul-04 20:24:49.125 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_medium` matches labels `process_medium` for process with name ASSEMBLY:KRAKEN1_DB_PREPARATION_UNIX
+Jul-04 20:24:49.126 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:KRAKEN1_DB_PREPARATION_UNIX` matches process ASSEMBLY:KRAKEN1_DB_PREPARATION_UNIX
+Jul-04 20:24:49.128 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: local
+Jul-04 20:24:49.128 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jul-04 20:24:49.129 [main] DEBUG nextflow.processor.TaskProcessor - Creating process 'ASSEMBLY:KRAKEN1_DB_PREPARATION_UNIX': maxForks=0; fair=false; array=0
+Jul-04 20:24:49.139 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_high` matches labels `process_high` for process with name ASSEMBLY:READ_CLASSIFY_KRAKEN_ONE
+Jul-04 20:24:49.140 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:READ_CLASSIFY_KRAKEN_ONE` matches process ASSEMBLY:READ_CLASSIFY_KRAKEN_ONE
+Jul-04 20:24:49.141 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:ASSEMBLY:READ_CLASSIFY_KRAKEN_ONE` matches process ASSEMBLY:READ_CLASSIFY_KRAKEN_ONE
+Jul-04 20:24:49.144 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: local
+Jul-04 20:24:49.144 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jul-04 20:24:49.145 [main] DEBUG nextflow.processor.TaskProcessor - Creating process 'ASSEMBLY:READ_CLASSIFY_KRAKEN_ONE': maxForks=0; fair=false; array=0
+Jul-04 20:24:49.155 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_medium` matches labels `process_medium` for process with name ASSEMBLY:KRAKEN2_DB_PREPARATION_UNIX
+Jul-04 20:24:49.156 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:KRAKEN2_DB_PREPARATION_UNIX` matches process ASSEMBLY:KRAKEN2_DB_PREPARATION_UNIX
+Jul-04 20:24:49.157 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: local
+Jul-04 20:24:49.157 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jul-04 20:24:49.157 [main] DEBUG nextflow.processor.TaskProcessor - Creating process 'ASSEMBLY:KRAKEN2_DB_PREPARATION_UNIX': maxForks=0; fair=false; array=0
+Jul-04 20:24:49.162 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_high` matches labels `process_high` for process with name ASSEMBLY:READ_CLASSIFY_KRAKEN_TWO
+Jul-04 20:24:49.163 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:READ_CLASSIFY_KRAKEN_TWO` matches process ASSEMBLY:READ_CLASSIFY_KRAKEN_TWO
+Jul-04 20:24:49.163 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:ASSEMBLY:READ_CLASSIFY_KRAKEN_TWO` matches process ASSEMBLY:READ_CLASSIFY_KRAKEN_TWO
+Jul-04 20:24:49.164 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: local
+Jul-04 20:24:49.164 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jul-04 20:24:49.164 [main] DEBUG nextflow.processor.TaskProcessor - Creating process 'ASSEMBLY:READ_CLASSIFY_KRAKEN_TWO': maxForks=0; fair=false; array=0
+Jul-04 20:24:49.174 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_high` matches labels `process_high` for process with name ASSEMBLY:ASSEMBLE_CONTIGS:ASSEMBLE_CONTIGS_SPADES
+Jul-04 20:24:49.175 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:ASSEMBLE_CONTIGS_SPADES` matches process ASSEMBLY:ASSEMBLE_CONTIGS:ASSEMBLE_CONTIGS_SPADES
+Jul-04 20:24:49.175 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:ASSEMBLY:ASSEMBLE_CONTIGS:ASSEMBLE_CONTIGS_SPADES` matches process ASSEMBLY:ASSEMBLE_CONTIGS:ASSEMBLE_CONTIGS_SPADES
+Jul-04 20:24:49.176 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: local
+Jul-04 20:24:49.177 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jul-04 20:24:49.177 [main] DEBUG nextflow.processor.TaskProcessor - Creating process 'ASSEMBLY:ASSEMBLE_CONTIGS:ASSEMBLE_CONTIGS_SPADES': maxForks=0; fair=false; array=0
+Jul-04 20:24:49.185 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:FILTER_CONTIGS_BIOPYTHON` matches process ASSEMBLY:ASSEMBLE_CONTIGS:FILTER_CONTIGS_BIOPYTHON
+Jul-04 20:24:49.187 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: local
+Jul-04 20:24:49.187 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jul-04 20:24:49.188 [main] DEBUG nextflow.processor.TaskProcessor - Creating process 'ASSEMBLY:ASSEMBLE_CONTIGS:FILTER_CONTIGS_BIOPYTHON': maxForks=0; fair=false; array=0
+Jul-04 20:24:49.195 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_high` matches labels `process_high` for process with name ASSEMBLY:ASSEMBLE_CONTIGS:POLISH_ASSEMBLY_BWA_PILON
+Jul-04 20:24:49.196 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:POLISH_ASSEMBLY_BWA_PILON` matches process ASSEMBLY:ASSEMBLE_CONTIGS:POLISH_ASSEMBLY_BWA_PILON
+Jul-04 20:24:49.197 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: local
+Jul-04 20:24:49.198 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jul-04 20:24:49.198 [main] DEBUG nextflow.processor.TaskProcessor - Creating process 'ASSEMBLY:ASSEMBLE_CONTIGS:POLISH_ASSEMBLY_BWA_PILON': maxForks=0; fair=false; array=0
+Jul-04 20:24:49.215 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:EXTRACT_READ_ALIGNMENT_DEPTHS_BEDTOOLS` matches process ASSEMBLY:EXTRACT_READ_ALIGNMENT_DEPTHS_BEDTOOLS
+Jul-04 20:24:49.217 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: local
+Jul-04 20:24:49.217 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jul-04 20:24:49.217 [main] DEBUG nextflow.processor.TaskProcessor - Creating process 'ASSEMBLY:EXTRACT_READ_ALIGNMENT_DEPTHS_BEDTOOLS': maxForks=0; fair=false; array=0
+Jul-04 20:24:49.224 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:MLST_MLST` matches process ASSEMBLY:MLST_MLST
+Jul-04 20:24:49.226 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: local
+Jul-04 20:24:49.226 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jul-04 20:24:49.226 [main] DEBUG nextflow.processor.TaskProcessor - Creating process 'ASSEMBLY:MLST_MLST': maxForks=0; fair=false; array=0
+Jul-04 20:24:49.232 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_high` matches labels `process_high` for process with name ASSEMBLY:ANNOTATE_PROKKA
+Jul-04 20:24:49.233 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:ANNOTATE_PROKKA` matches process ASSEMBLY:ANNOTATE_PROKKA
+Jul-04 20:24:49.234 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: local
+Jul-04 20:24:49.234 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jul-04 20:24:49.235 [main] DEBUG nextflow.processor.TaskProcessor - Creating process 'ASSEMBLY:ANNOTATE_PROKKA': maxForks=0; fair=false; array=0
+Jul-04 20:24:49.246 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: local
+Jul-04 20:24:49.246 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jul-04 20:24:49.246 [main] DEBUG nextflow.processor.TaskProcessor - Creating process 'ASSEMBLY:EXTRACT_16S_BIOPYTHON': maxForks=0; fair=false; array=0
+Jul-04 20:24:49.252 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:EXTRACT_16S_BARRNAP` matches process ASSEMBLY:EXTRACT_16S_BARRNAP
+Jul-04 20:24:49.254 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: local
+Jul-04 20:24:49.254 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jul-04 20:24:49.255 [main] DEBUG nextflow.processor.TaskProcessor - Creating process 'ASSEMBLY:EXTRACT_16S_BARRNAP': maxForks=0; fair=false; array=0
+Jul-04 20:24:49.264 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_medium` matches labels `process_medium` for process with name ASSEMBLY:BLAST_DB_PREPARATION_UNIX
+Jul-04 20:24:49.266 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: local
+Jul-04 20:24:49.266 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jul-04 20:24:49.266 [main] DEBUG nextflow.processor.TaskProcessor - Creating process 'ASSEMBLY:BLAST_DB_PREPARATION_UNIX': maxForks=0; fair=false; array=0
+Jul-04 20:24:49.272 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:ALIGN_16S_BLAST` matches process ASSEMBLY:ALIGN_16S_BLAST
+Jul-04 20:24:49.274 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: local
+Jul-04 20:24:49.274 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jul-04 20:24:49.275 [main] DEBUG nextflow.processor.TaskProcessor - Creating process 'ASSEMBLY:ALIGN_16S_BLAST': maxForks=0; fair=false; array=0
+Jul-04 20:24:49.284 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_medium` matches labels `process_medium` for process with name ASSEMBLY:CLASSIFY_16S_RDP
+Jul-04 20:24:49.284 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:CLASSIFY_16S_RDP` matches process ASSEMBLY:CLASSIFY_16S_RDP
+Jul-04 20:24:49.286 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: local
+Jul-04 20:24:49.286 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jul-04 20:24:49.286 [main] DEBUG nextflow.processor.TaskProcessor - Creating process 'ASSEMBLY:CLASSIFY_16S_RDP': maxForks=0; fair=false; array=0
+Jul-04 20:24:49.297 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:BEST_16S_BLASTN_BITSCORE_TAXON_PYTHON` matches process ASSEMBLY:BEST_16S_BLASTN_BITSCORE_TAXON_PYTHON
+Jul-04 20:24:49.299 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: local
+Jul-04 20:24:49.299 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jul-04 20:24:49.300 [main] DEBUG nextflow.processor.TaskProcessor - Creating process 'ASSEMBLY:BEST_16S_BLASTN_BITSCORE_TAXON_PYTHON': maxForks=0; fair=false; array=0
+Jul-04 20:24:49.312 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_low` matches labels `process_low` for process with name ASSEMBLY:ASSEMBLY_ASSESSMENT:QA_ASSEMBLY_QUAST
+Jul-04 20:24:49.313 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:QA_ASSEMBLY_QUAST` matches process ASSEMBLY:ASSEMBLY_ASSESSMENT:QA_ASSEMBLY_QUAST
+Jul-04 20:24:49.314 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: local
+Jul-04 20:24:49.314 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jul-04 20:24:49.315 [main] DEBUG nextflow.processor.TaskProcessor - Creating process 'ASSEMBLY:ASSEMBLY_ASSESSMENT:QA_ASSEMBLY_QUAST': maxForks=0; fair=false; array=0
+Jul-04 20:24:49.324 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:CALCULATE_COVERAGE_UNIX` matches process ASSEMBLY:ASSEMBLY_ASSESSMENT:CALCULATE_COVERAGE_UNIX
+Jul-04 20:24:49.325 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: local
+Jul-04 20:24:49.325 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jul-04 20:24:49.325 [main] DEBUG nextflow.processor.TaskProcessor - Creating process 'ASSEMBLY:ASSEMBLY_ASSESSMENT:CALCULATE_COVERAGE_UNIX': maxForks=0; fair=false; array=0
+Jul-04 20:24:49.347 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_medium` matches labels `process_medium` for process with name ASSEMBLY:ASSEMBLY_ASSESSMENT:QA_ASSEMBLY_GTDBTK
+Jul-04 20:24:49.348 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:QA_ASSEMBLY_GTDBTK` matches process ASSEMBLY:ASSEMBLY_ASSESSMENT:QA_ASSEMBLY_GTDBTK
+Jul-04 20:24:49.350 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: local
+Jul-04 20:24:49.350 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jul-04 20:24:49.350 [main] DEBUG nextflow.processor.TaskProcessor - Creating process 'ASSEMBLY:ASSEMBLY_ASSESSMENT:QA_ASSEMBLY_GTDBTK': maxForks=0; fair=false; array=0
+Jul-04 20:24:49.361 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_high` matches labels `process_high` for process with name ASSEMBLY:ASSEMBLY_ASSESSMENT:CLASSIFY_CONTIGS_CAT
+Jul-04 20:24:49.362 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:CLASSIFY_CONTIGS_CAT` matches process ASSEMBLY:ASSEMBLY_ASSESSMENT:CLASSIFY_CONTIGS_CAT
+Jul-04 20:24:49.363 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: local
+Jul-04 20:24:49.363 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jul-04 20:24:49.363 [main] DEBUG nextflow.processor.TaskProcessor - Creating process 'ASSEMBLY:ASSEMBLY_ASSESSMENT:CLASSIFY_CONTIGS_CAT': maxForks=0; fair=false; array=0
+Jul-04 20:24:49.375 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_medium` matches labels `process_medium` for process with name ASSEMBLY:ASSEMBLY_ASSESSMENT:CHECKM2_DB_PREPARATION_UNIX
+Jul-04 20:24:49.377 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: local
+Jul-04 20:24:49.377 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jul-04 20:24:49.377 [main] DEBUG nextflow.processor.TaskProcessor - Creating process 'ASSEMBLY:ASSEMBLY_ASSESSMENT:CHECKM2_DB_PREPARATION_UNIX': maxForks=0; fair=false; array=0
+Jul-04 20:24:49.381 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_high` matches labels `process_high` for process with name ASSEMBLY:ASSEMBLY_ASSESSMENT:ASSESS_ASSEMBLY_CHECKM2
+Jul-04 20:24:49.382 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:ASSESS_ASSEMBLY_CHECKM2` matches process ASSEMBLY:ASSEMBLY_ASSESSMENT:ASSESS_ASSEMBLY_CHECKM2
+Jul-04 20:24:49.383 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: local
+Jul-04 20:24:49.383 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Jul-04 20:24:49.383 [main] DEBUG nextflow.processor.TaskProcessor - Creating process 'ASSEMBLY:ASSEMBLY_ASSESSMENT:ASSESS_ASSEMBLY_CHECKM2': maxForks=0; fair=false; array=0
+Jul-04 20:24:49.404 [main] DEBUG nextflow.Session - Workflow process names [dsl2]: CALC_STATS_REPAIR_REMOVED_FQ_SEQKIT, BUSCO, ASSEMBLY:ASSEMBLE_CONTIGS:ASSEMBLE_CONTIGS_SPADES, CAT_DB_PREPARATION_UNIX, ESTIMATE_ORIGINAL_INPUT_DEPTH_UNIX, ASSEMBLY:HOST_REMOVAL:CALC_STATS_SCRUB_REMOVED_FQ_SEQKIT, ASSEMBLY:EXTRACT_16S_BIOPYTHON, MLST_MLST, ASSEMBLY:VALIDATE_FASTQ_SEQFU, CALC_STATS_INPUT_FQ_SEQKIT, COUNT_TOTAL_BP_INPUT_READS_SEQTK, ASSEMBLY:ASSEMBLE_CONTIGS:FILTER_CONTIGS_BIOPYTHON, TRIM_READS_FASTP, SUBSAMPLE_READS_TO_DEPTH_SEQKIT, EXTRACT_READ_ALIGNMENT_DEPTHS_BEDTOOLS, ASSEMBLY:INFILE_HANDLING_UNIX, ASSEMBLY:EXTRACT_16S_BARRNAP, REMOVE_BROKEN_PAIRS_BBTOOLS_REPAIR, ASSEMBLY:TRIM_READS_TRIMMOMATIC, ASSESS_ASSEMBLY_CHECKM2, CHECKM2_DB_PREPARATION_UNIX, QA_ASSEMBLY_GTDBTK, ASSEMBLE_CONTIGS_SKESA, ASSEMBLY:CALC_STATS_TRIM_FQ_SEQKIT, ASSEMBLY:CALC_STATS_CLEANEDREADS_FQ_SEQKIT, ASSEMBLY:HOST_REMOVAL:REMOVE_HOST_HOSTILE, REMOVE_PHIX_BBDUK, CALC_STATS_TRIM_FQ_SEQKIT, DOWNLOAD_CAT_DB_UNIX, ASSEMBLY:BLAST_DB_PREPARATION_UNIX, ASSEMBLY:BEST_16S_BLASTN_BITSCORE_TAXON_PYTHON, ESTIMATE_GENOME_SIZE_KMC, ASSEMBLY:KRAKEN2_DB_PREPARATION_UNIX, ASSEMBLY:HOST_REMOVAL:REMOVE_BROKEN_PAIRS_BBTOOLS_REPAIR, UPDATE_DB_SRA_HUMAN_SCRUBBER, POLISH_ASSEMBLY_BWA_PILON, SUBSAMPLE_READS_TO_DEPTH_SEQTK, ASSEMBLY:ASSEMBLY_ASSESSMENT:CLASSIFY_CONTIGS_CAT, FILTER_CONTIGS_BIOPYTHON, OVERLAP_PAIRED_READS_FLASH, CLASSIFY_CONTIGS_CAT, ASSEMBLE_CONTIGS_SPADES, ALIGN_16S_BLAST, BEST_16S_BLASTN_BITSCORE_TAXON_PYTHON, ASSEMBLY:HOST_REMOVAL:CALC_STATS_HOSTILE_REMOVED_FQ_SEQKIT, ASSEMBLY:ANNOTATE_PROKKA, ASSEMBLY:CLASSIFY_16S_RDP, CALC_STATS_SCRUB_REMOVED_FQ_SEQKIT, QA_ASSEMBLY_BUSCO, REMOVE_HOST_SRA_HUMAN_SCRUBBER, INFILE_HANDLING_UNIX, ASSEMBLY:REMOVE_PHIX_BBDUK, ASSEMBLY:CALC_STATS_INPUT_FQ_SEQKIT, CALC_STATS_CLEANEDREADS_FQ_SEQKIT, CALCULATE_COVERAGE_UNIX, ASSEMBLY:ASSEMBLY_ASSESSMENT:QA_ASSEMBLY_GTDBTK, ASSEMBLY:ASSEMBLY_ASSESSMENT:CHECKM2_DB_PREPARATION_UNIX, TRIM_READS_TRIMMOMATIC, ASSEMBLY:ASSEMBLY_ASSESSMENT:QA_ASSEMBLY_QUAST, VALIDATE_FASTQ_SEQFU, ASSEMBLY:READ_CLASSIFY_KRAKEN_ONE, QA_ASSEMBLY_QUAST, ASSEMBLY:HOST_REMOVAL:REMOVE_HOST_SRA_HUMAN_SCRUBBER, EXTRACT_16S_BARRNAP, SPLIT_MULTIFASTA_ASSEMBLY_BIOPYTHON, GTDBTK_CLASSIFYWF, EXTRACT_16S_BIOPYTHON, CALCULATE_METRICS_FASTQ_SEQTK, MAP_CONTIGS_BWA, CALC_STATS_DOWNSAMPLE_FQ_SEQTK, ASSEMBLY:KRAKEN1_DB_PREPARATION_UNIX, ASSEMBLY:CALC_STATS_NOPHIX_FQ_SEQKIT, ASSEMBLY:HOST_REMOVAL:CALC_STATS_REPAIR_REMOVED_FQ_SEQKIT, KRAKEN2_DB_PREPARATION_UNIX, READ_CLASSIFY_KRAKEN_ONE, CALCULATE_METRICS_FASTQ_SEQKIT, ASSEMBLY:ASSEMBLY_ASSESSMENT:ASSESS_ASSEMBLY_CHECKM2, CALC_STATS_DOWNSAMPLE_FQ_SEQKIT, GTDBTK_DB_PREPARATION_UNIX, KRAKEN1_DB_PREPARATION_UNIX, ASSEMBLY:EXTRACT_READ_ALIGNMENT_DEPTHS_BEDTOOLS, BLAST_DB_PREPARATION_UNIX, REMOVE_HOST_HOSTILE, CALC_STATS_NOPHIX_FQ_SEQKIT, ASSEMBLY:ASSEMBLY_ASSESSMENT:CALCULATE_COVERAGE_UNIX, CALC_STATS_HOSTILE_REMOVED_FQ_SEQKIT, CONVERT_TSV_TO_EXCEL_PYTHON, READ_CLASSIFY_KRAKEN_TWO, COUNT_TOTAL_BP_INPUT_READS_SEQKIT, ASSEMBLY:ALIGN_16S_BLAST, ASSEMBLY:OVERLAP_PAIRED_READS_FLASH, CREATE_EXCEL_RUN_SUMMARY_PYTHON, ASSEMBLY:ASSEMBLE_CONTIGS:POLISH_ASSEMBLY_BWA_PILON, ASSEMBLY:READ_CLASSIFY_KRAKEN_TWO, BUSCO_DB_PREPARATION_UNIX, CLASSIFY_16S_RDP, ASSEMBLY:MLST_MLST, ANNOTATE_PROKKA
+Jul-04 20:24:49.436 [main] WARN  nextflow.Session - There's no process matching config selector: ASSEMBLY:ASSEMBLE_CONTIGS:ASSEMBLE_CONTIGS_SKESA -- Did you mean: ASSEMBLY:ASSEMBLE_CONTIGS:ASSEMBLE_CONTIGS_SPADES?
+Jul-04 20:24:49.437 [main] WARN  nextflow.Session - There's no process matching config selector: ASSESS_ASSEMBLY_QUAST
+Jul-04 20:24:49.437 [main] WARN  nextflow.Session - There's no process matching config selector: CLASSIFY_GTDBTK
+Jul-04 20:24:49.437 [main] WARN  nextflow.Session - There's no process matching config selector: CLASSIFY_CAT
+Jul-04 20:24:49.437 [main] WARN  nextflow.Session - There's no process matching config selector: ASSESS_ASSEMBLY_BUSCO
+Jul-04 20:24:49.437 [main] WARN  nextflow.Session - There's no process matching config selector: REMOVE_HOST_READS_SRA_HUMAN_SCRUBBER
+Jul-04 20:24:49.437 [main] WARN  nextflow.Session - There's no process matching config selector: REMOVE_HOST_READS_BBTOOLS_BBDUK
+Jul-04 20:24:49.437 [main] WARN  nextflow.Session - There's no process matching config selector: FASTQC
+Jul-04 20:24:49.437 [main] WARN  nextflow.Session - There's no process matching config selector: MULTIQC
+Jul-04 20:24:49.437 [main] WARN  nextflow.Session - There's no process matching config selector: SUBSAMPLE_READS_SEQTK
+Jul-04 20:24:49.437 [main] WARN  nextflow.Session - There's no process matching config selector: SUBSAMPLE_READS_SEQKIT
+Jul-04 20:24:49.439 [main] DEBUG nextflow.Session - Igniting dataflow network (66)
+Jul-04 20:24:49.445 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > ASSEMBLY:INFILE_HANDLING_UNIX
+Jul-04 20:24:49.445 [PathVisitor-1] DEBUG nextflow.file.PathVisitor - files for syntax: glob; folder: /home/phemarajata/Downloads/sra_reads/; pattern: *_R{1,2}_*.fastq.gz; options: [checkIfExists:false]
+Jul-04 20:24:49.445 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > ASSEMBLY:CALC_STATS_INPUT_FQ_SEQKIT
+Jul-04 20:24:49.445 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > ASSEMBLY:VALIDATE_FASTQ_SEQFU
+Jul-04 20:24:49.445 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > ASSEMBLY:HOST_REMOVAL:REMOVE_HOST_SRA_HUMAN_SCRUBBER
+Jul-04 20:24:49.445 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > ASSEMBLY:HOST_REMOVAL:CALC_STATS_SCRUB_REMOVED_FQ_SEQKIT
+Jul-04 20:24:49.445 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > ASSEMBLY:HOST_REMOVAL:REMOVE_BROKEN_PAIRS_BBTOOLS_REPAIR
+Jul-04 20:24:49.445 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > ASSEMBLY:HOST_REMOVAL:CALC_STATS_REPAIR_REMOVED_FQ_SEQKIT
+Jul-04 20:24:49.445 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > ASSEMBLY:HOST_REMOVAL:REMOVE_HOST_HOSTILE
+Jul-04 20:24:49.445 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > ASSEMBLY:HOST_REMOVAL:CALC_STATS_HOSTILE_REMOVED_FQ_SEQKIT
+Jul-04 20:24:49.445 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > ASSEMBLY:REMOVE_PHIX_BBDUK
+Jul-04 20:24:49.445 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > ASSEMBLY:CALC_STATS_NOPHIX_FQ_SEQKIT
+Jul-04 20:24:49.445 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > ASSEMBLY:TRIM_READS_TRIMMOMATIC
+Jul-04 20:24:49.445 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > ASSEMBLY:CALC_STATS_TRIM_FQ_SEQKIT
+Jul-04 20:24:49.445 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > ASSEMBLY:OVERLAP_PAIRED_READS_FLASH
+Jul-04 20:24:49.445 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > ASSEMBLY:CALC_STATS_CLEANEDREADS_FQ_SEQKIT
+Jul-04 20:24:49.446 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > ASSEMBLY:KRAKEN1_DB_PREPARATION_UNIX
+Jul-04 20:24:49.446 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > ASSEMBLY:READ_CLASSIFY_KRAKEN_ONE
+Jul-04 20:24:49.446 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > ASSEMBLY:KRAKEN2_DB_PREPARATION_UNIX
+Jul-04 20:24:49.446 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > ASSEMBLY:READ_CLASSIFY_KRAKEN_TWO
+Jul-04 20:24:49.446 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > ASSEMBLY:ASSEMBLE_CONTIGS:ASSEMBLE_CONTIGS_SPADES
+Jul-04 20:24:49.446 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > ASSEMBLY:ASSEMBLE_CONTIGS:FILTER_CONTIGS_BIOPYTHON
+Jul-04 20:24:49.446 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > ASSEMBLY:ASSEMBLE_CONTIGS:POLISH_ASSEMBLY_BWA_PILON
+Jul-04 20:24:49.446 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > ASSEMBLY:EXTRACT_READ_ALIGNMENT_DEPTHS_BEDTOOLS
+Jul-04 20:24:49.446 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > ASSEMBLY:MLST_MLST
+Jul-04 20:24:49.446 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > ASSEMBLY:ANNOTATE_PROKKA
+Jul-04 20:24:49.446 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > ASSEMBLY:EXTRACT_16S_BIOPYTHON
+Jul-04 20:24:49.446 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > ASSEMBLY:EXTRACT_16S_BARRNAP
+Jul-04 20:24:49.446 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > ASSEMBLY:BLAST_DB_PREPARATION_UNIX
+Jul-04 20:24:49.446 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > ASSEMBLY:ALIGN_16S_BLAST
+Jul-04 20:24:49.446 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > ASSEMBLY:CLASSIFY_16S_RDP
+Jul-04 20:24:49.446 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > ASSEMBLY:BEST_16S_BLASTN_BITSCORE_TAXON_PYTHON
+Jul-04 20:24:49.446 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > ASSEMBLY:ASSEMBLY_ASSESSMENT:QA_ASSEMBLY_QUAST
+Jul-04 20:24:49.446 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > ASSEMBLY:ASSEMBLY_ASSESSMENT:CALCULATE_COVERAGE_UNIX
+Jul-04 20:24:49.446 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > ASSEMBLY:ASSEMBLY_ASSESSMENT:QA_ASSEMBLY_GTDBTK
+Jul-04 20:24:49.446 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > ASSEMBLY:ASSEMBLY_ASSESSMENT:CLASSIFY_CONTIGS_CAT
+Jul-04 20:24:49.446 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > ASSEMBLY:ASSEMBLY_ASSESSMENT:CHECKM2_DB_PREPARATION_UNIX
+Jul-04 20:24:49.446 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > ASSEMBLY:ASSEMBLY_ASSESSMENT:ASSESS_ASSEMBLY_CHECKM2
+Jul-04 20:24:49.447 [main] DEBUG nextflow.script.ScriptRunner - Parsed script files:
+  Script_de404a5603b76f3c: /home/phemarajata/wf-paired-end-illumina-assembly-gcb/modules/local/classify_contigs_cat/main.nf
+  Script_2209075874a8c67c: /home/phemarajata/wf-paired-end-illumina-assembly-gcb/modules/local/count_total_bp_input_reads_seqtk/main.nf
+  Script_946e321c830e8988: /home/phemarajata/wf-paired-end-illumina-assembly-gcb/modules/local/remove_broken_pairs_bbtools_repair/main.nf
+  Script_76cb64aaba172b56: /home/phemarajata/wf-paired-end-illumina-assembly-gcb/modules/local/trim_reads_fastp/main.nf
+  Script_6e378198d92358b7: /home/phemarajata/wf-paired-end-illumina-assembly-gcb/modules/local/trim_reads_trimmomatic/main.nf
+  Script_092f137e3264021b: /home/phemarajata/wf-paired-end-illumina-assembly-gcb/modules/local/split_multifasta_assembly_biopython/main.nf
+  Script_fd2a1b885374adbb: /home/phemarajata/wf-paired-end-illumina-assembly-gcb/modules/local/overlap_paired_reads_flash/main.nf
+  Script_0c47aff7e5a3c4c2: /home/phemarajata/wf-paired-end-illumina-assembly-gcb/modules/nf-core/busco/main.nf
+  Script_c9fc0bf520c3a205: /home/phemarajata/wf-paired-end-illumina-assembly-gcb/subworkflows/local/downsampling.nf
+  Script_ac5353ef0045f722: /home/phemarajata/wf-paired-end-illumina-assembly-gcb/modules/local/extract_16S_biopython/main.nf
+  Script_1fcc5c676a3b1923: /home/phemarajata/wf-paired-end-illumina-assembly-gcb/modules/local/gtdbtk_db_preparation_unix/main.nf
+  Script_817d42ce3472c42c: /home/phemarajata/wf-paired-end-illumina-assembly-gcb/modules/local/create_excel_run_summary_python/main.nf
+  Script_a8b52481bc0536ab: /home/phemarajata/wf-paired-end-illumina-assembly-gcb/modules/local/classify_16S_rdp/main.nf
+  Script_7355b6b488dea1f2: /home/phemarajata/wf-paired-end-illumina-assembly-gcb/modules/local/update_db_sra_human_scrubber/main.nf
+  Script_028ee33fad4ecb1e: /home/phemarajata/wf-paired-end-illumina-assembly-gcb/modules/local/calculate_metrics_fastq_seqtk/main.nf
+  Script_a80d11c170654fbf: /home/phemarajata/wf-paired-end-illumina-assembly-gcb/modules/local/assess_assembly_checkm2/main.nf
+  Script_a5006b406faa1a5e: /home/phemarajata/wf-paired-end-illumina-assembly-gcb/modules/local/blast_db_preparation_unix/main.nf
+  Script_7b4b973dc66b2794: /home/phemarajata/wf-paired-end-illumina-assembly-gcb/modules/local/read_classify_kraken/main.nf
+  Script_21a3ec34d87e5dea: /home/phemarajata/wf-paired-end-illumina-assembly-gcb/modules/local/busco_db_preparation_unix/main.nf
+  Script_c2b1f93576355a8d: /home/phemarajata/wf-paired-end-illumina-assembly-gcb/modules/local/estimate_genome_size_kmc/main.nf
+  Script_758bcd2bb43149d2: /home/phemarajata/wf-paired-end-illumina-assembly-gcb/modules/local/estimate_original_input_depth_unix/main.nf
+  Script_aa7d74d6d1e53bc5: /home/phemarajata/wf-paired-end-illumina-assembly-gcb/modules/local/calculate_metrics_fastq_seqkit/main.nf
+  Script_1174f8c286c1a284: /home/phemarajata/wf-paired-end-illumina-assembly-gcb/modules/local/assemble_contigs_skesa/main.nf
+  Script_5dc63d57119f1595: /home/phemarajata/wf-paired-end-illumina-assembly-gcb/modules/local/map_contigs_bwa/main.nf
+  Script_39d31550cc87e07b: /home/phemarajata/wf-paired-end-illumina-assembly-gcb/modules/local/infile_handling_unix/main.nf
+  Script_4624255d0bd28885: /home/phemarajata/wf-paired-end-illumina-assembly-gcb/subworkflows/local/host_removal.nf
+  Script_daab3931d6dbebc6: /home/phemarajata/wf-paired-end-illumina-assembly-gcb/modules/local/convert_tsv_to_excel_python/main.nf
+  Script_ad05a0791493b0cc: /home/phemarajata/wf-paired-end-illumina-assembly-gcb/modules/local/checkm2_db_preparation_unix/main.nf
+  Script_08d585fe29f71251: /home/phemarajata/wf-paired-end-illumina-assembly-gcb/modules/local/annotate_prokka/main.nf
+  Script_5ae774486af0dc0d: /home/phemarajata/wf-paired-end-illumina-assembly-gcb/subworkflows/local/assemble_contigs.nf
+  Script_983e8cbb05a7d867: /home/phemarajata/wf-paired-end-illumina-assembly-gcb/modules/local/cat_db_preparation_unix/main.nf
+  Script_1885f67056022f1b: /home/phemarajata/wf-paired-end-illumina-assembly-gcb/modules/local/polish_assembly_bwa_pilon/main.nf
+  Script_ad8bf332f741d18e: /home/phemarajata/wf-paired-end-illumina-assembly-gcb/subworkflows/local/input_check.nf
+  Script_776e26ce485343c9: /home/phemarajata/wf-paired-end-illumina-assembly-gcb/modules/local/extract_read_alignment_depths_bedtools/main.nf
+  Script_060869596053bac4: /home/phemarajata/wf-paired-end-illumina-assembly-gcb/modules/nf-core/gtdbtk/classifywf/main.nf
+  Script_395a6e9dcc4a7a9a: /home/phemarajata/wf-paired-end-illumina-assembly-gcb/subworkflows/local/assembly_assessment.nf
+  Script_510c5354a2ad6c0c: /home/phemarajata/wf-paired-end-illumina-assembly-gcb/modules/local/download_cat_db_unix/main.nf
+  Script_6168f531a850c2ef: /home/phemarajata/wf-paired-end-illumina-assembly-gcb/modules/local/validate_fastq_seqfu/main.nf
+  Script_fbe3c9a6706b9f74: /home/phemarajata/wf-paired-end-illumina-assembly-gcb/modules/local/remove_host_sra_human_scrubber/main.nf
+  Script_900626211ca7f105: /home/phemarajata/wf-paired-end-illumina-assembly-gcb/modules/local/remove_host_hostile/main.nf
+  Script_4b41a5e3fdea77b8: /home/phemarajata/wf-paired-end-illumina-assembly-gcb/modules/local/best_16S_blastn_bitscore_taxon_python/main.nf
+  Script_10368cfa5cb17975: /home/phemarajata/wf-paired-end-illumina-assembly-gcb/modules/local/mlst_mlst/main.nf
+  Script_bdc59cb72a7cfe5d: /home/phemarajata/wf-paired-end-illumina-assembly-gcb/workflows/assembly.nf
+  Script_a85f47ae157ab1b7: /home/phemarajata/wf-paired-end-illumina-assembly-gcb/modules/local/qa_assembly_quast/main.nf
+  Script_da15d9f50de3c0ec: /home/phemarajata/wf-paired-end-illumina-assembly-gcb/modules/local/kraken1_db_preparation_unix/main.nf
+  Script_c60c7471cc352364: /home/phemarajata/wf-paired-end-illumina-assembly-gcb/modules/local/align_16S_blast/main.nf
+  Script_f0c2dd0562632baf: /home/phemarajata/wf-paired-end-illumina-assembly-gcb/modules/local/extract_16S_barrnap/main.nf
+  Script_81a4a05847076f64: /home/phemarajata/wf-paired-end-illumina-assembly-gcb/modules/local/assemble_contigs_spades/main.nf
+  Script_6ebd7b839066b4d1: /home/phemarajata/wf-paired-end-illumina-assembly-gcb/modules/local/subsample_reads_to_depth_seqkit/main.nf
+  Script_c0c15b8e0c6b1199: /home/phemarajata/wf-paired-end-illumina-assembly-gcb/modules/local/calculate_coverage_unix/main.nf
+  Script_e3436ab466004a16: /home/phemarajata/wf-paired-end-illumina-assembly-gcb/main.nf
+  Script_0ec9ed5fe28e05db: /home/phemarajata/wf-paired-end-illumina-assembly-gcb/modules/local/remove_phix_bbduk/main.nf
+  Script_72e0e9ec1081042b: /home/phemarajata/wf-paired-end-illumina-assembly-gcb/modules/local/kraken2_db_preparation_unix/main.nf
+  Script_3dfff63be75e5bb4: /home/phemarajata/wf-paired-end-illumina-assembly-gcb/modules/local/count_total_bp_input_reads_seqkit/main.nf
+  Script_24e6ca9836a935e7: /home/phemarajata/wf-paired-end-illumina-assembly-gcb/modules/local/read_classify_kraken2/main.nf
+  Script_4257a5df56a96d62: /home/phemarajata/wf-paired-end-illumina-assembly-gcb/modules/local/subsample_reads_to_depth_seqtk/main.nf
+  Script_515456322656c880: /home/phemarajata/wf-paired-end-illumina-assembly-gcb/modules/local/filter_contigs_biopython/main.nf
+Jul-04 20:24:49.447 [main] DEBUG nextflow.script.ScriptRunner - > Awaiting termination 
+Jul-04 20:24:49.447 [main] DEBUG nextflow.Session - Session await
+Jul-04 20:24:49.452 [Actor Thread 14] DEBUG nextflow.file.SortFileCollector - FileCollector temp dir not removed: null
+Jul-04 20:24:49.452 [Actor Thread 21] DEBUG nextflow.file.SortFileCollector - FileCollector temp dir not removed: null
+Jul-04 20:24:49.740 [Actor Thread 39] INFO  nextflow.processor.TaskProcessor - [3e/356e9e] Cached process > ASSEMBLY:CALC_STATS_INPUT_FQ_SEQKIT (SRR11097786)
+Jul-04 20:24:49.740 [Actor Thread 19] INFO  nextflow.processor.TaskProcessor - [4f/885de0] Cached process > ASSEMBLY:VALIDATE_FASTQ_SEQFU (SRR12527876)
+Jul-04 20:24:49.740 [Actor Thread 76] INFO  nextflow.processor.TaskProcessor - [f3/eaba28] Cached process > ASSEMBLY:CALC_STATS_INPUT_FQ_SEQKIT (SRR11097776)
+Jul-04 20:24:49.740 [Actor Thread 44] INFO  nextflow.processor.TaskProcessor - [57/c1f5bb] Cached process > ASSEMBLY:VALIDATE_FASTQ_SEQFU (SRR12527871)
+Jul-04 20:24:49.740 [Actor Thread 61] INFO  nextflow.processor.TaskProcessor - [fb/311abc] Cached process > ASSEMBLY:INFILE_HANDLING_UNIX (SRR11097780)
+Jul-04 20:24:49.740 [Actor Thread 62] INFO  nextflow.processor.TaskProcessor - [b1/9db02f] Cached process > ASSEMBLY:INFILE_HANDLING_UNIX (SRR11097777)
+Jul-04 20:24:49.740 [Actor Thread 70] INFO  nextflow.processor.TaskProcessor - [ae/8bc614] Cached process > ASSEMBLY:CALC_STATS_INPUT_FQ_SEQKIT (SRR11097772)
+Jul-04 20:24:49.740 [Actor Thread 59] INFO  nextflow.processor.TaskProcessor - [30/60728c] Cached process > ASSEMBLY:INFILE_HANDLING_UNIX (SRR11097772)
+Jul-04 20:24:49.740 [Actor Thread 35] INFO  nextflow.processor.TaskProcessor - [63/a64d58] Cached process > ASSEMBLY:CALC_STATS_INPUT_FQ_SEQKIT (SRR11097782)
+Jul-04 20:24:49.740 [Actor Thread 31] INFO  nextflow.processor.TaskProcessor - [3b/183401] Cached process > ASSEMBLY:CALC_STATS_INPUT_FQ_SEQKIT (SRR12527873)
+Jul-04 20:24:49.740 [Actor Thread 9] INFO  nextflow.processor.TaskProcessor - [6d/817a07] Cached process > ASSEMBLY:VALIDATE_FASTQ_SEQFU (SRR12983339)
+Jul-04 20:24:49.740 [Actor Thread 47] INFO  nextflow.processor.TaskProcessor - [5d/cad710] Cached process > ASSEMBLY:VALIDATE_FASTQ_SEQFU (SRR11097778)
+Jul-04 20:24:49.740 [Actor Thread 24] INFO  nextflow.processor.TaskProcessor - [9e/c344ad] Cached process > ASSEMBLY:VALIDATE_FASTQ_SEQFU (SRR12527887)
+Jul-04 20:24:49.740 [Actor Thread 69] INFO  nextflow.processor.TaskProcessor - [5f/324771] Cached process > ASSEMBLY:VALIDATE_FASTQ_SEQFU (SRR12527869)
+Jul-04 20:24:49.740 [Actor Thread 63] INFO  nextflow.processor.TaskProcessor - [e5/e8783e] Cached process > ASSEMBLY:VALIDATE_FASTQ_SEQFU (SRR12527886)
+Jul-04 20:24:49.740 [Actor Thread 33] INFO  nextflow.processor.TaskProcessor - [ba/2da107] Cached process > ASSEMBLY:VALIDATE_FASTQ_SEQFU (SRR11097786)
+Jul-04 20:24:49.740 [Actor Thread 29] INFO  nextflow.processor.TaskProcessor - [f3/c16531] Cached process > ASSEMBLY:CALC_STATS_INPUT_FQ_SEQKIT (SRR12983336)
+Jul-04 20:24:49.740 [Actor Thread 37] INFO  nextflow.processor.TaskProcessor - [db/0bf54f] Cached process > ASSEMBLY:VALIDATE_FASTQ_SEQFU (SRR12527879)
+Jul-04 20:24:49.740 [Actor Thread 30] INFO  nextflow.processor.TaskProcessor - [f9/9e6a97] Cached process > ASSEMBLY:VALIDATE_FASTQ_SEQFU (SRR11097782)
+Jul-04 20:24:49.740 [Actor Thread 60] INFO  nextflow.processor.TaskProcessor - [1e/0fb603] Cached process > ASSEMBLY:VALIDATE_FASTQ_SEQFU (SRR11097780)
+Jul-04 20:24:49.740 [Actor Thread 74] INFO  nextflow.processor.TaskProcessor - [ad/043983] Cached process > ASSEMBLY:CALC_STATS_INPUT_FQ_SEQKIT (SRR12527886)
+Jul-04 20:24:49.740 [Actor Thread 40] INFO  nextflow.processor.TaskProcessor - [d4/8b7162] Cached process > ASSEMBLY:INFILE_HANDLING_UNIX (SRR12527879)
+Jul-04 20:24:49.740 [Actor Thread 34] INFO  nextflow.processor.TaskProcessor - [51/fce4b5] Cached process > ASSEMBLY:INFILE_HANDLING_UNIX (SRR12983339)
+Jul-04 20:24:49.740 [Actor Thread 16] INFO  nextflow.processor.TaskProcessor - [81/d226a5] Cached process > ASSEMBLY:INFILE_HANDLING_UNIX (SRR12527865)
+Jul-04 20:24:49.740 [Actor Thread 53] INFO  nextflow.processor.TaskProcessor - [74/409785] Cached process > ASSEMBLY:INFILE_HANDLING_UNIX (SRR12527878)
+Jul-04 20:24:49.740 [Actor Thread 51] INFO  nextflow.processor.TaskProcessor - [93/20de27] Cached process > ASSEMBLY:CALC_STATS_INPUT_FQ_SEQKIT (SRR11097778)
+Jul-04 20:24:49.740 [Actor Thread 42] INFO  nextflow.processor.TaskProcessor - [66/c71ddb] Cached process > ASSEMBLY:CALC_STATS_INPUT_FQ_SEQKIT (SRR12527879)
+Jul-04 20:24:49.740 [Actor Thread 73] INFO  nextflow.processor.TaskProcessor - [02/c2705b] Cached process > ASSEMBLY:CALC_STATS_INPUT_FQ_SEQKIT (SRR11097773)
+Jul-04 20:24:49.741 [Actor Thread 32] INFO  nextflow.processor.TaskProcessor - [2d/0a4139] Cached process > ASSEMBLY:INFILE_HANDLING_UNIX (SRR12527887)
+Jul-04 20:24:49.741 [Actor Thread 14] INFO  nextflow.processor.TaskProcessor - [c1/90cd16] Cached process > ASSEMBLY:CALC_STATS_INPUT_FQ_SEQKIT (SRR12983339)
+Jul-04 20:24:49.741 [Actor Thread 66] INFO  nextflow.processor.TaskProcessor - [df/990830] Cached process > ASSEMBLY:CALC_STATS_INPUT_FQ_SEQKIT (SRR12527876)
+Jul-04 20:24:49.741 [Actor Thread 67] INFO  nextflow.processor.TaskProcessor - [63/b1916b] Cached process > ASSEMBLY:INFILE_HANDLING_UNIX (SRR12527886)
+Jul-04 20:24:49.741 [Actor Thread 78] INFO  nextflow.processor.TaskProcessor - [87/09ec2d] Cached process > ASSEMBLY:CALC_STATS_INPUT_FQ_SEQKIT (SRR12527869)
+Jul-04 20:24:49.741 [Actor Thread 36] INFO  nextflow.processor.TaskProcessor - [89/743355] Cached process > ASSEMBLY:INFILE_HANDLING_UNIX (SRR11097786)
+Jul-04 20:24:49.741 [Actor Thread 22] INFO  nextflow.processor.TaskProcessor - [30/4f2942] Cached process > ASSEMBLY:CALC_STATS_INPUT_FQ_SEQKIT (SRR12527865)
+Jul-04 20:24:49.741 [Actor Thread 58] INFO  nextflow.processor.TaskProcessor - [76/9d876c] Cached process > ASSEMBLY:VALIDATE_FASTQ_SEQFU (SRR11097777)
+Jul-04 20:24:49.741 [Actor Thread 3] INFO  nextflow.processor.TaskProcessor - [7a/63c33f] Cached process > ASSEMBLY:VALIDATE_FASTQ_SEQFU (SRR12527865)
+Jul-04 20:24:49.741 [Actor Thread 55] INFO  nextflow.processor.TaskProcessor - [97/59cd68] Cached process > ASSEMBLY:VALIDATE_FASTQ_SEQFU (SRR11097773)
+Jul-04 20:24:49.741 [Actor Thread 48] INFO  nextflow.processor.TaskProcessor - [c3/6eca29] Cached process > ASSEMBLY:CALC_STATS_INPUT_FQ_SEQKIT (SRR12527881)
+Jul-04 20:24:49.741 [Actor Thread 54] INFO  nextflow.processor.TaskProcessor - [96/c95544] Cached process > ASSEMBLY:VALIDATE_FASTQ_SEQFU (SRR11097772)
+Jul-04 20:24:49.741 [Actor Thread 1] INFO  nextflow.processor.TaskProcessor - [a3/1fa787] Cached process > ASSEMBLY:INFILE_HANDLING_UNIX (SRR12527883)
+Jul-04 20:24:49.741 [Actor Thread 21] INFO  nextflow.processor.TaskProcessor - [e3/857908] Cached process > ASSEMBLY:INFILE_HANDLING_UNIX (SRR12983336)
+Jul-04 20:24:49.741 [Actor Thread 28] INFO  nextflow.processor.TaskProcessor - [59/f50c9f] Cached process > ASSEMBLY:CALC_STATS_INPUT_FQ_SEQKIT (SRR12527887)
+Jul-04 20:24:49.741 [Actor Thread 71] INFO  nextflow.processor.TaskProcessor - [a6/b5dafe] Cached process > ASSEMBLY:CALC_STATS_INPUT_FQ_SEQKIT (SRR11097780)
+Jul-04 20:24:49.741 [Actor Thread 41] INFO  nextflow.processor.TaskProcessor - [19/c6d017] Cached process > ASSEMBLY:INFILE_HANDLING_UNIX (SRR11097782)
+Jul-04 20:24:49.741 [Actor Thread 56] INFO  nextflow.processor.TaskProcessor - [bc/968d4d] Cached process > ASSEMBLY:INFILE_HANDLING_UNIX (SRR11097773)
+Jul-04 20:24:49.741 [Actor Thread 45] INFO  nextflow.processor.TaskProcessor - [f2/f92d53] Cached process > ASSEMBLY:INFILE_HANDLING_UNIX (SRR11097778)
+Jul-04 20:24:49.741 [Actor Thread 75] INFO  nextflow.processor.TaskProcessor - [44/4266aa] Cached process > ASSEMBLY:CALC_STATS_INPUT_FQ_SEQKIT (SRR11097777)
+Jul-04 20:24:49.741 [Actor Thread 64] INFO  nextflow.processor.TaskProcessor - [4a/81efa1] Cached process > ASSEMBLY:CALC_STATS_INPUT_FQ_SEQKIT (SRR12527878)
+Jul-04 20:24:49.741 [Actor Thread 8] INFO  nextflow.processor.TaskProcessor - [e6/f3bfd8] Cached process > ASSEMBLY:VALIDATE_FASTQ_SEQFU (SRR12527883)
+Jul-04 20:24:49.741 [Actor Thread 49] INFO  nextflow.processor.TaskProcessor - [8e/d32048] Cached process > ASSEMBLY:INFILE_HANDLING_UNIX (SRR12527871)
+Jul-04 20:24:49.741 [Actor Thread 25] INFO  nextflow.processor.TaskProcessor - [02/8bb19c] Cached process > ASSEMBLY:INFILE_HANDLING_UNIX (SRR12527884)
+Jul-04 20:24:49.741 [Actor Thread 38] INFO  nextflow.processor.TaskProcessor - [da/724eaa] Cached process > ASSEMBLY:INFILE_HANDLING_UNIX (SRR12527873)
+Jul-04 20:24:49.741 [Actor Thread 13] INFO  nextflow.processor.TaskProcessor - [ad/01f649] Cached process > ASSEMBLY:VALIDATE_FASTQ_SEQFU (SRR12527884)
+Jul-04 20:24:49.741 [Actor Thread 26] INFO  nextflow.processor.TaskProcessor - [16/b9e441] Cached process > ASSEMBLY:CALC_STATS_INPUT_FQ_SEQKIT (SRR12527884)
+Jul-04 20:24:49.741 [Actor Thread 65] INFO  nextflow.processor.TaskProcessor - [45/b70aaf] Cached process > ASSEMBLY:VALIDATE_FASTQ_SEQFU (SRR11097776)
+Jul-04 20:24:49.741 [Actor Thread 50] INFO  nextflow.processor.TaskProcessor - [47/a837e4] Cached process > ASSEMBLY:INFILE_HANDLING_UNIX (SRR12527876)
+Jul-04 20:24:49.741 [Actor Thread 43] INFO  nextflow.processor.TaskProcessor - [e3/a82fb8] Cached process > ASSEMBLY:VALIDATE_FASTQ_SEQFU (SRR12527881)
+Jul-04 20:24:49.741 [Actor Thread 68] INFO  nextflow.processor.TaskProcessor - [b2/c12e55] Cached process > ASSEMBLY:INFILE_HANDLING_UNIX (SRR11097776)
+Jul-04 20:24:49.741 [Actor Thread 57] INFO  nextflow.processor.TaskProcessor - [35/034a3d] Cached process > ASSEMBLY:CALC_STATS_INPUT_FQ_SEQKIT (SRR12527871)
+Jul-04 20:24:49.741 [Actor Thread 27] INFO  nextflow.processor.TaskProcessor - [c1/728f0f] Cached process > ASSEMBLY:VALIDATE_FASTQ_SEQFU (SRR12527873)
+Jul-04 20:24:49.741 [Actor Thread 46] INFO  nextflow.processor.TaskProcessor - [46/883d40] Cached process > ASSEMBLY:INFILE_HANDLING_UNIX (SRR12527881)
+Jul-04 20:24:49.741 [Actor Thread 20] INFO  nextflow.processor.TaskProcessor - [f9/b8f3d6] Cached process > ASSEMBLY:CALC_STATS_INPUT_FQ_SEQKIT (SRR12527883)
+Jul-04 20:24:49.741 [Actor Thread 72] INFO  nextflow.processor.TaskProcessor - [6e/86cd87] Cached process > ASSEMBLY:INFILE_HANDLING_UNIX (SRR12527869)
+Jul-04 20:24:49.741 [Actor Thread 52] INFO  nextflow.processor.TaskProcessor - [cd/5655cd] Cached process > ASSEMBLY:VALIDATE_FASTQ_SEQFU (SRR12527878)
+Jul-04 20:24:49.742 [Actor Thread 18] INFO  nextflow.processor.TaskProcessor - [6c/57e4f1] Cached process > ASSEMBLY:VALIDATE_FASTQ_SEQFU (SRR12983336)
+Jul-04 20:24:49.786 [Actor Thread 29] DEBUG nextflow.util.ThreadPoolBuilder - Creating thread pool 'PublishDir' minSize=10; maxSize=66; workQueue=LinkedBlockingQueue[-1]; allowCoreThreadTimeout=false
+Jul-04 20:24:49.826 [Actor Thread 8] INFO  nextflow.processor.TaskProcessor - [99/05d135] Cached process > ASSEMBLY:VALIDATE_FASTQ_SEQFU (SRR12527870)
+Jul-04 20:24:49.827 [Actor Thread 28] INFO  nextflow.processor.TaskProcessor - [c2/a7a45f] Cached process > ASSEMBLY:VALIDATE_FASTQ_SEQFU (SRR12527885)
+Jul-04 20:24:49.829 [Actor Thread 53] INFO  nextflow.processor.TaskProcessor - [c1/c56373] Cached process > ASSEMBLY:CALC_STATS_INPUT_FQ_SEQKIT (SRR12527870)
+Jul-04 20:24:49.831 [Actor Thread 46] INFO  nextflow.processor.TaskProcessor - [9e/336c86] Cached process > ASSEMBLY:VALIDATE_FASTQ_SEQFU (SRR11097783)
+Jul-04 20:24:49.851 [Actor Thread 61] INFO  nextflow.processor.TaskProcessor - [9b/e9bb1c] Cached process > ASSEMBLY:INFILE_HANDLING_UNIX (SRR12527875)
+Jul-04 20:24:49.853 [Actor Thread 30] INFO  nextflow.processor.TaskProcessor - [fb/c78589] Cached process > ASSEMBLY:INFILE_HANDLING_UNIX (SRR11097783)
+Jul-04 20:24:49.853 [Actor Thread 72] INFO  nextflow.processor.TaskProcessor - [fc/70c73b] Cached process > ASSEMBLY:INFILE_HANDLING_UNIX (SRR11097785)
+Jul-04 20:24:49.854 [Actor Thread 105] INFO  nextflow.processor.TaskProcessor - [17/21c08f] Cached process > ASSEMBLY:INFILE_HANDLING_UNIX (SRR12983328)
+Jul-04 20:24:49.854 [Actor Thread 34] INFO  nextflow.processor.TaskProcessor - [fb/f6db67] Cached process > ASSEMBLY:CALC_STATS_INPUT_FQ_SEQKIT (SRR11097784)
+Jul-04 20:24:49.854 [Actor Thread 67] INFO  nextflow.processor.TaskProcessor - [b2/a64e9a] Cached process > ASSEMBLY:INFILE_HANDLING_UNIX (ERR298346)
+Jul-04 20:24:49.854 [Actor Thread 16] INFO  nextflow.processor.TaskProcessor - [5b/0f9469] Cached process > ASSEMBLY:VALIDATE_FASTQ_SEQFU (SRR11097779)
+Jul-04 20:24:49.855 [Actor Thread 51] INFO  nextflow.processor.TaskProcessor - [22/842d55] Cached process > ASSEMBLY:INFILE_HANDLING_UNIX (SRR12527885)
+Jul-04 20:24:49.856 [Actor Thread 21] INFO  nextflow.processor.TaskProcessor - [73/9cf155] Cached process > ASSEMBLY:INFILE_HANDLING_UNIX (SRR12527868)
+Jul-04 20:24:49.858 [Actor Thread 31] INFO  nextflow.processor.TaskProcessor - [25/64a0d1] Cached process > ASSEMBLY:INFILE_HANDLING_UNIX (SRR12527870)
+Jul-04 20:24:49.865 [Actor Thread 75] INFO  nextflow.processor.TaskProcessor - [12/c00f98] Cached process > ASSEMBLY:CALC_STATS_INPUT_FQ_SEQKIT (SRR11097783)
+Jul-04 20:24:49.865 [Actor Thread 40] INFO  nextflow.processor.TaskProcessor - [e4/576c15] Cached process > ASSEMBLY:INFILE_HANDLING_UNIX (SRR11097784)
+Jul-04 20:24:49.865 [Actor Thread 22] INFO  nextflow.processor.TaskProcessor - [aa/ea0f78] Cached process > ASSEMBLY:VALIDATE_FASTQ_SEQFU (ERR298346)
+Jul-04 20:24:49.866 [Actor Thread 25] INFO  nextflow.processor.TaskProcessor - [81/223057] Cached process > ASSEMBLY:INFILE_HANDLING_UNIX (SRR12983327)
+Jul-04 20:24:49.867 [Actor Thread 111] INFO  nextflow.processor.TaskProcessor - [2d/1f8781] Cached process > ASSEMBLY:INFILE_HANDLING_UNIX (SRR11097779)
+Jul-04 20:24:49.869 [Actor Thread 24] INFO  nextflow.processor.TaskProcessor - [29/4d2426] Cached process > ASSEMBLY:VALIDATE_FASTQ_SEQFU (SRR12527868)
+Jul-04 20:24:49.871 [Actor Thread 54] INFO  nextflow.processor.TaskProcessor - [b6/ea4c8f] Cached process > ASSEMBLY:CALC_STATS_INPUT_FQ_SEQKIT (SRR11097779)
+Jul-04 20:24:49.871 [Actor Thread 37] INFO  nextflow.processor.TaskProcessor - [e5/28967a] Cached process > ASSEMBLY:INFILE_HANDLING_UNIX (SRR12983338)
+Jul-04 20:24:49.890 [Actor Thread 58] INFO  nextflow.processor.TaskProcessor - [2c/cf4a4e] Cached process > ASSEMBLY:VALIDATE_FASTQ_SEQFU (SRR11097784)
+Jul-04 20:24:49.892 [Actor Thread 44] INFO  nextflow.processor.TaskProcessor - [f1/8241f8] Cached process > ASSEMBLY:VALIDATE_FASTQ_SEQFU (SRR12527866)
+Jul-04 20:24:49.893 [Actor Thread 59] INFO  nextflow.processor.TaskProcessor - [fb/be5999] Cached process > ASSEMBLY:CALC_STATS_INPUT_FQ_SEQKIT (SRR12527866)
+Jul-04 20:24:49.894 [Actor Thread 91] INFO  nextflow.processor.TaskProcessor - [68/ed8cfb] Cached process > ASSEMBLY:INFILE_HANDLING_UNIX (SRR12983337)
+Jul-04 20:24:49.897 [Actor Thread 35] INFO  nextflow.processor.TaskProcessor - [63/a5a386] Cached process > ASSEMBLY:CALC_STATS_INPUT_FQ_SEQKIT (SRR12527874)
+Jul-04 20:24:49.898 [Actor Thread 27] INFO  nextflow.processor.TaskProcessor - [d2/06f55d] Cached process > ASSEMBLY:CALC_STATS_INPUT_FQ_SEQKIT (ERR298346)
+Jul-04 20:24:49.899 [Actor Thread 70] INFO  nextflow.processor.TaskProcessor - [9b/0a9523] Cached process > ASSEMBLY:INFILE_HANDLING_UNIX (SRR12527880)
+Jul-04 20:24:49.899 [Actor Thread 56] INFO  nextflow.processor.TaskProcessor - [52/f12411] Cached process > ASSEMBLY:INFILE_HANDLING_UNIX (SRR12983340)
+Jul-04 20:24:49.897 [Actor Thread 102] INFO  nextflow.processor.TaskProcessor - [3f/c8c031] Cached process > ASSEMBLY:VALIDATE_FASTQ_SEQFU (SRR11097775)
+Jul-04 20:24:49.899 [Actor Thread 78] INFO  nextflow.processor.TaskProcessor - [61/5e3a8e] Cached process > ASSEMBLY:VALIDATE_FASTQ_SEQFU (SRR12983337)
+Jul-04 20:24:49.900 [Actor Thread 26] INFO  nextflow.processor.TaskProcessor - [3f/4e0d56] Cached process > ASSEMBLY:CALC_STATS_INPUT_FQ_SEQKIT (SRR12983338)
+Jul-04 20:24:49.901 [Actor Thread 65] INFO  nextflow.processor.TaskProcessor - [de/fbd605] Cached process > ASSEMBLY:CALC_STATS_INPUT_FQ_SEQKIT (SRR12527888)
+Jul-04 20:24:49.902 [Actor Thread 66] INFO  nextflow.processor.TaskProcessor - [b7/ede027] Cached process > ASSEMBLY:VALIDATE_FASTQ_SEQFU (SRR12983328)
+Jul-04 20:24:49.902 [Actor Thread 90] INFO  nextflow.processor.TaskProcessor - [d0/76c8bc] Cached process > ASSEMBLY:INFILE_HANDLING_UNIX (SRR12527866)
+Jul-04 20:24:49.903 [Actor Thread 52] INFO  nextflow.processor.TaskProcessor - [da/74a67f] Cached process > ASSEMBLY:VALIDATE_FASTQ_SEQFU (SRR12983327)
+Jul-04 20:24:49.903 [Actor Thread 14] INFO  nextflow.processor.TaskProcessor - [9d/04baef] Cached process > ASSEMBLY:VALIDATE_FASTQ_SEQFU (SRR12983338)
+Jul-04 20:24:49.903 [Actor Thread 73] INFO  nextflow.processor.TaskProcessor - [23/779b79] Cached process > ASSEMBLY:CALC_STATS_INPUT_FQ_SEQKIT (SRR12983328)
+Jul-04 20:24:49.904 [Actor Thread 76] INFO  nextflow.processor.TaskProcessor - [1d/537236] Cached process > ASSEMBLY:CALC_STATS_INPUT_FQ_SEQKIT (SRR12527877)
+Jul-04 20:24:49.904 [Actor Thread 112] INFO  nextflow.processor.TaskProcessor - [ec/0fe01a] Cached process > ASSEMBLY:VALIDATE_FASTQ_SEQFU (SRR12527880)
+Jul-04 20:24:49.905 [Actor Thread 32] INFO  nextflow.processor.TaskProcessor - [6e/e83870] Cached process > ASSEMBLY:CALC_STATS_INPUT_FQ_SEQKIT (SRR11097785)
+Jul-04 20:24:49.905 [Actor Thread 115] INFO  nextflow.processor.TaskProcessor - [00/a63f09] Cached process > ASSEMBLY:INFILE_HANDLING_UNIX (SRR12527874)
+Jul-04 20:24:49.905 [Actor Thread 38] INFO  nextflow.processor.TaskProcessor - [35/57a835] Cached process > ASSEMBLY:VALIDATE_FASTQ_SEQFU (SRR12527874)
+Jul-04 20:24:49.906 [Actor Thread 45] INFO  nextflow.processor.TaskProcessor - [12/f821d1] Cached process > ASSEMBLY:INFILE_HANDLING_UNIX (SRR12527867)
+Jul-04 20:24:49.906 [Actor Thread 64] INFO  nextflow.processor.TaskProcessor - [5a/6c5b96] Cached process > ASSEMBLY:CALC_STATS_INPUT_FQ_SEQKIT (SRR12983327)
+Jul-04 20:24:49.908 [Actor Thread 103] INFO  nextflow.processor.TaskProcessor - [ca/918627] Cached process > ASSEMBLY:CALC_STATS_INPUT_FQ_SEQKIT (SRR12983337)
+Jul-04 20:24:49.908 [Actor Thread 74] INFO  nextflow.processor.TaskProcessor - [da/7a889a] Cached process > ASSEMBLY:CALC_STATS_INPUT_FQ_SEQKIT (SRR11097774)
+Jul-04 20:24:49.910 [Actor Thread 3] INFO  nextflow.processor.TaskProcessor - [51/5b045b] Cached process > ASSEMBLY:CALC_STATS_INPUT_FQ_SEQKIT (SRR12527868)
+Jul-04 20:24:49.910 [Actor Thread 19] INFO  nextflow.processor.TaskProcessor - [d7/bf344c] Cached process > ASSEMBLY:VALIDATE_FASTQ_SEQFU (SRR11097785)
+Jul-04 20:24:49.912 [Actor Thread 68] INFO  nextflow.processor.TaskProcessor - [1b/37aa34] Cached process > ASSEMBLY:INFILE_HANDLING_UNIX (SRR12527877)
+Jul-04 20:24:49.912 [Actor Thread 69] INFO  nextflow.processor.TaskProcessor - [73/b52956] Cached process > ASSEMBLY:VALIDATE_FASTQ_SEQFU (SRR12527888)
+Jul-04 20:24:49.913 [Actor Thread 43] INFO  nextflow.processor.TaskProcessor - [a0/e48578] Cached process > ASSEMBLY:VALIDATE_FASTQ_SEQFU (SRR12527877)
+Jul-04 20:24:49.915 [Actor Thread 93] INFO  nextflow.processor.TaskProcessor - [a7/76d8f1] Cached process > ASSEMBLY:INFILE_HANDLING_UNIX (SRR11097775)
+Jul-04 20:24:49.915 [Actor Thread 57] INFO  nextflow.processor.TaskProcessor - [22/02963c] Cached process > ASSEMBLY:CALC_STATS_INPUT_FQ_SEQKIT (SRR12527880)
+Jul-04 20:24:49.913 [Actor Thread 39] INFO  nextflow.processor.TaskProcessor - [9d/18be16] Cached process > ASSEMBLY:INFILE_HANDLING_UNIX (SRR11097774)
+Jul-04 20:24:49.917 [Actor Thread 35] INFO  nextflow.processor.TaskProcessor - [a6/192a96] Cached process > ASSEMBLY:INFILE_HANDLING_UNIX (SRR11097781)
+Jul-04 20:24:49.919 [Actor Thread 114] INFO  nextflow.processor.TaskProcessor - [16/3d4b6e] Cached process > ASSEMBLY:CALC_STATS_INPUT_FQ_SEQKIT (SRR11097775)
+Jul-04 20:24:49.920 [Actor Thread 50] INFO  nextflow.processor.TaskProcessor - [92/ec813d] Cached process > ASSEMBLY:CALC_STATS_INPUT_FQ_SEQKIT (SRR12527875)
+Jul-04 20:24:49.919 [Actor Thread 1] INFO  nextflow.processor.TaskProcessor - [1e/c1f95a] Cached process > ASSEMBLY:CALC_STATS_INPUT_FQ_SEQKIT (SRR12527885)
+Jul-04 20:24:49.921 [Actor Thread 49] INFO  nextflow.processor.TaskProcessor - [6b/a0aa4d] Cached process > ASSEMBLY:INFILE_HANDLING_UNIX (SRR12527888)
+Jul-04 20:24:49.938 [Actor Thread 59] INFO  nextflow.processor.TaskProcessor - [84/85728e] Cached process > ASSEMBLY:VALIDATE_FASTQ_SEQFU (SRR12527864)
+Jul-04 20:24:49.938 [Actor Thread 32] INFO  nextflow.processor.TaskProcessor - [c7/46e7ea] Cached process > ASSEMBLY:CALC_STATS_INPUT_FQ_SEQKIT (SRR12527882)
+Jul-04 20:24:49.938 [Actor Thread 106] INFO  nextflow.processor.TaskProcessor - [76/00dc6e] Cached process > ASSEMBLY:CALC_STATS_INPUT_FQ_SEQKIT (SRR12527867)
+Jul-04 20:24:49.938 [Actor Thread 80] INFO  nextflow.processor.TaskProcessor - [3e/3028d3] Cached process > ASSEMBLY:VALIDATE_FASTQ_SEQFU (SRR12527872)
+Jul-04 20:24:49.938 [Actor Thread 77] INFO  nextflow.processor.TaskProcessor - [20/04c9fd] Cached process > ASSEMBLY:VALIDATE_FASTQ_SEQFU (SRR11097774)
+Jul-04 20:24:49.938 [Actor Thread 21] INFO  nextflow.processor.TaskProcessor - [b7/c0a0bf] Cached process > ASSEMBLY:INFILE_HANDLING_UNIX (SRR12527882)
+Jul-04 20:24:49.938 [Actor Thread 36] INFO  nextflow.processor.TaskProcessor - [0f/5135b0] Cached process > ASSEMBLY:VALIDATE_FASTQ_SEQFU (SRR12527867)
+Jul-04 20:24:49.939 [Actor Thread 54] INFO  nextflow.processor.TaskProcessor - [de/d75180] Cached process > ASSEMBLY:CALC_STATS_INPUT_FQ_SEQKIT (SRR12983340)
+Jul-04 20:24:49.939 [Actor Thread 25] INFO  nextflow.processor.TaskProcessor - [18/f379e6] Cached process > ASSEMBLY:CALC_STATS_INPUT_FQ_SEQKIT (SRR12527864)
+Jul-04 20:24:49.940 [Actor Thread 42] INFO  nextflow.processor.TaskProcessor - [f8/377357] Cached process > ASSEMBLY:CALC_STATS_INPUT_FQ_SEQKIT (SRR11097781)
+Jul-04 20:24:49.941 [Actor Thread 9] INFO  nextflow.processor.TaskProcessor - [bb/17bd23] Cached process > ASSEMBLY:INFILE_HANDLING_UNIX (SRR12527872)
+Jul-04 20:24:49.942 [Actor Thread 60] INFO  nextflow.processor.TaskProcessor - [a4/81e8ff] Cached process > ASSEMBLY:VALIDATE_FASTQ_SEQFU (SRR12527875)
+Jul-04 20:24:49.944 [Actor Thread 86] INFO  nextflow.processor.TaskProcessor - [35/d1f3d6] Cached process > ASSEMBLY:CALC_STATS_INPUT_FQ_SEQKIT (SRR12527872)
+Jul-04 20:24:49.948 [Actor Thread 122] INFO  nextflow.processor.TaskProcessor - [ca/3d8943] Cached process > ASSEMBLY:VALIDATE_FASTQ_SEQFU (SRR11097781)
+Jul-04 20:24:49.949 [Actor Thread 53] INFO  nextflow.processor.TaskProcessor - [5f/31c733] Cached process > ASSEMBLY:VALIDATE_FASTQ_SEQFU (SRR12527882)
+Jul-04 20:24:49.952 [Actor Thread 55] INFO  nextflow.processor.TaskProcessor - [e9/cdfa19] Cached process > ASSEMBLY:INFILE_HANDLING_UNIX (SRR12527864)
+Jul-04 20:24:49.954 [Actor Thread 113] INFO  nextflow.processor.TaskProcessor - [6e/febf03] Cached process > ASSEMBLY:VALIDATE_FASTQ_SEQFU (SRR12983340)
+Jul-04 20:24:49.998 [Actor Thread 59] DEBUG nextflow.sort.BigSort - Sort completed -- entries: 48; slices: 1; internal sort time: 0.019 s; external sort time: 0.004 s; total time: 0.023 s
+Jul-04 20:24:49.999 [Actor Thread 59] DEBUG nextflow.file.FileCollector - >> temp file exists? false
+Jul-04 20:24:50.000 [Actor Thread 59] DEBUG nextflow.file.FileCollector - Missed collect-file cache -- cause: java.nio.file.NoSuchFileException: /home/phemarajata/wf-paired-end-illumina-assembly-gcb/work/collect-file/f5ee47d83f59468dbc2dedbd01b7b656
+Jul-04 20:24:50.003 [Actor Thread 126] DEBUG nextflow.sort.BigSort - Sort completed -- entries: 48; slices: 1; internal sort time: 0.027 s; external sort time: 0.001 s; total time: 0.028 s
+Jul-04 20:24:50.003 [Actor Thread 126] DEBUG nextflow.file.FileCollector - >> temp file exists? true
+Jul-04 20:24:50.005 [Actor Thread 126] DEBUG nextflow.file.FileCollector - Retrieved cached collect-files from: /home/phemarajata/wf-paired-end-illumina-assembly-gcb/work/collect-file/f29dcd54bba6908ca2907b748d2d6fa8
+Jul-04 20:24:50.009 [Actor Thread 126] DEBUG nextflow.file.FileCollector - Deleting file collector temp dir: /tmp/nxf-11423379424445170695
+Jul-04 20:24:50.009 [Actor Thread 59] DEBUG nextflow.file.FileCollector - Saved collect-files list to: /home/phemarajata/wf-paired-end-illumina-assembly-gcb/work/collect-file/f5ee47d83f59468dbc2dedbd01b7b656
+Jul-04 20:24:50.010 [Actor Thread 126] INFO  nextflow.script.BaseScript - DEBUG: From INFILE_HANDLING_UNIX.out.checksums, collected files: /home/phemarajata/Downloads/sra_reads/my-results/Summaries/Summary.Input_Checksums.tsv
+Jul-04 20:24:50.011 [Actor Thread 59] DEBUG nextflow.file.FileCollector - Deleting file collector temp dir: /tmp/nxf-1307729794485039970
+Jul-04 20:26:20.205 [FileTransfer-2] DEBUG nextflow.file.FilePorter - Local cache found for foreign file https://ccb.jhu.edu/software/kraken/dl/minikraken_20171019_8GB.tgz at /home/phemarajata/wf-paired-end-illumina-assembly-gcb/work/stage-686e6b2b-df9a-4c0d-9b1e-07e4c1c6f279/86/2b2c7a022b0ab4763a35ca7e417565/minikraken_20171019_8GB.tgz
+Jul-04 20:26:20.205 [FileTransfer-1] DEBUG nextflow.file.FilePorter - Local cache found for foreign file https://genome-idx.s3.amazonaws.com/kraken/k2_standard_08gb_20231009.tar.gz at /home/phemarajata/wf-paired-end-illumina-assembly-gcb/work/stage-686e6b2b-df9a-4c0d-9b1e-07e4c1c6f279/43/891cb1455a4f1482eb5b7511beea8e/k2_standard_08gb_20231009.tar.gz
+Jul-04 20:26:20.205 [FileTransfer-3] DEBUG nextflow.file.FilePorter - Local cache found for foreign file https://zenodo.org/records/5571251/files/checkm2_database.tar.gz at /home/phemarajata/wf-paired-end-illumina-assembly-gcb/work/stage-686e6b2b-df9a-4c0d-9b1e-07e4c1c6f279/93/7c61c712fbb0953d6676c674e5b0f6/checkm2_database.tar.gz
+Jul-04 20:26:20.206 [FileTransfer-4] DEBUG nextflow.file.FilePorter - Local cache found for foreign file https://ftp.ncbi.nlm.nih.gov/blast/db/16S_ribosomal_RNA.tar.gz at /home/phemarajata/wf-paired-end-illumina-assembly-gcb/work/stage-686e6b2b-df9a-4c0d-9b1e-07e4c1c6f279/aa/923b5fa090e8404e44353681898384/16S_ribosomal_RNA.tar.gz
+Jul-04 20:26:20.206 [FileTransfer-5] DEBUG nextflow.file.FilePorter - Local cache found for foreign file https://ftp.ncbi.nlm.nih.gov/sra/dbs/human_filter/human_filter.db.20240718v2 at /home/phemarajata/wf-paired-end-illumina-assembly-gcb/work/stage-686e6b2b-df9a-4c0d-9b1e-07e4c1c6f279/fb/60768fbfa4619a4b8575bde05e489b/human_filter.db.20240718v2
+Jul-04 20:26:20.223 [Actor Thread 15] INFO  nextflow.processor.TaskProcessor - [9c/b5c817] Cached process > ASSEMBLY:KRAKEN1_DB_PREPARATION_UNIX (minikraken_20171019_8GB)
+Jul-04 20:26:20.224 [Actor Thread 12] INFO  nextflow.processor.TaskProcessor - [72/1e35f0] Cached process > ASSEMBLY:KRAKEN2_DB_PREPARATION_UNIX (k2_standard_08gb_20231009)
+Jul-04 20:26:20.226 [Actor Thread 94] INFO  nextflow.processor.TaskProcessor - [98/266fc3] Cached process > ASSEMBLY:HOST_REMOVAL:REMOVE_HOST_SRA_HUMAN_SCRUBBER (SRR12527869)
+Jul-04 20:26:20.226 [Actor Thread 99] INFO  nextflow.processor.TaskProcessor - [93/d4dd1c] Cached process > ASSEMBLY:HOST_REMOVAL:REMOVE_HOST_SRA_HUMAN_SCRUBBER (SRR12527878)
+Jul-04 20:26:20.226 [Actor Thread 47] INFO  nextflow.processor.TaskProcessor - [c8/55b543] Cached process > ASSEMBLY:HOST_REMOVAL:REMOVE_HOST_SRA_HUMAN_SCRUBBER (SRR11097778)
+Jul-04 20:26:20.226 [Actor Thread 108] INFO  nextflow.processor.TaskProcessor - [c1/19cd0c] Cached process > ASSEMBLY:HOST_REMOVAL:REMOVE_HOST_SRA_HUMAN_SCRUBBER (SRR11097777)
+Jul-04 20:26:20.226 [Actor Thread 100] INFO  nextflow.processor.TaskProcessor - [22/2e0f23] Cached process > ASSEMBLY:HOST_REMOVAL:REMOVE_HOST_SRA_HUMAN_SCRUBBER (SRR11097786)
+Jul-04 20:26:20.226 [Actor Thread 6] INFO  nextflow.processor.TaskProcessor - [40/a8af4e] Cached process > ASSEMBLY:BLAST_DB_PREPARATION_UNIX (16S_ribosomal_RNA)
+Jul-04 20:26:20.227 [Actor Thread 104] INFO  nextflow.processor.TaskProcessor - [5c/472f27] Cached process > ASSEMBLY:HOST_REMOVAL:REMOVE_HOST_SRA_HUMAN_SCRUBBER (SRR12527865)
+Jul-04 20:26:20.227 [Actor Thread 88] INFO  nextflow.processor.TaskProcessor - [e2/9b2ddc] Cached process > ASSEMBLY:HOST_REMOVAL:REMOVE_HOST_SRA_HUMAN_SCRUBBER (SRR12527873)
+Jul-04 20:26:20.227 [Actor Thread 89] INFO  nextflow.processor.TaskProcessor - [b1/f8f70b] Cached process > ASSEMBLY:HOST_REMOVAL:REMOVE_HOST_SRA_HUMAN_SCRUBBER (SRR12527884)
+Jul-04 20:26:20.228 [Actor Thread 95] INFO  nextflow.processor.TaskProcessor - [c3/da2aec] Cached process > ASSEMBLY:HOST_REMOVAL:REMOVE_HOST_SRA_HUMAN_SCRUBBER (SRR11097780)
+Jul-04 20:26:20.228 [Actor Thread 81] INFO  nextflow.processor.TaskProcessor - [53/c6554c] Cached process > ASSEMBLY:HOST_REMOVAL:REMOVE_HOST_SRA_HUMAN_SCRUBBER (SRR12983336)
+Jul-04 20:26:20.228 [Actor Thread 101] INFO  nextflow.processor.TaskProcessor - [a9/07655f] Cached process > ASSEMBLY:HOST_REMOVAL:REMOVE_HOST_SRA_HUMAN_SCRUBBER (SRR12527879)
+Jul-04 20:26:20.228 [Actor Thread 97] INFO  nextflow.processor.TaskProcessor - [17/32437e] Cached process > ASSEMBLY:HOST_REMOVAL:REMOVE_HOST_SRA_HUMAN_SCRUBBER (SRR12527887)
+Jul-04 20:26:20.228 [Actor Thread 98] INFO  nextflow.processor.TaskProcessor - [26/7a3d18] Cached process > ASSEMBLY:HOST_REMOVAL:REMOVE_HOST_SRA_HUMAN_SCRUBBER (SRR12527886)
+Jul-04 20:26:20.228 [Actor Thread 92] INFO  nextflow.processor.TaskProcessor - [21/3c8967] Cached process > ASSEMBLY:HOST_REMOVAL:REMOVE_HOST_SRA_HUMAN_SCRUBBER (SRR11097773)
+Jul-04 20:26:20.228 [Actor Thread 82] INFO  nextflow.processor.TaskProcessor - [1f/10e01d] Cached process > ASSEMBLY:HOST_REMOVAL:REMOVE_HOST_SRA_HUMAN_SCRUBBER (SRR12527883)
+Jul-04 20:26:20.229 [Actor Thread 107] INFO  nextflow.processor.TaskProcessor - [14/a9d675] Cached process > ASSEMBLY:HOST_REMOVAL:REMOVE_HOST_SRA_HUMAN_SCRUBBER (SRR11097772)
+Jul-04 20:26:20.229 [Actor Thread 96] INFO  nextflow.processor.TaskProcessor - [a0/a03ad7] Cached process > ASSEMBLY:HOST_REMOVAL:REMOVE_HOST_SRA_HUMAN_SCRUBBER (SRR11097776)
+Jul-04 20:26:20.229 [Actor Thread 109] INFO  nextflow.processor.TaskProcessor - [f4/eec93f] Cached process > ASSEMBLY:HOST_REMOVAL:REMOVE_HOST_SRA_HUMAN_SCRUBBER (SRR12527876)
+Jul-04 20:26:20.229 [Actor Thread 83] INFO  nextflow.processor.TaskProcessor - [14/aeed59] Cached process > ASSEMBLY:HOST_REMOVAL:REMOVE_HOST_SRA_HUMAN_SCRUBBER (SRR12527881)
+Jul-04 20:26:20.230 [Actor Thread 85] INFO  nextflow.processor.TaskProcessor - [df/bc0939] Cached process > ASSEMBLY:HOST_REMOVAL:REMOVE_HOST_SRA_HUMAN_SCRUBBER (SRR12983339)
+Jul-04 20:26:20.230 [Actor Thread 20] INFO  nextflow.processor.TaskProcessor - [c6/cc5bc6] Cached process > ASSEMBLY:HOST_REMOVAL:REMOVE_HOST_SRA_HUMAN_SCRUBBER (SRR12527871)
+Jul-04 20:26:20.230 [Actor Thread 84] INFO  nextflow.processor.TaskProcessor - [cb/89528e] Cached process > ASSEMBLY:HOST_REMOVAL:REMOVE_HOST_SRA_HUMAN_SCRUBBER (SRR11097782)
+Jul-04 20:26:20.267 [Actor Thread 131] INFO  nextflow.processor.TaskProcessor - [5a/81da1d] Cached process > ASSEMBLY:HOST_REMOVAL:CALC_STATS_SCRUB_REMOVED_FQ_SEQKIT (SRR11097786)
+Jul-04 20:26:20.269 [Actor Thread 145] INFO  nextflow.processor.TaskProcessor - [1c/805139] Cached process > ASSEMBLY:HOST_REMOVAL:CALC_STATS_SCRUB_REMOVED_FQ_SEQKIT (SRR12527881)
+Jul-04 20:26:20.271 [Actor Thread 7] INFO  nextflow.processor.TaskProcessor - [6f/ed3e95] Cached process > ASSEMBLY:HOST_REMOVAL:CALC_STATS_SCRUB_REMOVED_FQ_SEQKIT (SRR11097778)
+Jul-04 20:26:20.271 [Actor Thread 108] INFO  nextflow.processor.TaskProcessor - [06/d46a18] Cached process > ASSEMBLY:HOST_REMOVAL:CALC_STATS_SCRUB_REMOVED_FQ_SEQKIT (SRR11097772)
+Jul-04 20:26:20.271 [Actor Thread 139] INFO  nextflow.processor.TaskProcessor - [e8/bb3aeb] Cached process > ASSEMBLY:HOST_REMOVAL:CALC_STATS_SCRUB_REMOVED_FQ_SEQKIT (SRR11097776)
+Jul-04 20:26:20.271 [Actor Thread 129] INFO  nextflow.processor.TaskProcessor - [07/968206] Cached process > ASSEMBLY:HOST_REMOVAL:CALC_STATS_SCRUB_REMOVED_FQ_SEQKIT (SRR12983339)
+Jul-04 20:26:20.272 [Actor Thread 5] INFO  nextflow.processor.TaskProcessor - [6f/615858] Cached process > ASSEMBLY:HOST_REMOVAL:CALC_STATS_SCRUB_REMOVED_FQ_SEQKIT (SRR12527871)
+Jul-04 20:26:20.272 [Actor Thread 10] INFO  nextflow.processor.TaskProcessor - [c1/23fe68] Cached process > ASSEMBLY:HOST_REMOVAL:CALC_STATS_SCRUB_REMOVED_FQ_SEQKIT (SRR12527876)
+Jul-04 20:26:20.273 [Actor Thread 135] INFO  nextflow.processor.TaskProcessor - [68/4b5a0b] Cached process > ASSEMBLY:HOST_REMOVAL:CALC_STATS_SCRUB_REMOVED_FQ_SEQKIT (SRR11097777)
+Jul-04 20:26:20.273 [Actor Thread 6] INFO  nextflow.processor.TaskProcessor - [74/d559f7] Cached process > ASSEMBLY:HOST_REMOVAL:CALC_STATS_SCRUB_REMOVED_FQ_SEQKIT (SRR11097782)
+Jul-04 20:26:20.273 [Actor Thread 12] INFO  nextflow.processor.TaskProcessor - [51/263b0d] Cached process > ASSEMBLY:HOST_REMOVAL:CALC_STATS_SCRUB_REMOVED_FQ_SEQKIT (SRR12527886)
+Jul-04 20:26:20.275 [Actor Thread 138] INFO  nextflow.processor.TaskProcessor - [24/3f3712] Cached process > ASSEMBLY:HOST_REMOVAL:CALC_STATS_SCRUB_REMOVED_FQ_SEQKIT (SRR12527878)
+Jul-04 20:26:20.279 [Actor Thread 130] INFO  nextflow.processor.TaskProcessor - [85/e10b53] Cached process > ASSEMBLY:HOST_REMOVAL:CALC_STATS_SCRUB_REMOVED_FQ_SEQKIT (SRR12527879)
+Jul-04 20:26:20.288 [Actor Thread 162] INFO  nextflow.processor.TaskProcessor - [2e/d11812] Cached process > ASSEMBLY:HOST_REMOVAL:CALC_STATS_SCRUB_REMOVED_FQ_SEQKIT (SRR12527883)
+Jul-04 20:26:20.290 [Actor Thread 132] INFO  nextflow.processor.TaskProcessor - [76/476946] Cached process > ASSEMBLY:HOST_REMOVAL:CALC_STATS_SCRUB_REMOVED_FQ_SEQKIT (SRR12527884)
+Jul-04 20:26:20.290 [Actor Thread 168] INFO  nextflow.processor.TaskProcessor - [f8/d9e084] Cached process > ASSEMBLY:HOST_REMOVAL:CALC_STATS_SCRUB_REMOVED_FQ_SEQKIT (SRR11097773)
+Jul-04 20:26:20.290 [Actor Thread 109] INFO  nextflow.processor.TaskProcessor - [3d/6abf49] Cached process > ASSEMBLY:HOST_REMOVAL:CALC_STATS_SCRUB_REMOVED_FQ_SEQKIT (SRR12527887)
+Jul-04 20:26:20.293 [Actor Thread 107] INFO  nextflow.processor.TaskProcessor - [ba/3d1ce5] Cached process > ASSEMBLY:HOST_REMOVAL:CALC_STATS_SCRUB_REMOVED_FQ_SEQKIT (SRR11097780)
+Jul-04 20:26:20.300 [Actor Thread 148] INFO  nextflow.processor.TaskProcessor - [e4/ca418e] Cached process > ASSEMBLY:HOST_REMOVAL:CALC_STATS_SCRUB_REMOVED_FQ_SEQKIT (SRR12527869)
+Jul-04 20:26:20.301 [Actor Thread 160] INFO  nextflow.processor.TaskProcessor - [0f/4e363b] Cached process > ASSEMBLY:HOST_REMOVAL:CALC_STATS_SCRUB_REMOVED_FQ_SEQKIT (SRR12527865)
+Jul-04 20:26:20.301 [Actor Thread 84] INFO  nextflow.processor.TaskProcessor - [f3/0e808f] Cached process > ASSEMBLY:HOST_REMOVAL:CALC_STATS_SCRUB_REMOVED_FQ_SEQKIT (SRR12527873)
+Jul-04 20:26:20.309 [Actor Thread 83] INFO  nextflow.processor.TaskProcessor - [cd/ba68f3] Cached process > ASSEMBLY:HOST_REMOVAL:CALC_STATS_SCRUB_REMOVED_FQ_SEQKIT (SRR12983336)
+Jul-04 20:26:20.325 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-04 20:26:20.327 [Task submitter] INFO  nextflow.Session - [04/cac751] Submitted process > ASSEMBLY:ASSEMBLY_ASSESSMENT:CHECKM2_DB_PREPARATION_UNIX (checkm2_database)
+Jul-04 20:26:20.336 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-04 20:26:20.337 [Task submitter] INFO  nextflow.Session - [2a/4195c7] Submitted process > ASSEMBLY:HOST_REMOVAL:REMOVE_BROKEN_PAIRS_BBTOOLS_REPAIR (SRR11097776)
+Jul-04 20:26:44.733 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 3; name: ASSEMBLY:ASSEMBLY_ASSESSMENT:CHECKM2_DB_PREPARATION_UNIX (checkm2_database); status: COMPLETED; exit: 0; error: -; workDir: /home/phemarajata/wf-paired-end-illumina-assembly-gcb/work/04/cac751ba058bfe35449b29db58db4b]
+Jul-04 20:26:44.733 [Task monitor] DEBUG nextflow.util.ThreadPoolBuilder - Creating thread pool 'TaskFinalizer' minSize=10; maxSize=66; workQueue=LinkedBlockingQueue[-1]; allowCoreThreadTimeout=false
+Jul-04 20:27:18.207 [Actor Thread 81] INFO  nextflow.processor.TaskProcessor - [ff/9898d7] Cached process > ASSEMBLY:HOST_REMOVAL:REMOVE_HOST_SRA_HUMAN_SCRUBBER (SRR12983328)
+Jul-04 20:27:18.207 [Actor Thread 85] INFO  nextflow.processor.TaskProcessor - [d0/7ae5e8] Cached process > ASSEMBLY:HOST_REMOVAL:REMOVE_HOST_SRA_HUMAN_SCRUBBER (SRR12527866)
+Jul-04 20:27:18.207 [Actor Thread 98] INFO  nextflow.processor.TaskProcessor - [09/bd76cd] Cached process > ASSEMBLY:HOST_REMOVAL:REMOVE_HOST_SRA_HUMAN_SCRUBBER (SRR12983337)
+Jul-04 20:27:18.208 [Actor Thread 136] INFO  nextflow.processor.TaskProcessor - [3d/c119d7] Cached process > ASSEMBLY:HOST_REMOVAL:REMOVE_HOST_SRA_HUMAN_SCRUBBER (SRR12983327)
+Jul-04 20:27:18.208 [Actor Thread 137] INFO  nextflow.processor.TaskProcessor - [c0/d35be6] Cached process > ASSEMBLY:HOST_REMOVAL:REMOVE_HOST_SRA_HUMAN_SCRUBBER (SRR12983340)
+Jul-04 20:27:18.208 [Actor Thread 131] INFO  nextflow.processor.TaskProcessor - [58/39267a] Cached process > ASSEMBLY:HOST_REMOVAL:REMOVE_HOST_SRA_HUMAN_SCRUBBER (SRR12527875)
+Jul-04 20:27:18.208 [Actor Thread 5] INFO  nextflow.processor.TaskProcessor - [ab/c69a25] Cached process > ASSEMBLY:HOST_REMOVAL:REMOVE_HOST_SRA_HUMAN_SCRUBBER (SRR11097774)
+Jul-04 20:27:18.209 [Actor Thread 95] INFO  nextflow.processor.TaskProcessor - [3a/e037c1] Cached process > ASSEMBLY:HOST_REMOVAL:REMOVE_HOST_SRA_HUMAN_SCRUBBER (SRR11097783)
+Jul-04 20:27:18.209 [Actor Thread 96] INFO  nextflow.processor.TaskProcessor - [e6/415ec0] Cached process > ASSEMBLY:HOST_REMOVAL:REMOVE_HOST_SRA_HUMAN_SCRUBBER (SRR12527868)
+Jul-04 20:27:18.209 [Actor Thread 157] INFO  nextflow.processor.TaskProcessor - [e7/898a2d] Cached process > ASSEMBLY:HOST_REMOVAL:REMOVE_HOST_SRA_HUMAN_SCRUBBER (SRR11097781)
+Jul-04 20:27:18.209 [Actor Thread 20] INFO  nextflow.processor.TaskProcessor - [a4/e1cb6c] Cached process > ASSEMBLY:HOST_REMOVAL:REMOVE_HOST_SRA_HUMAN_SCRUBBER (SRR12527880)
+Jul-04 20:27:18.209 [Actor Thread 153] INFO  nextflow.processor.TaskProcessor - [58/f0e377] Cached process > ASSEMBLY:HOST_REMOVAL:REMOVE_HOST_SRA_HUMAN_SCRUBBER (SRR11097775)
+Jul-04 20:27:18.209 [Actor Thread 104] INFO  nextflow.processor.TaskProcessor - [26/c51d79] Cached process > ASSEMBLY:HOST_REMOVAL:REMOVE_HOST_SRA_HUMAN_SCRUBBER (SRR11097785)
+Jul-04 20:27:18.209 [Actor Thread 140] INFO  nextflow.processor.TaskProcessor - [0a/8a7f5b] Cached process > ASSEMBLY:HOST_REMOVAL:REMOVE_HOST_SRA_HUMAN_SCRUBBER (SRR11097779)
+Jul-04 20:27:18.210 [Actor Thread 170] INFO  nextflow.processor.TaskProcessor - [09/aa4e58] Cached process > ASSEMBLY:HOST_REMOVAL:REMOVE_HOST_SRA_HUMAN_SCRUBBER (SRR12527888)
+Jul-04 20:27:18.210 [Actor Thread 152] INFO  nextflow.processor.TaskProcessor - [65/b9d397] Cached process > ASSEMBLY:HOST_REMOVAL:REMOVE_HOST_SRA_HUMAN_SCRUBBER (ERR298346)
+Jul-04 20:27:18.212 [Actor Thread 99] INFO  nextflow.processor.TaskProcessor - [e9/89a79a] Cached process > ASSEMBLY:HOST_REMOVAL:REMOVE_HOST_SRA_HUMAN_SCRUBBER (SRR12527872)
+Jul-04 20:27:18.213 [Actor Thread 134] INFO  nextflow.processor.TaskProcessor - [3f/5cffac] Cached process > ASSEMBLY:HOST_REMOVAL:REMOVE_HOST_SRA_HUMAN_SCRUBBER (SRR12983338)
+Jul-04 20:27:18.214 [Actor Thread 47] INFO  nextflow.processor.TaskProcessor - [ef/038db8] Cached process > ASSEMBLY:HOST_REMOVAL:REMOVE_HOST_SRA_HUMAN_SCRUBBER (SRR12527867)
+Jul-04 20:27:18.216 [Actor Thread 161] INFO  nextflow.processor.TaskProcessor - [3a/0d8098] Cached process > ASSEMBLY:HOST_REMOVAL:REMOVE_HOST_SRA_HUMAN_SCRUBBER (SRR12527874)
+Jul-04 20:27:18.217 [Actor Thread 139] INFO  nextflow.processor.TaskProcessor - [c3/b94166] Cached process > ASSEMBLY:HOST_REMOVAL:CALC_STATS_SCRUB_REMOVED_FQ_SEQKIT (SRR12983328)
+Jul-04 20:27:18.218 [Actor Thread 160] INFO  nextflow.processor.TaskProcessor - [b3/e550c7] Cached process > ASSEMBLY:HOST_REMOVAL:CALC_STATS_SCRUB_REMOVED_FQ_SEQKIT (SRR12527875)
+Jul-04 20:27:18.219 [Actor Thread 147] INFO  nextflow.processor.TaskProcessor - [4a/dd7ec3] Cached process > ASSEMBLY:HOST_REMOVAL:REMOVE_HOST_SRA_HUMAN_SCRUBBER (SRR12527870)
+Jul-04 20:27:18.222 [Actor Thread 89] INFO  nextflow.processor.TaskProcessor - [33/52c8a9] Cached process > ASSEMBLY:HOST_REMOVAL:CALC_STATS_SCRUB_REMOVED_FQ_SEQKIT (SRR12527888)
+Jul-04 20:27:18.224 [Actor Thread 151] INFO  nextflow.processor.TaskProcessor - [dc/38c874] Cached process > ASSEMBLY:HOST_REMOVAL:CALC_STATS_SCRUB_REMOVED_FQ_SEQKIT (SRR11097781)
+Jul-04 20:27:18.227 [Actor Thread 133] INFO  nextflow.processor.TaskProcessor - [ee/e53bdb] Cached process > ASSEMBLY:HOST_REMOVAL:CALC_STATS_SCRUB_REMOVED_FQ_SEQKIT (SRR12527866)
+Jul-04 20:27:18.227 [Actor Thread 15] INFO  nextflow.processor.TaskProcessor - [37/0150c3] Cached process > ASSEMBLY:HOST_REMOVAL:CALC_STATS_SCRUB_REMOVED_FQ_SEQKIT (SRR11097774)
+Jul-04 20:27:18.227 [Actor Thread 168] INFO  nextflow.processor.TaskProcessor - [c8/cb1716] Cached process > ASSEMBLY:HOST_REMOVAL:CALC_STATS_SCRUB_REMOVED_FQ_SEQKIT (SRR11097779)
+Jul-04 20:27:18.227 [Actor Thread 109] INFO  nextflow.processor.TaskProcessor - [d2/564448] Cached process > ASSEMBLY:HOST_REMOVAL:CALC_STATS_SCRUB_REMOVED_FQ_SEQKIT (SRR12983340)
+Jul-04 20:27:18.231 [Actor Thread 82] INFO  nextflow.processor.TaskProcessor - [68/73fb7f] Cached process > ASSEMBLY:HOST_REMOVAL:CALC_STATS_SCRUB_REMOVED_FQ_SEQKIT (SRR11097785)
+Jul-04 20:27:18.234 [Actor Thread 138] INFO  nextflow.processor.TaskProcessor - [d4/8e995e] Cached process > ASSEMBLY:HOST_REMOVAL:CALC_STATS_SCRUB_REMOVED_FQ_SEQKIT (ERR298346)
+Jul-04 20:27:18.234 [Actor Thread 136] INFO  nextflow.processor.TaskProcessor - [70/4526bb] Cached process > ASSEMBLY:HOST_REMOVAL:CALC_STATS_SCRUB_REMOVED_FQ_SEQKIT (SRR11097775)
+Jul-04 20:27:18.234 [Actor Thread 150] INFO  nextflow.processor.TaskProcessor - [03/f072c9] Cached process > ASSEMBLY:HOST_REMOVAL:CALC_STATS_SCRUB_REMOVED_FQ_SEQKIT (SRR12983327)
+Jul-04 20:27:18.235 [Actor Thread 101] INFO  nextflow.processor.TaskProcessor - [b7/80089f] Cached process > ASSEMBLY:HOST_REMOVAL:CALC_STATS_SCRUB_REMOVED_FQ_SEQKIT (SRR12527874)
+Jul-04 20:27:18.243 [Actor Thread 163] INFO  nextflow.processor.TaskProcessor - [3e/6b9b8e] Cached process > ASSEMBLY:HOST_REMOVAL:CALC_STATS_SCRUB_REMOVED_FQ_SEQKIT (SRR12527880)
+Jul-04 20:27:18.244 [Actor Thread 131] INFO  nextflow.processor.TaskProcessor - [a3/c46eb2] Cached process > ASSEMBLY:HOST_REMOVAL:CALC_STATS_SCRUB_REMOVED_FQ_SEQKIT (SRR12983337)
+Jul-04 20:27:18.246 [Actor Thread 149] INFO  nextflow.processor.TaskProcessor - [32/33fbc6] Cached process > ASSEMBLY:HOST_REMOVAL:CALC_STATS_SCRUB_REMOVED_FQ_SEQKIT (SRR11097783)
+Jul-04 20:27:18.247 [Actor Thread 139] INFO  nextflow.processor.TaskProcessor - [0d/e35e1e] Cached process > ASSEMBLY:HOST_REMOVAL:CALC_STATS_SCRUB_REMOVED_FQ_SEQKIT (SRR12527867)
+Jul-04 20:27:18.248 [Actor Thread 152] INFO  nextflow.processor.TaskProcessor - [39/7b192f] Cached process > ASSEMBLY:HOST_REMOVAL:CALC_STATS_SCRUB_REMOVED_FQ_SEQKIT (SRR12527870)
+Jul-04 20:27:18.254 [Actor Thread 107] INFO  nextflow.processor.TaskProcessor - [6c/6857c5] Cached process > ASSEMBLY:HOST_REMOVAL:CALC_STATS_SCRUB_REMOVED_FQ_SEQKIT (SRR12527872)
+Jul-04 20:27:18.256 [Actor Thread 101] INFO  nextflow.processor.TaskProcessor - [d2/483bfc] Cached process > ASSEMBLY:HOST_REMOVAL:CALC_STATS_SCRUB_REMOVED_FQ_SEQKIT (SRR12527868)
+Jul-04 20:27:18.259 [Actor Thread 129] INFO  nextflow.processor.TaskProcessor - [49/93021b] Cached process > ASSEMBLY:HOST_REMOVAL:CALC_STATS_SCRUB_REMOVED_FQ_SEQKIT (SRR12983338)
+Jul-04 20:27:18.756 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-04 20:27:18.756 [Task submitter] INFO  nextflow.Session - [4b/90e821] Submitted process > ASSEMBLY:HOST_REMOVAL:REMOVE_HOST_SRA_HUMAN_SCRUBBER (SRR12527864)
+Jul-04 20:27:28.436 [Actor Thread 12] INFO  nextflow.processor.TaskProcessor - [ed/f87fc0] Cached process > ASSEMBLY:HOST_REMOVAL:REMOVE_HOST_SRA_HUMAN_SCRUBBER (SRR12527882)
+Jul-04 20:27:28.436 [Actor Thread 81] INFO  nextflow.processor.TaskProcessor - [e4/80f1b1] Cached process > ASSEMBLY:HOST_REMOVAL:REMOVE_HOST_SRA_HUMAN_SCRUBBER (SRR11097784)
+Jul-04 20:27:28.441 [Actor Thread 146] INFO  nextflow.processor.TaskProcessor - [62/4f24e6] Cached process > ASSEMBLY:HOST_REMOVAL:REMOVE_HOST_SRA_HUMAN_SCRUBBER (SRR12527885)
+Jul-04 20:27:28.445 [Actor Thread 134] INFO  nextflow.processor.TaskProcessor - [70/429b10] Cached process > ASSEMBLY:HOST_REMOVAL:CALC_STATS_SCRUB_REMOVED_FQ_SEQKIT (SRR12527882)
+Jul-04 20:27:28.448 [Actor Thread 138] INFO  nextflow.processor.TaskProcessor - [ad/9af570] Cached process > ASSEMBLY:HOST_REMOVAL:CALC_STATS_SCRUB_REMOVED_FQ_SEQKIT (SRR11097784)
+Jul-04 20:27:28.448 [Actor Thread 129] INFO  nextflow.processor.TaskProcessor - [83/9ed292] Cached process > ASSEMBLY:HOST_REMOVAL:CALC_STATS_SCRUB_REMOVED_FQ_SEQKIT (SRR12527885)
+Jul-04 20:29:48.087 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 2 -- submitted tasks are shown below
+~> TaskHandler[id: 176; name: ASSEMBLY:HOST_REMOVAL:REMOVE_BROKEN_PAIRS_BBTOOLS_REPAIR (SRR11097776); status: RUNNING; exit: -; error: -; workDir: /home/phemarajata/wf-paired-end-illumina-assembly-gcb/work/2a/4195c71f207d08ec1018fc51182757]
+~> TaskHandler[id: 225; name: ASSEMBLY:HOST_REMOVAL:REMOVE_HOST_SRA_HUMAN_SCRUBBER (SRR12527864); status: RUNNING; exit: -; error: -; workDir: /home/phemarajata/wf-paired-end-illumina-assembly-gcb/work/4b/90e82187b2cf4055c6923ffe605342]
+Jul-04 20:30:49.747 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 176; name: ASSEMBLY:HOST_REMOVAL:REMOVE_BROKEN_PAIRS_BBTOOLS_REPAIR (SRR11097776); status: COMPLETED; exit: 0; error: -; workDir: /home/phemarajata/wf-paired-end-illumina-assembly-gcb/work/2a/4195c71f207d08ec1018fc51182757]
+Jul-04 20:30:49.750 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-04 20:30:49.750 [Task submitter] INFO  nextflow.Session - [8b/0ba1a0] Submitted process > ASSEMBLY:HOST_REMOVAL:REMOVE_BROKEN_PAIRS_BBTOOLS_REPAIR (SRR12527879)
+Jul-04 20:30:50.755 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-04 20:30:50.755 [Task submitter] INFO  nextflow.Session - [f0/3146f2] Submitted process > ASSEMBLY:HOST_REMOVAL:CALC_STATS_REPAIR_REMOVED_FQ_SEQKIT (SRR11097776)
+Jul-04 20:31:02.689 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 289; name: ASSEMBLY:HOST_REMOVAL:CALC_STATS_REPAIR_REMOVED_FQ_SEQKIT (SRR11097776); status: COMPLETED; exit: 0; error: -; workDir: /home/phemarajata/wf-paired-end-illumina-assembly-gcb/work/f0/3146f2105d479c3bff18f7b8a538d4]
+Jul-04 20:31:20.698 [Task submitter] DEBUG n.processor.TaskPollingMonitor - %% executor local > tasks in the submission queue: 46 -- tasks to be submitted are shown below
+~> TaskHandler[id: 189; name: ASSEMBLY:HOST_REMOVAL:REMOVE_BROKEN_PAIRS_BBTOOLS_REPAIR (SRR12527878); status: NEW; exit: -; error: -; workDir: /home/phemarajata/wf-paired-end-illumina-assembly-gcb/work/af/199c839d6aaddfcfab4a3290f31904]
+~> TaskHandler[id: 190; name: ASSEMBLY:HOST_REMOVAL:REMOVE_BROKEN_PAIRS_BBTOOLS_REPAIR (SRR11097778); status: NEW; exit: -; error: -; workDir: /home/phemarajata/wf-paired-end-illumina-assembly-gcb/work/e8/92186ea87e67291862fddbf0241269]
+~> TaskHandler[id: 209; name: ASSEMBLY:HOST_REMOVAL:REMOVE_BROKEN_PAIRS_BBTOOLS_REPAIR (SRR12527876); status: NEW; exit: -; error: -; workDir: /home/phemarajata/wf-paired-end-illumina-assembly-gcb/work/5f/a0f651f476c0374380a9bf534b92e3]
+~> TaskHandler[id: 175; name: ASSEMBLY:HOST_REMOVAL:REMOVE_BROKEN_PAIRS_BBTOOLS_REPAIR (SRR11097786); status: NEW; exit: -; error: -; workDir: /home/phemarajata/wf-paired-end-illumina-assembly-gcb/work/5d/e0cb912846ee9fbdf7dde933def2e7]
+~> TaskHandler[id: 188; name: ASSEMBLY:HOST_REMOVAL:REMOVE_BROKEN_PAIRS_BBTOOLS_REPAIR (SRR11097782); status: NEW; exit: -; error: -; workDir: /home/phemarajata/wf-paired-end-illumina-assembly-gcb/work/94/a3fd1ae0399e9387cf1db50b01cc16]
+~> TaskHandler[id: 197; name: ASSEMBLY:HOST_REMOVAL:REMOVE_BROKEN_PAIRS_BBTOOLS_REPAIR (SRR12527881); status: NEW; exit: -; error: -; workDir: /home/phemarajata/wf-paired-end-illumina-assembly-gcb/work/a9/62cabe9632a48a3773af14482c6b9d]
+~> TaskHandler[id: 183; name: ASSEMBLY:HOST_REMOVAL:REMOVE_BROKEN_PAIRS_BBTOOLS_REPAIR (SRR12527871); status: NEW; exit: -; error: -; workDir: /home/phemarajata/wf-paired-end-illumina-assembly-gcb/work/64/db668abe3d2a68480b2d3a1591042c]
+~> TaskHandler[id: 228; name: ASSEMBLY:HOST_REMOVAL:REMOVE_BROKEN_PAIRS_BBTOOLS_REPAIR (SRR12527873); status: NEW; exit: -; error: -; workDir: /home/phemarajata/wf-paired-end-illumina-assembly-gcb/work/2a/fd3371961181c9ec850b5072112b34]
+~> TaskHandler[id: 200; name: ASSEMBLY:HOST_REMOVAL:REMOVE_BROKEN_PAIRS_BBTOOLS_REPAIR (SRR12983339); status: NEW; exit: -; error: -; workDir: /home/phemarajata/wf-paired-end-illumina-assembly-gcb/work/da/3e226a385e5a7ca35f0b70ed9cd0fa]
+~> TaskHandler[id: 178; name: ASSEMBLY:HOST_REMOVAL:REMOVE_BROKEN_PAIRS_BBTOOLS_REPAIR (SRR11097777); status: NEW; exit: -; error: -; workDir: /home/phemarajata/wf-paired-end-illumina-assembly-gcb/work/fe/569f51711cb940352000f36664a477]
+.. remaining tasks omitted.
+Jul-04 20:34:48.135 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 2 -- submitted tasks are shown below
+~> TaskHandler[id: 225; name: ASSEMBLY:HOST_REMOVAL:REMOVE_HOST_SRA_HUMAN_SCRUBBER (SRR12527864); status: RUNNING; exit: -; error: -; workDir: /home/phemarajata/wf-paired-end-illumina-assembly-gcb/work/4b/90e82187b2cf4055c6923ffe605342]
+~> TaskHandler[id: 211; name: ASSEMBLY:HOST_REMOVAL:REMOVE_BROKEN_PAIRS_BBTOOLS_REPAIR (SRR12527879); status: RUNNING; exit: -; error: -; workDir: /home/phemarajata/wf-paired-end-illumina-assembly-gcb/work/8b/0ba1a08b47279bc79050bf75ca5af5]
+Jul-04 20:36:20.798 [Task submitter] DEBUG n.processor.TaskPollingMonitor - %% executor local > tasks in the submission queue: 46 -- tasks to be submitted are shown below
+~> TaskHandler[id: 189; name: ASSEMBLY:HOST_REMOVAL:REMOVE_BROKEN_PAIRS_BBTOOLS_REPAIR (SRR12527878); status: NEW; exit: -; error: -; workDir: /home/phemarajata/wf-paired-end-illumina-assembly-gcb/work/af/199c839d6aaddfcfab4a3290f31904]
+~> TaskHandler[id: 190; name: ASSEMBLY:HOST_REMOVAL:REMOVE_BROKEN_PAIRS_BBTOOLS_REPAIR (SRR11097778); status: NEW; exit: -; error: -; workDir: /home/phemarajata/wf-paired-end-illumina-assembly-gcb/work/e8/92186ea87e67291862fddbf0241269]
+~> TaskHandler[id: 209; name: ASSEMBLY:HOST_REMOVAL:REMOVE_BROKEN_PAIRS_BBTOOLS_REPAIR (SRR12527876); status: NEW; exit: -; error: -; workDir: /home/phemarajata/wf-paired-end-illumina-assembly-gcb/work/5f/a0f651f476c0374380a9bf534b92e3]
+~> TaskHandler[id: 175; name: ASSEMBLY:HOST_REMOVAL:REMOVE_BROKEN_PAIRS_BBTOOLS_REPAIR (SRR11097786); status: NEW; exit: -; error: -; workDir: /home/phemarajata/wf-paired-end-illumina-assembly-gcb/work/5d/e0cb912846ee9fbdf7dde933def2e7]
+~> TaskHandler[id: 188; name: ASSEMBLY:HOST_REMOVAL:REMOVE_BROKEN_PAIRS_BBTOOLS_REPAIR (SRR11097782); status: NEW; exit: -; error: -; workDir: /home/phemarajata/wf-paired-end-illumina-assembly-gcb/work/94/a3fd1ae0399e9387cf1db50b01cc16]
+~> TaskHandler[id: 197; name: ASSEMBLY:HOST_REMOVAL:REMOVE_BROKEN_PAIRS_BBTOOLS_REPAIR (SRR12527881); status: NEW; exit: -; error: -; workDir: /home/phemarajata/wf-paired-end-illumina-assembly-gcb/work/a9/62cabe9632a48a3773af14482c6b9d]
+~> TaskHandler[id: 183; name: ASSEMBLY:HOST_REMOVAL:REMOVE_BROKEN_PAIRS_BBTOOLS_REPAIR (SRR12527871); status: NEW; exit: -; error: -; workDir: /home/phemarajata/wf-paired-end-illumina-assembly-gcb/work/64/db668abe3d2a68480b2d3a1591042c]
+~> TaskHandler[id: 228; name: ASSEMBLY:HOST_REMOVAL:REMOVE_BROKEN_PAIRS_BBTOOLS_REPAIR (SRR12527873); status: NEW; exit: -; error: -; workDir: /home/phemarajata/wf-paired-end-illumina-assembly-gcb/work/2a/fd3371961181c9ec850b5072112b34]
+~> TaskHandler[id: 200; name: ASSEMBLY:HOST_REMOVAL:REMOVE_BROKEN_PAIRS_BBTOOLS_REPAIR (SRR12983339); status: NEW; exit: -; error: -; workDir: /home/phemarajata/wf-paired-end-illumina-assembly-gcb/work/da/3e226a385e5a7ca35f0b70ed9cd0fa]
+~> TaskHandler[id: 178; name: ASSEMBLY:HOST_REMOVAL:REMOVE_BROKEN_PAIRS_BBTOOLS_REPAIR (SRR11097777); status: NEW; exit: -; error: -; workDir: /home/phemarajata/wf-paired-end-illumina-assembly-gcb/work/fe/569f51711cb940352000f36664a477]
+.. remaining tasks omitted.
+Jul-04 20:36:46.768 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 225; name: ASSEMBLY:HOST_REMOVAL:REMOVE_HOST_SRA_HUMAN_SCRUBBER (SRR12527864); status: COMPLETED; exit: 0; error: -; workDir: /home/phemarajata/wf-paired-end-illumina-assembly-gcb/work/4b/90e82187b2cf4055c6923ffe605342]
+Jul-04 20:36:46.772 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-04 20:36:46.772 [Task submitter] INFO  nextflow.Session - [75/a60b45] Submitted process > ASSEMBLY:HOST_REMOVAL:REMOVE_HOST_SRA_HUMAN_SCRUBBER (SRR12527877)
+Jul-04 20:36:47.775 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-04 20:36:47.776 [Task submitter] INFO  nextflow.Session - [dd/1f3733] Submitted process > ASSEMBLY:HOST_REMOVAL:CALC_STATS_SCRUB_REMOVED_FQ_SEQKIT (SRR12527864)
+Jul-04 20:37:05.143 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 291; name: ASSEMBLY:HOST_REMOVAL:CALC_STATS_SCRUB_REMOVED_FQ_SEQKIT (SRR12527864); status: COMPLETED; exit: 0; error: -; workDir: /home/phemarajata/wf-paired-end-illumina-assembly-gcb/work/dd/1f37332e06331cf2d0cfdbd2b1c3a6]
+Jul-04 20:37:35.363 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 211; name: ASSEMBLY:HOST_REMOVAL:REMOVE_BROKEN_PAIRS_BBTOOLS_REPAIR (SRR12527879); status: COMPLETED; exit: 0; error: -; workDir: /home/phemarajata/wf-paired-end-illumina-assembly-gcb/work/8b/0ba1a08b47279bc79050bf75ca5af5]
+Jul-04 20:37:35.369 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-04 20:37:35.370 [Task submitter] INFO  nextflow.Session - [af/199c83] Submitted process > ASSEMBLY:HOST_REMOVAL:REMOVE_BROKEN_PAIRS_BBTOOLS_REPAIR (SRR12527878)
+Jul-04 20:37:36.378 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-04 20:37:36.378 [Task submitter] INFO  nextflow.Session - [e5/08c723] Submitted process > ASSEMBLY:HOST_REMOVAL:CALC_STATS_REPAIR_REMOVED_FQ_SEQKIT (SRR12527879)
+Jul-04 20:37:56.491 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 293; name: ASSEMBLY:HOST_REMOVAL:CALC_STATS_REPAIR_REMOVED_FQ_SEQKIT (SRR12527879); status: COMPLETED; exit: 0; error: -; workDir: /home/phemarajata/wf-paired-end-illumina-assembly-gcb/work/e5/08c723861cce9554c190057a119d9a]
+Jul-04 20:39:48.198 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 2 -- submitted tasks are shown below
+~> TaskHandler[id: 243; name: ASSEMBLY:HOST_REMOVAL:REMOVE_HOST_SRA_HUMAN_SCRUBBER (SRR12527877); status: RUNNING; exit: -; error: -; workDir: /home/phemarajata/wf-paired-end-illumina-assembly-gcb/work/75/a60b458f542d7c14b79405ce33f018]
+~> TaskHandler[id: 189; name: ASSEMBLY:HOST_REMOVAL:REMOVE_BROKEN_PAIRS_BBTOOLS_REPAIR (SRR12527878); status: RUNNING; exit: -; error: -; workDir: /home/phemarajata/wf-paired-end-illumina-assembly-gcb/work/af/199c839d6aaddfcfab4a3290f31904]
+Jul-04 20:41:21.566 [Task submitter] DEBUG n.processor.TaskPollingMonitor - %% executor local > tasks in the submission queue: 46 -- tasks to be submitted are shown below
+~> TaskHandler[id: 190; name: ASSEMBLY:HOST_REMOVAL:REMOVE_BROKEN_PAIRS_BBTOOLS_REPAIR (SRR11097778); status: NEW; exit: -; error: -; workDir: /home/phemarajata/wf-paired-end-illumina-assembly-gcb/work/e8/92186ea87e67291862fddbf0241269]
+~> TaskHandler[id: 209; name: ASSEMBLY:HOST_REMOVAL:REMOVE_BROKEN_PAIRS_BBTOOLS_REPAIR (SRR12527876); status: NEW; exit: -; error: -; workDir: /home/phemarajata/wf-paired-end-illumina-assembly-gcb/work/5f/a0f651f476c0374380a9bf534b92e3]
+~> TaskHandler[id: 175; name: ASSEMBLY:HOST_REMOVAL:REMOVE_BROKEN_PAIRS_BBTOOLS_REPAIR (SRR11097786); status: NEW; exit: -; error: -; workDir: /home/phemarajata/wf-paired-end-illumina-assembly-gcb/work/5d/e0cb912846ee9fbdf7dde933def2e7]
+~> TaskHandler[id: 188; name: ASSEMBLY:HOST_REMOVAL:REMOVE_BROKEN_PAIRS_BBTOOLS_REPAIR (SRR11097782); status: NEW; exit: -; error: -; workDir: /home/phemarajata/wf-paired-end-illumina-assembly-gcb/work/94/a3fd1ae0399e9387cf1db50b01cc16]
+~> TaskHandler[id: 197; name: ASSEMBLY:HOST_REMOVAL:REMOVE_BROKEN_PAIRS_BBTOOLS_REPAIR (SRR12527881); status: NEW; exit: -; error: -; workDir: /home/phemarajata/wf-paired-end-illumina-assembly-gcb/work/a9/62cabe9632a48a3773af14482c6b9d]
+~> TaskHandler[id: 183; name: ASSEMBLY:HOST_REMOVAL:REMOVE_BROKEN_PAIRS_BBTOOLS_REPAIR (SRR12527871); status: NEW; exit: -; error: -; workDir: /home/phemarajata/wf-paired-end-illumina-assembly-gcb/work/64/db668abe3d2a68480b2d3a1591042c]
+~> TaskHandler[id: 228; name: ASSEMBLY:HOST_REMOVAL:REMOVE_BROKEN_PAIRS_BBTOOLS_REPAIR (SRR12527873); status: NEW; exit: -; error: -; workDir: /home/phemarajata/wf-paired-end-illumina-assembly-gcb/work/2a/fd3371961181c9ec850b5072112b34]
+~> TaskHandler[id: 200; name: ASSEMBLY:HOST_REMOVAL:REMOVE_BROKEN_PAIRS_BBTOOLS_REPAIR (SRR12983339); status: NEW; exit: -; error: -; workDir: /home/phemarajata/wf-paired-end-illumina-assembly-gcb/work/da/3e226a385e5a7ca35f0b70ed9cd0fa]
+~> TaskHandler[id: 178; name: ASSEMBLY:HOST_REMOVAL:REMOVE_BROKEN_PAIRS_BBTOOLS_REPAIR (SRR11097777); status: NEW; exit: -; error: -; workDir: /home/phemarajata/wf-paired-end-illumina-assembly-gcb/work/fe/569f51711cb940352000f36664a477]
+~> TaskHandler[id: 179; name: ASSEMBLY:HOST_REMOVAL:REMOVE_BROKEN_PAIRS_BBTOOLS_REPAIR (SRR12527869); status: NEW; exit: -; error: -; workDir: /home/phemarajata/wf-paired-end-illumina-assembly-gcb/work/11/a903d30c2c68853590ba82b9b83784]
+.. remaining tasks omitted.
+Jul-04 20:42:57.659 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 189; name: ASSEMBLY:HOST_REMOVAL:REMOVE_BROKEN_PAIRS_BBTOOLS_REPAIR (SRR12527878); status: COMPLETED; exit: 0; error: -; workDir: /home/phemarajata/wf-paired-end-illumina-assembly-gcb/work/af/199c839d6aaddfcfab4a3290f31904]
+Jul-04 20:42:57.662 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-04 20:42:57.662 [Task submitter] INFO  nextflow.Session - [e8/92186e] Submitted process > ASSEMBLY:HOST_REMOVAL:REMOVE_BROKEN_PAIRS_BBTOOLS_REPAIR (SRR11097778)
+Jul-04 20:42:58.666 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-04 20:42:58.666 [Task submitter] INFO  nextflow.Session - [d9/e6bd44] Submitted process > ASSEMBLY:HOST_REMOVAL:CALC_STATS_REPAIR_REMOVED_FQ_SEQKIT (SRR12527878)
+Jul-04 20:43:15.980 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 295; name: ASSEMBLY:HOST_REMOVAL:CALC_STATS_REPAIR_REMOVED_FQ_SEQKIT (SRR12527878); status: COMPLETED; exit: 0; error: -; workDir: /home/phemarajata/wf-paired-end-illumina-assembly-gcb/work/d9/e6bd445f3bb33749046c98513dd058]
+Jul-04 20:44:48.240 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 2 -- submitted tasks are shown below
+~> TaskHandler[id: 243; name: ASSEMBLY:HOST_REMOVAL:REMOVE_HOST_SRA_HUMAN_SCRUBBER (SRR12527877); status: RUNNING; exit: -; error: -; workDir: /home/phemarajata/wf-paired-end-illumina-assembly-gcb/work/75/a60b458f542d7c14b79405ce33f018]
+~> TaskHandler[id: 190; name: ASSEMBLY:HOST_REMOVAL:REMOVE_BROKEN_PAIRS_BBTOOLS_REPAIR (SRR11097778); status: RUNNING; exit: -; error: -; workDir: /home/phemarajata/wf-paired-end-illumina-assembly-gcb/work/e8/92186ea87e67291862fddbf0241269]
+Jul-04 20:46:22.024 [Task submitter] DEBUG n.processor.TaskPollingMonitor - %% executor local > tasks in the submission queue: 46 -- tasks to be submitted are shown below
+~> TaskHandler[id: 209; name: ASSEMBLY:HOST_REMOVAL:REMOVE_BROKEN_PAIRS_BBTOOLS_REPAIR (SRR12527876); status: NEW; exit: -; error: -; workDir: /home/phemarajata/wf-paired-end-illumina-assembly-gcb/work/5f/a0f651f476c0374380a9bf534b92e3]
+~> TaskHandler[id: 175; name: ASSEMBLY:HOST_REMOVAL:REMOVE_BROKEN_PAIRS_BBTOOLS_REPAIR (SRR11097786); status: NEW; exit: -; error: -; workDir: /home/phemarajata/wf-paired-end-illumina-assembly-gcb/work/5d/e0cb912846ee9fbdf7dde933def2e7]
+~> TaskHandler[id: 188; name: ASSEMBLY:HOST_REMOVAL:REMOVE_BROKEN_PAIRS_BBTOOLS_REPAIR (SRR11097782); status: NEW; exit: -; error: -; workDir: /home/phemarajata/wf-paired-end-illumina-assembly-gcb/work/94/a3fd1ae0399e9387cf1db50b01cc16]
+~> TaskHandler[id: 197; name: ASSEMBLY:HOST_REMOVAL:REMOVE_BROKEN_PAIRS_BBTOOLS_REPAIR (SRR12527881); status: NEW; exit: -; error: -; workDir: /home/phemarajata/wf-paired-end-illumina-assembly-gcb/work/a9/62cabe9632a48a3773af14482c6b9d]
+~> TaskHandler[id: 183; name: ASSEMBLY:HOST_REMOVAL:REMOVE_BROKEN_PAIRS_BBTOOLS_REPAIR (SRR12527871); status: NEW; exit: -; error: -; workDir: /home/phemarajata/wf-paired-end-illumina-assembly-gcb/work/64/db668abe3d2a68480b2d3a1591042c]
+~> TaskHandler[id: 228; name: ASSEMBLY:HOST_REMOVAL:REMOVE_BROKEN_PAIRS_BBTOOLS_REPAIR (SRR12527873); status: NEW; exit: -; error: -; workDir: /home/phemarajata/wf-paired-end-illumina-assembly-gcb/work/2a/fd3371961181c9ec850b5072112b34]
+~> TaskHandler[id: 200; name: ASSEMBLY:HOST_REMOVAL:REMOVE_BROKEN_PAIRS_BBTOOLS_REPAIR (SRR12983339); status: NEW; exit: -; error: -; workDir: /home/phemarajata/wf-paired-end-illumina-assembly-gcb/work/da/3e226a385e5a7ca35f0b70ed9cd0fa]
+~> TaskHandler[id: 178; name: ASSEMBLY:HOST_REMOVAL:REMOVE_BROKEN_PAIRS_BBTOOLS_REPAIR (SRR11097777); status: NEW; exit: -; error: -; workDir: /home/phemarajata/wf-paired-end-illumina-assembly-gcb/work/fe/569f51711cb940352000f36664a477]
+~> TaskHandler[id: 179; name: ASSEMBLY:HOST_REMOVAL:REMOVE_BROKEN_PAIRS_BBTOOLS_REPAIR (SRR12527869); status: NEW; exit: -; error: -; workDir: /home/phemarajata/wf-paired-end-illumina-assembly-gcb/work/11/a903d30c2c68853590ba82b9b83784]
+~> TaskHandler[id: 202; name: ASSEMBLY:HOST_REMOVAL:REMOVE_BROKEN_PAIRS_BBTOOLS_REPAIR (SRR11097772); status: NEW; exit: -; error: -; workDir: /home/phemarajata/wf-paired-end-illumina-assembly-gcb/work/b1/1ce1880017a5bbc4a02a766f25b3ef]
+.. remaining tasks omitted.
+Jul-04 20:47:21.623 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 190; name: ASSEMBLY:HOST_REMOVAL:REMOVE_BROKEN_PAIRS_BBTOOLS_REPAIR (SRR11097778); status: COMPLETED; exit: 0; error: -; workDir: /home/phemarajata/wf-paired-end-illumina-assembly-gcb/work/e8/92186ea87e67291862fddbf0241269]
+Jul-04 20:47:21.627 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-04 20:47:21.627 [Task submitter] INFO  nextflow.Session - [5f/a0f651] Submitted process > ASSEMBLY:HOST_REMOVAL:REMOVE_BROKEN_PAIRS_BBTOOLS_REPAIR (SRR12527876)
+Jul-04 20:47:22.632 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-04 20:47:22.633 [Task submitter] INFO  nextflow.Session - [73/2d1859] Submitted process > ASSEMBLY:HOST_REMOVAL:CALC_STATS_REPAIR_REMOVED_FQ_SEQKIT (SRR11097778)
+Jul-04 20:47:32.447 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 297; name: ASSEMBLY:HOST_REMOVAL:CALC_STATS_REPAIR_REMOVED_FQ_SEQKIT (SRR11097778); status: COMPLETED; exit: 0; error: -; workDir: /home/phemarajata/wf-paired-end-illumina-assembly-gcb/work/73/2d1859865783e3280572e7cb5b1561]
+Jul-04 20:48:20.253 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 243; name: ASSEMBLY:HOST_REMOVAL:REMOVE_HOST_SRA_HUMAN_SCRUBBER (SRR12527877); status: COMPLETED; exit: 0; error: -; workDir: /home/phemarajata/wf-paired-end-illumina-assembly-gcb/work/75/a60b458f542d7c14b79405ce33f018]
+Jul-04 20:48:20.275 [Actor Thread 138] DEBUG nextflow.sort.BigSort - Sort completed -- entries: 48; slices: 1; internal sort time: 0.012 s; external sort time: 0.002 s; total time: 0.014 s
+Jul-04 20:48:20.276 [Actor Thread 138] DEBUG nextflow.file.FileCollector - >> temp file exists? false
+Jul-04 20:48:20.276 [Actor Thread 138] DEBUG nextflow.file.FileCollector - Missed collect-file cache -- cause: java.nio.file.NoSuchFileException: /home/phemarajata/wf-paired-end-illumina-assembly-gcb/work/collect-file/1f1b07061d0027f103515f8ae816a190
+Jul-04 20:48:20.280 [Actor Thread 138] DEBUG nextflow.file.FileCollector - Saved collect-files list to: /home/phemarajata/wf-paired-end-illumina-assembly-gcb/work/collect-file/1f1b07061d0027f103515f8ae816a190
+Jul-04 20:48:20.281 [Actor Thread 146] INFO  nextflow.script.BaseScript - DEBUG: From REMOVE_HOST_SRA_HUMAN_SCRUBBER.out.summary, collected files: /home/phemarajata/Downloads/sra_reads/my-results/Summaries/Summary.SRA_Human_Scrubbed.tsv
+Jul-04 20:48:20.282 [Actor Thread 138] DEBUG nextflow.file.FileCollector - Deleting file collector temp dir: /tmp/nxf-2606861593694011848
+Jul-04 20:48:21.257 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-04 20:48:21.257 [Task submitter] INFO  nextflow.Session - [c0/ac1738] Submitted process > ASSEMBLY:HOST_REMOVAL:CALC_STATS_SCRUB_REMOVED_FQ_SEQKIT (SRR12527877)
+Jul-04 20:48:28.981 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 299; name: ASSEMBLY:HOST_REMOVAL:CALC_STATS_SCRUB_REMOVED_FQ_SEQKIT (SRR12527877); status: COMPLETED; exit: 0; error: -; workDir: /home/phemarajata/wf-paired-end-illumina-assembly-gcb/work/c0/ac1738d4017b6a946c04761ece3c12]
+Jul-04 20:48:28.996 [Actor Thread 144] DEBUG nextflow.sort.BigSort - Sort completed -- entries: 48; slices: 1; internal sort time: 0.011 s; external sort time: 0.001 s; total time: 0.012 s
+Jul-04 20:48:28.996 [Actor Thread 144] DEBUG nextflow.file.FileCollector - >> temp file exists? false
+Jul-04 20:48:28.996 [Actor Thread 144] DEBUG nextflow.file.FileCollector - Missed collect-file cache -- cause: java.nio.file.NoSuchFileException: /home/phemarajata/wf-paired-end-illumina-assembly-gcb/work/collect-file/7656c9d2ca14a838925c703c0245d2b3
+Jul-04 20:48:28.999 [Actor Thread 144] DEBUG nextflow.file.FileCollector - Saved collect-files list to: /home/phemarajata/wf-paired-end-illumina-assembly-gcb/work/collect-file/7656c9d2ca14a838925c703c0245d2b3
+Jul-04 20:48:28.999 [Actor Thread 144] DEBUG nextflow.file.FileCollector - Deleting file collector temp dir: /tmp/nxf-14538402263424244340
+Jul-04 20:49:48.251 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[id: 209; name: ASSEMBLY:HOST_REMOVAL:REMOVE_BROKEN_PAIRS_BBTOOLS_REPAIR (SRR12527876); status: RUNNING; exit: -; error: -; workDir: /home/phemarajata/wf-paired-end-illumina-assembly-gcb/work/5f/a0f651f476c0374380a9bf534b92e3]
+Jul-04 20:51:07.545 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 209; name: ASSEMBLY:HOST_REMOVAL:REMOVE_BROKEN_PAIRS_BBTOOLS_REPAIR (SRR12527876); status: COMPLETED; exit: 0; error: -; workDir: /home/phemarajata/wf-paired-end-illumina-assembly-gcb/work/5f/a0f651f476c0374380a9bf534b92e3]
+Jul-04 20:51:07.548 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-04 20:51:07.548 [Task submitter] INFO  nextflow.Session - [5d/e0cb91] Submitted process > ASSEMBLY:HOST_REMOVAL:REMOVE_BROKEN_PAIRS_BBTOOLS_REPAIR (SRR11097786)
+Jul-04 20:51:08.553 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-04 20:51:08.553 [Task submitter] INFO  nextflow.Session - [71/9b5a4d] Submitted process > ASSEMBLY:HOST_REMOVAL:CALC_STATS_REPAIR_REMOVED_FQ_SEQKIT (SRR12527876)
+Jul-04 20:51:20.068 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 301; name: ASSEMBLY:HOST_REMOVAL:CALC_STATS_REPAIR_REMOVED_FQ_SEQKIT (SRR12527876); status: COMPLETED; exit: 0; error: -; workDir: /home/phemarajata/wf-paired-end-illumina-assembly-gcb/work/71/9b5a4d022310fb4b1afeaa7232b5d4]
+Jul-04 20:51:22.069 [Task submitter] DEBUG n.processor.TaskPollingMonitor - %% executor local > tasks in the submission queue: 47 -- tasks to be submitted are shown below
+~> TaskHandler[id: 188; name: ASSEMBLY:HOST_REMOVAL:REMOVE_BROKEN_PAIRS_BBTOOLS_REPAIR (SRR11097782); status: NEW; exit: -; error: -; workDir: /home/phemarajata/wf-paired-end-illumina-assembly-gcb/work/94/a3fd1ae0399e9387cf1db50b01cc16]
+~> TaskHandler[id: 197; name: ASSEMBLY:HOST_REMOVAL:REMOVE_BROKEN_PAIRS_BBTOOLS_REPAIR (SRR12527881); status: NEW; exit: -; error: -; workDir: /home/phemarajata/wf-paired-end-illumina-assembly-gcb/work/a9/62cabe9632a48a3773af14482c6b9d]
+~> TaskHandler[id: 183; name: ASSEMBLY:HOST_REMOVAL:REMOVE_BROKEN_PAIRS_BBTOOLS_REPAIR (SRR12527871); status: NEW; exit: -; error: -; workDir: /home/phemarajata/wf-paired-end-illumina-assembly-gcb/work/64/db668abe3d2a68480b2d3a1591042c]
+~> TaskHandler[id: 228; name: ASSEMBLY:HOST_REMOVAL:REMOVE_BROKEN_PAIRS_BBTOOLS_REPAIR (SRR12527873); status: NEW; exit: -; error: -; workDir: /home/phemarajata/wf-paired-end-illumina-assembly-gcb/work/2a/fd3371961181c9ec850b5072112b34]
+~> TaskHandler[id: 200; name: ASSEMBLY:HOST_REMOVAL:REMOVE_BROKEN_PAIRS_BBTOOLS_REPAIR (SRR12983339); status: NEW; exit: -; error: -; workDir: /home/phemarajata/wf-paired-end-illumina-assembly-gcb/work/da/3e226a385e5a7ca35f0b70ed9cd0fa]
+~> TaskHandler[id: 178; name: ASSEMBLY:HOST_REMOVAL:REMOVE_BROKEN_PAIRS_BBTOOLS_REPAIR (SRR11097777); status: NEW; exit: -; error: -; workDir: /home/phemarajata/wf-paired-end-illumina-assembly-gcb/work/fe/569f51711cb940352000f36664a477]
+~> TaskHandler[id: 179; name: ASSEMBLY:HOST_REMOVAL:REMOVE_BROKEN_PAIRS_BBTOOLS_REPAIR (SRR12527869); status: NEW; exit: -; error: -; workDir: /home/phemarajata/wf-paired-end-illumina-assembly-gcb/work/11/a903d30c2c68853590ba82b9b83784]
+~> TaskHandler[id: 202; name: ASSEMBLY:HOST_REMOVAL:REMOVE_BROKEN_PAIRS_BBTOOLS_REPAIR (SRR11097772); status: NEW; exit: -; error: -; workDir: /home/phemarajata/wf-paired-end-illumina-assembly-gcb/work/b1/1ce1880017a5bbc4a02a766f25b3ef]
+~> TaskHandler[id: 182; name: ASSEMBLY:HOST_REMOVAL:REMOVE_BROKEN_PAIRS_BBTOOLS_REPAIR (SRR12527886); status: NEW; exit: -; error: -; workDir: /home/phemarajata/wf-paired-end-illumina-assembly-gcb/work/4d/fb13379155e45a9db64d669dca6cf2]
+~> TaskHandler[id: 230; name: ASSEMBLY:HOST_REMOVAL:REMOVE_BROKEN_PAIRS_BBTOOLS_REPAIR (SRR12527865); status: NEW; exit: -; error: -; workDir: /home/phemarajata/wf-paired-end-illumina-assembly-gcb/work/2c/b88825d43d8447658df79a5a16c63e]
+.. remaining tasks omitted.
+Jul-04 20:54:48.347 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[id: 175; name: ASSEMBLY:HOST_REMOVAL:REMOVE_BROKEN_PAIRS_BBTOOLS_REPAIR (SRR11097786); status: RUNNING; exit: -; error: -; workDir: /home/phemarajata/wf-paired-end-illumina-assembly-gcb/work/5d/e0cb912846ee9fbdf7dde933def2e7]
+Jul-04 20:55:36.063 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 175; name: ASSEMBLY:HOST_REMOVAL:REMOVE_BROKEN_PAIRS_BBTOOLS_REPAIR (SRR11097786); status: COMPLETED; exit: 0; error: -; workDir: /home/phemarajata/wf-paired-end-illumina-assembly-gcb/work/5d/e0cb912846ee9fbdf7dde933def2e7]
+Jul-04 20:55:36.066 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-04 20:55:36.066 [Task submitter] INFO  nextflow.Session - [94/a3fd1a] Submitted process > ASSEMBLY:HOST_REMOVAL:REMOVE_BROKEN_PAIRS_BBTOOLS_REPAIR (SRR11097782)
+Jul-04 20:55:37.071 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-04 20:55:37.072 [Task submitter] INFO  nextflow.Session - [f8/e8ed33] Submitted process > ASSEMBLY:HOST_REMOVAL:CALC_STATS_REPAIR_REMOVED_FQ_SEQKIT (SRR11097786)
+Jul-04 20:55:49.130 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 303; name: ASSEMBLY:HOST_REMOVAL:CALC_STATS_REPAIR_REMOVED_FQ_SEQKIT (SRR11097786); status: COMPLETED; exit: 0; error: -; workDir: /home/phemarajata/wf-paired-end-illumina-assembly-gcb/work/f8/e8ed332650d07db889a87d1bc18e3e]
+Jul-04 20:56:22.139 [Task submitter] DEBUG n.processor.TaskPollingMonitor - %% executor local > tasks in the submission queue: 47 -- tasks to be submitted are shown below
+~> TaskHandler[id: 197; name: ASSEMBLY:HOST_REMOVAL:REMOVE_BROKEN_PAIRS_BBTOOLS_REPAIR (SRR12527881); status: NEW; exit: -; error: -; workDir: /home/phemarajata/wf-paired-end-illumina-assembly-gcb/work/a9/62cabe9632a48a3773af14482c6b9d]
+~> TaskHandler[id: 183; name: ASSEMBLY:HOST_REMOVAL:REMOVE_BROKEN_PAIRS_BBTOOLS_REPAIR (SRR12527871); status: NEW; exit: -; error: -; workDir: /home/phemarajata/wf-paired-end-illumina-assembly-gcb/work/64/db668abe3d2a68480b2d3a1591042c]
+~> TaskHandler[id: 228; name: ASSEMBLY:HOST_REMOVAL:REMOVE_BROKEN_PAIRS_BBTOOLS_REPAIR (SRR12527873); status: NEW; exit: -; error: -; workDir: /home/phemarajata/wf-paired-end-illumina-assembly-gcb/work/2a/fd3371961181c9ec850b5072112b34]
+~> TaskHandler[id: 200; name: ASSEMBLY:HOST_REMOVAL:REMOVE_BROKEN_PAIRS_BBTOOLS_REPAIR (SRR12983339); status: NEW; exit: -; error: -; workDir: /home/phemarajata/wf-paired-end-illumina-assembly-gcb/work/da/3e226a385e5a7ca35f0b70ed9cd0fa]
+~> TaskHandler[id: 178; name: ASSEMBLY:HOST_REMOVAL:REMOVE_BROKEN_PAIRS_BBTOOLS_REPAIR (SRR11097777); status: NEW; exit: -; error: -; workDir: /home/phemarajata/wf-paired-end-illumina-assembly-gcb/work/fe/569f51711cb940352000f36664a477]
+~> TaskHandler[id: 179; name: ASSEMBLY:HOST_REMOVAL:REMOVE_BROKEN_PAIRS_BBTOOLS_REPAIR (SRR12527869); status: NEW; exit: -; error: -; workDir: /home/phemarajata/wf-paired-end-illumina-assembly-gcb/work/11/a903d30c2c68853590ba82b9b83784]
+~> TaskHandler[id: 202; name: ASSEMBLY:HOST_REMOVAL:REMOVE_BROKEN_PAIRS_BBTOOLS_REPAIR (SRR11097772); status: NEW; exit: -; error: -; workDir: /home/phemarajata/wf-paired-end-illumina-assembly-gcb/work/b1/1ce1880017a5bbc4a02a766f25b3ef]
+~> TaskHandler[id: 182; name: ASSEMBLY:HOST_REMOVAL:REMOVE_BROKEN_PAIRS_BBTOOLS_REPAIR (SRR12527886); status: NEW; exit: -; error: -; workDir: /home/phemarajata/wf-paired-end-illumina-assembly-gcb/work/4d/fb13379155e45a9db64d669dca6cf2]
+~> TaskHandler[id: 230; name: ASSEMBLY:HOST_REMOVAL:REMOVE_BROKEN_PAIRS_BBTOOLS_REPAIR (SRR12527865); status: NEW; exit: -; error: -; workDir: /home/phemarajata/wf-paired-end-illumina-assembly-gcb/work/2c/b88825d43d8447658df79a5a16c63e]
+~> TaskHandler[id: 233; name: ASSEMBLY:HOST_REMOVAL:REMOVE_BROKEN_PAIRS_BBTOOLS_REPAIR (SRR12527887); status: NEW; exit: -; error: -; workDir: /home/phemarajata/wf-paired-end-illumina-assembly-gcb/work/0c/20d000894699b29151cd921b51b00d]
+.. remaining tasks omitted.
+Jul-04 20:59:48.433 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[id: 188; name: ASSEMBLY:HOST_REMOVAL:REMOVE_BROKEN_PAIRS_BBTOOLS_REPAIR (SRR11097782); status: RUNNING; exit: -; error: -; workDir: /home/phemarajata/wf-paired-end-illumina-assembly-gcb/work/94/a3fd1ae0399e9387cf1db50b01cc16]
+Jul-04 20:59:58.311 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 188; name: ASSEMBLY:HOST_REMOVAL:REMOVE_BROKEN_PAIRS_BBTOOLS_REPAIR (SRR11097782); status: COMPLETED; exit: 0; error: -; workDir: /home/phemarajata/wf-paired-end-illumina-assembly-gcb/work/94/a3fd1ae0399e9387cf1db50b01cc16]
+Jul-04 20:59:58.314 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-04 20:59:58.314 [Task submitter] INFO  nextflow.Session - [a9/62cabe] Submitted process > ASSEMBLY:HOST_REMOVAL:REMOVE_BROKEN_PAIRS_BBTOOLS_REPAIR (SRR12527881)
+Jul-04 20:59:59.318 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-04 20:59:59.319 [Task submitter] INFO  nextflow.Session - [5c/14713b] Submitted process > ASSEMBLY:HOST_REMOVAL:CALC_STATS_REPAIR_REMOVED_FQ_SEQKIT (SRR11097782)
+Jul-04 21:00:14.655 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 305; name: ASSEMBLY:HOST_REMOVAL:CALC_STATS_REPAIR_REMOVED_FQ_SEQKIT (SRR11097782); status: COMPLETED; exit: 0; error: -; workDir: /home/phemarajata/wf-paired-end-illumina-assembly-gcb/work/5c/14713b30eaad8cab6de495d92624c0]
+Jul-04 21:01:22.672 [Task submitter] DEBUG n.processor.TaskPollingMonitor - %% executor local > tasks in the submission queue: 47 -- tasks to be submitted are shown below
+~> TaskHandler[id: 183; name: ASSEMBLY:HOST_REMOVAL:REMOVE_BROKEN_PAIRS_BBTOOLS_REPAIR (SRR12527871); status: NEW; exit: -; error: -; workDir: /home/phemarajata/wf-paired-end-illumina-assembly-gcb/work/64/db668abe3d2a68480b2d3a1591042c]
+~> TaskHandler[id: 228; name: ASSEMBLY:HOST_REMOVAL:REMOVE_BROKEN_PAIRS_BBTOOLS_REPAIR (SRR12527873); status: NEW; exit: -; error: -; workDir: /home/phemarajata/wf-paired-end-illumina-assembly-gcb/work/2a/fd3371961181c9ec850b5072112b34]
+~> TaskHandler[id: 200; name: ASSEMBLY:HOST_REMOVAL:REMOVE_BROKEN_PAIRS_BBTOOLS_REPAIR (SRR12983339); status: NEW; exit: -; error: -; workDir: /home/phemarajata/wf-paired-end-illumina-assembly-gcb/work/da/3e226a385e5a7ca35f0b70ed9cd0fa]
+~> TaskHandler[id: 178; name: ASSEMBLY:HOST_REMOVAL:REMOVE_BROKEN_PAIRS_BBTOOLS_REPAIR (SRR11097777); status: NEW; exit: -; error: -; workDir: /home/phemarajata/wf-paired-end-illumina-assembly-gcb/work/fe/569f51711cb940352000f36664a477]
+~> TaskHandler[id: 179; name: ASSEMBLY:HOST_REMOVAL:REMOVE_BROKEN_PAIRS_BBTOOLS_REPAIR (SRR12527869); status: NEW; exit: -; error: -; workDir: /home/phemarajata/wf-paired-end-illumina-assembly-gcb/work/11/a903d30c2c68853590ba82b9b83784]
+~> TaskHandler[id: 202; name: ASSEMBLY:HOST_REMOVAL:REMOVE_BROKEN_PAIRS_BBTOOLS_REPAIR (SRR11097772); status: NEW; exit: -; error: -; workDir: /home/phemarajata/wf-paired-end-illumina-assembly-gcb/work/b1/1ce1880017a5bbc4a02a766f25b3ef]
+~> TaskHandler[id: 182; name: ASSEMBLY:HOST_REMOVAL:REMOVE_BROKEN_PAIRS_BBTOOLS_REPAIR (SRR12527886); status: NEW; exit: -; error: -; workDir: /home/phemarajata/wf-paired-end-illumina-assembly-gcb/work/4d/fb13379155e45a9db64d669dca6cf2]
+~> TaskHandler[id: 230; name: ASSEMBLY:HOST_REMOVAL:REMOVE_BROKEN_PAIRS_BBTOOLS_REPAIR (SRR12527865); status: NEW; exit: -; error: -; workDir: /home/phemarajata/wf-paired-end-illumina-assembly-gcb/work/2c/b88825d43d8447658df79a5a16c63e]
+~> TaskHandler[id: 233; name: ASSEMBLY:HOST_REMOVAL:REMOVE_BROKEN_PAIRS_BBTOOLS_REPAIR (SRR12527887); status: NEW; exit: -; error: -; workDir: /home/phemarajata/wf-paired-end-illumina-assembly-gcb/work/0c/20d000894699b29151cd921b51b00d]
+~> TaskHandler[id: 235; name: ASSEMBLY:HOST_REMOVAL:REMOVE_BROKEN_PAIRS_BBTOOLS_REPAIR (SRR12527884); status: NEW; exit: -; error: -; workDir: /home/phemarajata/wf-paired-end-illumina-assembly-gcb/work/d5/9d6a7c712ba1221f70b5f1e0d4cd95]
+.. remaining tasks omitted.
+Jul-04 21:04:48.476 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 1 -- submitted tasks are shown below
+~> TaskHandler[id: 197; name: ASSEMBLY:HOST_REMOVAL:REMOVE_BROKEN_PAIRS_BBTOOLS_REPAIR (SRR12527881); status: RUNNING; exit: -; error: -; workDir: /home/phemarajata/wf-paired-end-illumina-assembly-gcb/work/a9/62cabe9632a48a3773af14482c6b9d]
+Jul-04 21:05:06.260 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 197; name: ASSEMBLY:HOST_REMOVAL:REMOVE_BROKEN_PAIRS_BBTOOLS_REPAIR (SRR12527881); status: COMPLETED; exit: 0; error: -; workDir: /home/phemarajata/wf-paired-end-illumina-assembly-gcb/work/a9/62cabe9632a48a3773af14482c6b9d]
+Jul-04 21:05:06.263 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-04 21:05:06.263 [Task submitter] INFO  nextflow.Session - [64/db668a] Submitted process > ASSEMBLY:HOST_REMOVAL:REMOVE_BROKEN_PAIRS_BBTOOLS_REPAIR (SRR12527871)
+Jul-04 21:05:07.268 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Jul-04 21:05:07.269 [Task submitter] INFO  nextflow.Session - [4d/bfe351] Submitted process > ASSEMBLY:HOST_REMOVAL:CALC_STATS_REPAIR_REMOVED_FQ_SEQKIT (SRR12527881)
+Jul-04 21:05:26.351 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 307; name: ASSEMBLY:HOST_REMOVAL:CALC_STATS_REPAIR_REMOVED_FQ_SEQKIT (SRR12527881); status: COMPLETED; exit: 0; error: -; workDir: /home/phemarajata/wf-paired-end-illumina-assembly-gcb/work/4d/bfe3513ebac53470458a3d3ab83580]
+Jul-04 21:06:23.364 [Task submitter] DEBUG n.processor.TaskPollingMonitor - %% executor local > tasks in the submission queue: 47 -- tasks to be submitted are shown below
+~> TaskHandler[id: 228; name: ASSEMBLY:HOST_REMOVAL:REMOVE_BROKEN_PAIRS_BBTOOLS_REPAIR (SRR12527873); status: NEW; exit: -; error: -; workDir: /home/phemarajata/wf-paired-end-illumina-assembly-gcb/work/2a/fd3371961181c9ec850b5072112b34]
+~> TaskHandler[id: 200; name: ASSEMBLY:HOST_REMOVAL:REMOVE_BROKEN_PAIRS_BBTOOLS_REPAIR (SRR12983339); status: NEW; exit: -; error: -; workDir: /home/phemarajata/wf-paired-end-illumina-assembly-gcb/work/da/3e226a385e5a7ca35f0b70ed9cd0fa]
+~> TaskHandler[id: 178; name: ASSEMBLY:HOST_REMOVAL:REMOVE_BROKEN_PAIRS_BBTOOLS_REPAIR (SRR11097777); status: NEW; exit: -; error: -; workDir: /home/phemarajata/wf-paired-end-illumina-assembly-gcb/work/fe/569f51711cb940352000f36664a477]
+~> TaskHandler[id: 179; name: ASSEMBLY:HOST_REMOVAL:REMOVE_BROKEN_PAIRS_BBTOOLS_REPAIR (SRR12527869); status: NEW; exit: -; error: -; workDir: /home/phemarajata/wf-paired-end-illumina-assembly-gcb/work/11/a903d30c2c68853590ba82b9b83784]
+~> TaskHandler[id: 202; name: ASSEMBLY:HOST_REMOVAL:REMOVE_BROKEN_PAIRS_BBTOOLS_REPAIR (SRR11097772); status: NEW; exit: -; error: -; workDir: /home/phemarajata/wf-paired-end-illumina-assembly-gcb/work/b1/1ce1880017a5bbc4a02a766f25b3ef]
+~> TaskHandler[id: 182; name: ASSEMBLY:HOST_REMOVAL:REMOVE_BROKEN_PAIRS_BBTOOLS_REPAIR (SRR12527886); status: NEW; exit: -; error: -; workDir: /home/phemarajata/wf-paired-end-illumina-assembly-gcb/work/4d/fb13379155e45a9db64d669dca6cf2]
+~> TaskHandler[id: 230; name: ASSEMBLY:HOST_REMOVAL:REMOVE_BROKEN_PAIRS_BBTOOLS_REPAIR (SRR12527865); status: NEW; exit: -; error: -; workDir: /home/phemarajata/wf-paired-end-illumina-assembly-gcb/work/2c/b88825d43d8447658df79a5a16c63e]
+~> TaskHandler[id: 233; name: ASSEMBLY:HOST_REMOVAL:REMOVE_BROKEN_PAIRS_BBTOOLS_REPAIR (SRR12527887); status: NEW; exit: -; error: -; workDir: /home/phemarajata/wf-paired-end-illumina-assembly-gcb/work/0c/20d000894699b29151cd921b51b00d]
+~> TaskHandler[id: 235; name: ASSEMBLY:HOST_REMOVAL:REMOVE_BROKEN_PAIRS_BBTOOLS_REPAIR (SRR12527884); status: NEW; exit: -; error: -; workDir: /home/phemarajata/wf-paired-end-illumina-assembly-gcb/work/d5/9d6a7c712ba1221f70b5f1e0d4cd95]
+~> TaskHandler[id: 216; name: ASSEMBLY:HOST_REMOVAL:REMOVE_BROKEN_PAIRS_BBTOOLS_REPAIR (SRR11097780); status: NEW; exit: -; error: -; workDir: /home/phemarajata/wf-paired-end-illumina-assembly-gcb/work/c1/63317c7efe8f75eebfe4f7893a0656]
+.. remaining tasks omitted.
+Jul-04 21:08:24.521 [SIGINT handler] DEBUG nextflow.Session - Session aborted -- Cause: SIGINT
+Jul-04 21:08:24.542 [SIGINT handler] DEBUG nextflow.Session - The following nodes are still active:
+[process] ASSEMBLY:HOST_REMOVAL:CALC_STATS_REPAIR_REMOVED_FQ_SEQKIT
+  status=ACTIVE
+  port 0: (queue) OPEN  ; channel: -
+  port 1: (value) bound ; channel: input_fastq_type
+  port 2: (cntrl) -     ; channel: $
+
+[process] ASSEMBLY:HOST_REMOVAL:REMOVE_HOST_HOSTILE
+  status=ACTIVE
+  port 0: (queue) OPEN  ; channel: -
+  port 1: (cntrl) -     ; channel: $
+
+[process] ASSEMBLY:HOST_REMOVAL:CALC_STATS_HOSTILE_REMOVED_FQ_SEQKIT
+  status=ACTIVE
+  port 0: (queue) OPEN  ; channel: -
+  port 1: (value) bound ; channel: input_fastq_type
+  port 2: (cntrl) -     ; channel: $
+
+[process] ASSEMBLY:REMOVE_PHIX_BBDUK
+  status=ACTIVE
+  port 0: (queue) OPEN  ; channel: -
+  port 1: (value) bound ; channel: phix_reference_file
+  port 2: (cntrl) -     ; channel: $
+
+[process] ASSEMBLY:CALC_STATS_NOPHIX_FQ_SEQKIT
+  status=ACTIVE
+  port 0: (queue) OPEN  ; channel: -
+  port 1: (value) bound ; channel: input_fastq_type
+  port 2: (cntrl) -     ; channel: $
+
+[process] ASSEMBLY:TRIM_READS_TRIMMOMATIC
+  status=ACTIVE
+  port 0: (queue) OPEN  ; channel: -
+  port 1: (value) bound ; channel: adapter_reference_file
+  port 2: (cntrl) -     ; channel: $
+
+[process] ASSEMBLY:CALC_STATS_TRIM_FQ_SEQKIT
+  status=ACTIVE
+  port 0: (queue) OPEN  ; channel: -
+  port 1: (value) bound ; channel: input_fastq_type
+  port 2: (cntrl) -     ; channel: $
+
+[process] ASSEMBLY:OVERLAP_PAIRED_READS_FLASH
+  status=ACTIVE
+  port 0: (queue) OPEN  ; channel: -
+  port 1: (cntrl) -     ; channel: $
+
+[process] ASSEMBLY:CALC_STATS_CLEANEDREADS_FQ_SEQKIT
+  status=ACTIVE
+  port 0: (queue) OPEN  ; channel: -
+  port 1: (value) bound ; channel: input_fastq_type
+  port 2: (cntrl) -     ; channel: $
+
+[process] ASSEMBLY:READ_CLASSIFY_KRAKEN_ONE
+  status=ACTIVE
+  port 0: (queue) OPEN  ; channel: -
+  port 1: (value) bound ; channel: database
+  port 2: (cntrl) -     ; channel: $
+
+[process] ASSEMBLY:READ_CLASSIFY_KRAKEN_TWO
+  status=ACTIVE
+  port 0: (queue) OPEN  ; channel: -
+  port 1: (value) bound ; channel: database
+  port 2: (cntrl) -     ; channel: $
+
+[process] ASSEMBLY:ASSEMBLE_CONTIGS:ASSEMBLE_CONTIGS_SPADES
+  status=ACTIVE
+  port 0: (queue) OPEN  ; channel: -
+  port 1: (cntrl) -     ; channel: $
+
+[process] ASSEMBLY:ASSEMBLE_CONTIGS:FILTER_CONTIGS_BIOPYTHON
+  status=ACTIVE
+  port 0: (queue) OPEN  ; channel: -
+  port 1: (cntrl) -     ; channel: $
+
+[process] ASSEMBLY:ASSEMBLE_CONTIGS:POLISH_ASSEMBLY_BWA_PILON
+  status=ACTIVE
+  port 0: (queue) OPEN  ; channel: -
+  port 1: (cntrl) -     ; channel: $
+
+[process] ASSEMBLY:EXTRACT_READ_ALIGNMENT_DEPTHS_BEDTOOLS
+  status=ACTIVE
+  port 0: (queue) OPEN  ; channel: -
+  port 1: (cntrl) -     ; channel: $
+
+[process] ASSEMBLY:MLST_MLST
+  status=ACTIVE
+  port 0: (queue) OPEN  ; channel: -
+  port 1: (cntrl) -     ; channel: $
+
+[process] ASSEMBLY:ANNOTATE_PROKKA
+  status=ACTIVE
+  port 0: (queue) OPEN  ; channel: -
+  port 1: (cntrl) -     ; channel: $
+
+[process] ASSEMBLY:EXTRACT_16S_BIOPYTHON
+  status=ACTIVE
+  port 0: (queue) OPEN  ; channel: -
+  port 1: (cntrl) -     ; channel: $
+
+[process] ASSEMBLY:EXTRACT_16S_BARRNAP
+  status=ACTIVE
+  port 0: (queue) OPEN  ; channel: -
+  port 1: (cntrl) -     ; channel: $
+
+[process] ASSEMBLY:ALIGN_16S_BLAST
+  status=ACTIVE
+  port 0: (queue) OPEN  ; channel: -
+  port 1: (value) bound ; channel: -
+  port 2: (cntrl) -     ; channel: $
+
+[process] ASSEMBLY:CLASSIFY_16S_RDP
+  status=ACTIVE
+  port 0: (queue) OPEN  ; channel: -
+  port 1: (cntrl) -     ; channel: $
+
+[process] ASSEMBLY:BEST_16S_BLASTN_BITSCORE_TAXON_PYTHON
+  status=ACTIVE
+  port 0: (queue) OPEN  ; channel: -
+  port 1: (cntrl) -     ; channel: $
+
+[process] ASSEMBLY:ASSEMBLY_ASSESSMENT:QA_ASSEMBLY_QUAST
+  status=ACTIVE
+  port 0: (queue) OPEN  ; channel: -
+  port 1: (cntrl) -     ; channel: $
+
+[process] ASSEMBLY:ASSEMBLY_ASSESSMENT:CALCULATE_COVERAGE_UNIX
+  status=ACTIVE
+  port 0: (queue) OPEN  ; channel: -
+  port 1: (cntrl) -     ; channel: $
+
+[process] ASSEMBLY:ASSEMBLY_ASSESSMENT:ASSESS_ASSEMBLY_CHECKM2
+  status=ACTIVE
+  port 0: (queue) OPEN  ; channel: -
+  port 1: (value) bound ; channel: database
+  port 2: (cntrl) -     ; channel: $
+
+Jul-04 21:08:24.546 [main] DEBUG nextflow.Session - Session await > all processes finished
+Jul-04 21:08:24.546 [main] DEBUG nextflow.Session - Session await > all barriers passed
+Jul-04 21:08:24.546 [Task monitor] DEBUG n.processor.TaskPollingMonitor - <<< barrier arrives (monitor: local) - terminating tasks monitor poll loop
+Jul-04 21:08:24.546 [Actor Thread 148] DEBUG nextflow.file.SortFileCollector - FileCollector temp dir not removed: null
+Jul-04 21:08:24.546 [Actor Thread 12] DEBUG nextflow.file.SortFileCollector - FileCollector temp dir not removed: null
+Jul-04 21:08:24.546 [Actor Thread 138] DEBUG nextflow.file.SortFileCollector - FileCollector temp dir not removed: null
+Jul-04 21:08:24.546 [Actor Thread 146] DEBUG nextflow.file.SortFileCollector - FileCollector temp dir not removed: null
+Jul-04 21:08:24.547 [Actor Thread 148] DEBUG nextflow.file.SortFileCollector - FileCollector temp dir not removed: null
+Jul-04 21:08:24.547 [Actor Thread 130] DEBUG nextflow.file.SortFileCollector - FileCollector temp dir not removed: null
+Jul-04 21:08:24.547 [Actor Thread 95] DEBUG nextflow.file.SortFileCollector - FileCollector temp dir not removed: null
+Jul-04 21:08:24.547 [Actor Thread 146] DEBUG nextflow.file.SortFileCollector - FileCollector temp dir not removed: null
+Jul-04 21:08:24.547 [Actor Thread 12] DEBUG nextflow.file.SortFileCollector - FileCollector temp dir not removed: null
+Jul-04 21:08:24.547 [Actor Thread 146] DEBUG nextflow.file.SortFileCollector - FileCollector temp dir not removed: null
+Jul-04 21:08:24.548 [Actor Thread 146] DEBUG nextflow.file.SortFileCollector - FileCollector temp dir not removed: null
+Jul-04 21:08:24.548 [Actor Thread 109] DEBUG nextflow.file.SortFileCollector - FileCollector temp dir not removed: null
+Jul-04 21:08:24.548 [Actor Thread 101] DEBUG nextflow.file.SortFileCollector - FileCollector temp dir not removed: null
+Jul-04 21:08:24.548 [Actor Thread 138] DEBUG nextflow.file.SortFileCollector - FileCollector temp dir not removed: null
+Jul-04 21:08:24.548 [Actor Thread 146] DEBUG nextflow.file.SortFileCollector - FileCollector temp dir not removed: null
+Jul-04 21:08:24.548 [Actor Thread 129] DEBUG nextflow.sort.BigSort - Sort completed -- entries: 8; slices: 1; internal sort time: 0.002 s; external sort time: 0.0 s; total time: 0.002 s
+Jul-04 21:08:24.548 [Actor Thread 92] DEBUG nextflow.sort.BigSort - Sort completed -- entries: 8; slices: 1; internal sort time: 0.002 s; external sort time: 0.0 s; total time: 0.002 s
+Jul-04 21:08:24.548 [Actor Thread 107] DEBUG nextflow.file.SortFileCollector - FileCollector temp dir not removed: null
+Jul-04 21:08:24.548 [Actor Thread 99] DEBUG nextflow.file.SortFileCollector - FileCollector temp dir not removed: null
+Jul-04 21:08:24.549 [Actor Thread 129] DEBUG nextflow.file.FileCollector - >> temp file exists? false
+Jul-04 21:08:24.549 [Actor Thread 92] DEBUG nextflow.file.FileCollector - >> temp file exists? false
+Jul-04 21:08:24.549 [Actor Thread 92] DEBUG nextflow.file.FileCollector - Missed collect-file cache -- cause: java.nio.file.NoSuchFileException: /home/phemarajata/wf-paired-end-illumina-assembly-gcb/work/collect-file/220be99bae45975ed08b882373e55108
+Jul-04 21:08:24.549 [Actor Thread 107] DEBUG nextflow.file.SortFileCollector - FileCollector temp dir not removed: null
+Jul-04 21:08:24.549 [Actor Thread 129] DEBUG nextflow.file.FileCollector - Missed collect-file cache -- cause: java.nio.file.NoSuchFileException: /home/phemarajata/wf-paired-end-illumina-assembly-gcb/work/collect-file/595c5e4ddf515142473b95c620cfd293
+Jul-04 21:08:24.549 [Actor Thread 146] DEBUG nextflow.file.SortFileCollector - FileCollector temp dir not removed: null
+Jul-04 21:08:24.549 [Actor Thread 99] DEBUG nextflow.file.SortFileCollector - FileCollector temp dir not removed: null
+Jul-04 21:08:24.549 [Actor Thread 101] DEBUG nextflow.file.SortFileCollector - FileCollector temp dir not removed: null
+Jul-04 21:08:24.549 [Actor Thread 163] DEBUG nextflow.file.SortFileCollector - FileCollector temp dir not removed: null
+Jul-04 21:08:24.549 [Actor Thread 134] DEBUG nextflow.file.SortFileCollector - FileCollector temp dir not removed: null
+Jul-04 21:08:24.550 [main] INFO  nextflow.Nextflow - -[0;35m[bacterial-genomics/wf-paired-end-illumina-assembly][0;31m Pipeline completed with errors[0m-
+Jul-04 21:08:24.551 [Actor Thread 92] DEBUG nextflow.file.FileCollector - Saved collect-files list to: /home/phemarajata/wf-paired-end-illumina-assembly-gcb/work/collect-file/220be99bae45975ed08b882373e55108
+Jul-04 21:08:24.551 [Actor Thread 129] DEBUG nextflow.file.FileCollector - Saved collect-files list to: /home/phemarajata/wf-paired-end-illumina-assembly-gcb/work/collect-file/595c5e4ddf515142473b95c620cfd293
+Jul-04 21:08:24.552 [Actor Thread 129] DEBUG nextflow.file.FileCollector - Deleting file collector temp dir: /tmp/nxf-6501495590579386860
+Jul-04 21:08:24.552 [Actor Thread 92] DEBUG nextflow.file.FileCollector - Deleting file collector temp dir: /tmp/nxf-7880191179485835005
+Jul-04 21:08:24.553 [main] WARN  n.processor.TaskPollingMonitor - Killing running tasks (1)
+Jul-04 21:08:24.561 [main] DEBUG n.trace.WorkflowStatsObserver - Workflow completed > WorkflowStats[succeededCount=21; failedCount=0; ignoredCount=0; cachedCount=239; pendingCount=47; submittedCount=0; runningCount=0; retriesCount=0; abortedCount=1; succeedDuration=9h 53m 8s; failedDuration=0ms; cachedDuration=2d 5h 35m 37s;loadCpus=0; loadMemory=0; peakRunning=3; peakCpus=20; peakMemory=40 GB; ]
+Jul-04 21:08:24.562 [main] DEBUG nextflow.trace.TraceFileObserver - Workflow completed -- saving trace file
+Jul-04 21:08:24.563 [main] DEBUG nextflow.trace.ReportObserver - Workflow completed -- rendering execution report
+Jul-04 21:08:24.596 [Actor Thread 12] DEBUG nextflow.sort.BigSort - Sort completed -- entries: 260; slices: 1; internal sort time: 0.042 s; external sort time: 0.005 s; total time: 0.047 s
+Jul-04 21:08:24.596 [Actor Thread 12] DEBUG nextflow.file.FileCollector - >> temp file exists? false
+Jul-04 21:08:24.596 [Actor Thread 12] DEBUG nextflow.file.FileCollector - Missed collect-file cache -- cause: java.nio.file.NoSuchFileException: /home/phemarajata/wf-paired-end-illumina-assembly-gcb/work/collect-file/db8d7fddd50d92534b52d3d04512eccc
+Jul-04 21:08:24.605 [Actor Thread 12] DEBUG nextflow.file.FileCollector - Saved collect-files list to: /home/phemarajata/wf-paired-end-illumina-assembly-gcb/work/collect-file/db8d7fddd50d92534b52d3d04512eccc
+Jul-04 21:08:24.606 [Actor Thread 12] DEBUG nextflow.file.FileCollector - Deleting file collector temp dir: /tmp/nxf-7910345475632457177
+Jul-04 21:08:24.942 [main] DEBUG nextflow.trace.TimelineObserver - Workflow completed -- rendering execution timeline
+Jul-04 21:08:25.030 [main] DEBUG nextflow.cache.CacheDB - Closing CacheDB done
+Jul-04 21:08:25.039 [main] DEBUG nextflow.script.ScriptRunner - > Execution complete -- Goodbye
